@@ -18,13 +18,13 @@ mqtt:
 serial:
   # Location of CC2531 USB sniffer
   port: /dev/ttyUSB0
-  adapter: deconz
+  #adapter: deconz
 
 frontend:
   # Optional, default 8080 or you can use your own as well.
   port: 8081
   # IP address of the device running Zigbee2MQTT
-  host: 192.168.88.23
+  #host: 192.168.88.23
   
 advanced:
   network_key: GENERATE
