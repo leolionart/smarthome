@@ -24,7 +24,7 @@ frontend:
   # Optional, default 8080 or you can use your own as well.
   port: 8081
   # IP address of the device running Zigbee2MQTT
-  #host: 192.168.88.23
+  #host: 192.168.88.11
   
 advanced:
   network_key: GENERATE
