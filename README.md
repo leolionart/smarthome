@@ -7,7 +7,7 @@ https://wiki.banana-pi.org/Getting_Started_with_M5/M2Pro#Install_Image_to_EMMC
 4. Sử dụng công cụ cài hệ điều hành vào EMMC. Copy file img vào ổ cứng/usb và sử dụng nó để copy (đỡ phải tìm cách copy vào phân vùng hạn hẹp của SD cart). Các bước thực hiện dưới đây
 
 # Setup Docker Compose và Portainer để tiếp tục setup các dịch vụ dưới đây
-`curl -sk https://raw.githubusercontent.com/leolionart/smarthome/main/Docker_AIO_setup.sh | sudo bash -`
+Sử dụng câu lệnh `curl -sk https://raw.githubusercontent.com/leolionart/smarthome/main/Docker_AIO_setup.sh | sudo bash -`
 
 **Toàn bộ các dịch vụ được sử dụng trên HUB của tôi**
 1. qBittorrent: Tải phim
@@ -27,6 +27,7 @@ https://wiki.banana-pi.org/Getting_Started_with_M5/M2Pro#Install_Image_to_EMMC
 # Với PI-III sử dụng làm HUB Zigbee đa năng
 Thiết lập bằng homebridge firmware qua Raspberry Pi Imager để đơn giản quá trình setup
 Hoạt động với toàn bộ thiết bị sử dụng sóng Zigbee không kể hãng nào. Lệnh cài đặt tự động
+
 `curl -sk https://raw.githubusercontent.com/leolionart/smarthome/main/Z2M/ZigbeeHub.sh | sudo bash -`
 
 **Các dịch vụ đi kèm bao gồm**
