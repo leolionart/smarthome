@@ -1,0 +1,66 @@
+version: "3.7"
+
+services:
+  plex:
+    image: lscr.io/linuxserver/plex:latest
+    container_name: plex
+    network_mode: host
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+      - VERSION=docker
+      - PLEX_CLAIM=claim-LvsnuxnASAHYMykWg_1w
+    volumes:
+      - /mnt/sda1/Config/plex:/config
+      - /mnt/sda1/Series:/tv
+      - /mnt/sda1/Movies:/movies
+      - /mnt/sda1/Download:/download
+    restart: unless-stopped
+####
+  radarr:
+    container_name: radarr
+    image: ghcr.io/hotio/radarr
+    ports:
+      - "7878:7878"
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - UMASK=002
+      - TZ=Etc/UTC
+    volumes:
+      - /mnt/sda1:/downloads
+      - /mnt/sda1/Config/radarr:/config
+    restart: unless-stopped
+#####
+  sonarr:
+    container_name: sonarr
+    image: ghcr.io/hotio/sonarr
+    ports:
+      - "8989:8989"
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - UMASK=002
+      - TZ=Etc/UTC
+    volumes:
+      - /mnt/sda1:/downloads
+      - /mnt/sda1/Config/sonarr:/config
+    restart: unless-stopped
+
+#####
+    bazarr:
+    container_name: bazarr
+    image: ghcr.io/hotio/bazarr
+    ports:
+      - "6767:6767"
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - UMASK=002
+      - TZ=Etc/UTC
+    volumes:
+      - /mnt/sda1:/downloads
+      - /mnt/sda1/Config/bazarr:/config
+
+    restart: unless-stopped
