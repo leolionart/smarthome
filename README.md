@@ -25,8 +25,22 @@ Sử dụng câu lệnh `curl -sk https://raw.githubusercontent.com/leolionart/s
 > Folder chứa các config file: 
 
 ## Thiết lập hệ thống theo dõi Home LAB
+https://egg.d.pr/i/zRDjAi
 
+### Sử dụng Prometheus và InluxDB để show hiển thị dữ liệu bằng grafana
+1. Promehteus: Chứa metrics trong RAM
+2. Grafana: Dựng dashboard trực quan
+3. SNMP_exporter: Đọc dữ liệu từ Mikrotik Router
+4. Node-exporter: Đọc dữ liệu từ linux. Có thể dùng cadvisor có thể xem chi tiết hơn các node đang chiếm dụng tài nguyên
+5. Node-RED: Xây dựng flow dữ liệu đưa vào InluxDB. Chi tiết các flow hữu ích
 
+**NodeRED-Flow**
+1. Cài thêm 
+2. Flow lấy log sensors từ Homebridge: https://raw.githubusercontent.com/leolionart/smarthome/main/Monitoring/node-red-flow.json
+
+### Theo dõi bằng widget & nhận thông báo
+1. Cài Script
+2. Sử dụng config: https://raw.githubusercontent.com/leolionart/smarthome/main/Monitoring/homebridgeStatusWidget.js
 
 ## Với PI-III sử dụng làm HUB Zigbee đa năng
 Thiết lập bằng homebridge firmware qua Raspberry Pi Imager để đơn giản quá trình setup

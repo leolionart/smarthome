@@ -1,0 +1,91 @@
+version: "3.5"
+services:
+    
+    homebridge:
+      image: oznu/homebridge:latest
+      restart: always
+      network_mode: host
+      ports:
+        - "8581:8581"
+      volumes:
+        - /mnt/sda1/Config:/homebridge
+      logging:
+        driver: json-file
+        options:
+          max-size: "10mb"
+          max-file: "1"
+    scrypted:
+        environment:
+            # Scrypted NVR Storage (Part 2 of 3)
+
+            # Uncomment the next line to configure the NVR plugin to store recordings
+            # use the /nvr directory within the container. This can also be configured
+            # within the plugin manually.
+            # The drive or network share will ALSO need to be configured in the volumes
+            # section below.
+            # - SCRYPTED_NVR_VOLUME=/nvr
+
+            - SCRYPTED_WEBHOOK_UPDATE_AUTHORIZATION=
+            - SCRYPTED_WEBHOOK_UPDATE=http://localhost:10444/v1/update
+
+
+
+        volumes:
+            # Scrypted NVR Storage (Part 3 of 3)
+
+            # Modify to add the additional volume for Scrypted NVR.
+            # The following example would mount the /mnt/sda/video path on the host
+            # to the /nvr path inside the docker container.
+            # - /mnt/media/video:/nvr
+
+            # Or use a network mount from one of the CIFS/NFS examples at the top of this file.
+            # - type: volume
+            #   source: nvr
+            #   target: /nvr
+            #   volume:
+            #     nocopy: true
+
+            # uncomment the following lines to expose Avahi, an mDNS advertiser.
+            # make sure Avahi is running on the host machine, otherwise this will not work.
+            # not compatible with Avahi enabled via SCRYPTED_DOCKER_AVAHI=true
+            # - /var/run/dbus:/var/run/dbus
+            # - /var/run/avahi-daemon/socket:/var/run/avahi-daemon/socket
+
+            # Default volume for the Scrypted database. Typically should not be changed.
+            - /mnt/sda1/Config/scrypted:/server/volume
+          
+        devices: [
+            # uncomment the common systems devices to pass
+            # them through to docker.
+
+            # all usb devices, such as coral tpu
+            # "/dev/bus/usb:/dev/bus/usb",
+
+            # hardware accelerated video decoding, opencl, etc.
+            # "/dev/dri:/dev/dri",
+
+            # uncomment below as necessary.
+            # zwave usb serial device
+
+            # "/dev/ttyACM0:/dev/ttyACM0",
+
+            # coral PCI devices
+            # "/dev/apex_0:/dev/apex_0",
+            # "/dev/apex_1:/dev/apex_1",
+        ]
+
+        container_name: scrypted
+        restart: unless-stopped
+        network_mode: host
+        image: koush/scrypted
+
+        # logging is noisy and will unnecessarily wear on flash storage.
+        # scrypted has per device in memory logging that is preferred.
+        logging:
+            driver: "json-file"
+            options:
+                max-size: "10m"
+                max-file: "10"
+        labels:
+            - "com.centurylinklabs.scope=scrypted"
+
