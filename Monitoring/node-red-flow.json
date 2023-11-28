@@ -1,0 +1,208 @@
+[
+    {
+        "id": "36e4dd83e1b0dd74",
+        "type": "tab",
+        "label": "Sensor Logs",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "efc5c37922033e56",
+        "type": "hb-conf",
+        "username": "926-78-524",
+        "macAddress": "0E:3C:0A:0B:07:58"
+    },
+    {
+        "id": "0e8a250b994a1a1c",
+        "type": "influxdb",
+        "hostname": "192.168.88.11",
+        "port": "8086",
+        "protocol": "http",
+        "database": "nodered",
+        "name": "nodered",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "1.x",
+        "url": "http://localhost:8086",
+        "rejectUnauthorized": true
+    },
+    {
+        "id": "7f93d80ae455095a",
+        "type": "homekit-bridge",
+        "bridgeName": "Node-RED",
+        "pinCode": "302-22-137",
+        "port": "",
+        "advertiser": "bonjour-hap",
+        "allowInsecureRequest": false,
+        "manufacturer": "NRCHKB",
+        "model": "1.5.0",
+        "serialNo": "Default Serial Number",
+        "firmwareRev": "1.5.0",
+        "hardwareRev": "1.5.0",
+        "softwareRev": "1.5.0",
+        "customMdnsConfig": false,
+        "mdnsMulticast": true,
+        "mdnsInterface": "",
+        "mdnsPort": "",
+        "mdnsIp": "",
+        "mdnsTtl": "",
+        "mdnsLoopback": true,
+        "mdnsReuseAddr": true,
+        "allowMessagePassthrough": true
+    },
+    {
+        "id": "25cd9706f8156dc1",
+        "type": "influxdb",
+        "hostname": "192.168.88.11",
+        "port": "8086",
+        "protocol": "http",
+        "database": "sensor_data",
+        "name": "",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "1.x",
+        "url": "http://localhost:8086",
+        "rejectUnauthorized": true
+    },
+    {
+        "id": "38fa3ea5dc9d06de",
+        "type": "hb-status",
+        "z": "36e4dd83e1b0dd74",
+        "name": "Air Conditioner",
+        "Homebridge": "homebridge",
+        "Manufacturer": "Broadlink",
+        "Service": "Thermostat",
+        "device": "homebridge0E:94:B6:96:6F:15BroadlinkAir Conditioner0000004A",
+        "conf": "efc5c37922033e56",
+        "x": 340,
+        "y": 240,
+        "wires": [
+            [
+                "5b4e7578a4bd719f",
+                "1a56740e8659237a"
+            ]
+        ]
+    },
+    {
+        "id": "7c1f5f3f63dd3296",
+        "type": "inject",
+        "z": "36e4dd83e1b0dd74",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 240,
+        "wires": [
+            [
+                "38fa3ea5dc9d06de",
+                "49bf1e55f173ff8a",
+                "ef28f7e6b61ce7e5"
+            ]
+        ]
+    },
+    {
+        "id": "5b4e7578a4bd719f",
+        "type": "debug",
+        "z": "36e4dd83e1b0dd74",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "49bf1e55f173ff8a",
+        "type": "hb-status",
+        "z": "36e4dd83e1b0dd74",
+        "name": "Air Quality",
+        "Homebridge": "homebridge",
+        "Manufacturer": "Zhimi",
+        "Service": "Air Quality Sensor",
+        "device": "homebridge0E:AE:DE:D0:08:C9ZhimiAir Quality0000008D",
+        "conf": "efc5c37922033e56",
+        "x": 330,
+        "y": 340,
+        "wires": [
+            [
+                "5b4e7578a4bd719f",
+                "1a56740e8659237a"
+            ]
+        ]
+    },
+    {
+        "id": "1a56740e8659237a",
+        "type": "influxdb out",
+        "z": "36e4dd83e1b0dd74",
+        "influxdb": "25cd9706f8156dc1",
+        "name": "temp",
+        "measurement": "temp",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 610,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "7a943bfc993974a5",
+        "type": "influxdb out",
+        "z": "36e4dd83e1b0dd74",
+        "influxdb": "25cd9706f8156dc1",
+        "name": "weather",
+        "measurement": "weather",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 620,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "ef28f7e6b61ce7e5",
+        "type": "hb-status",
+        "z": "36e4dd83e1b0dd74",
+        "name": "Weather",
+        "Homebridge": "homebridge",
+        "Manufacturer": "github.com naofireblade",
+        "Service": "Temperature Sensor",
+        "device": "homebridge0E:3C:0A:0B:07:58github.com naofirebladeWeather0000008A",
+        "conf": "efc5c37922033e56",
+        "x": 320,
+        "y": 440,
+        "wires": [
+            [
+                "5b4e7578a4bd719f",
+                "7a943bfc993974a5"
+            ]
+        ]
+    }
+]

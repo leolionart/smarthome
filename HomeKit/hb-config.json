@@ -1,0 +1,551 @@
+{
+    "bridge": {
+        "name": "Homebridge 0758",
+        "username": "0E:3C:0A:0B:07:58",
+        "port": 51592,
+        "pin": "926-78-524",
+        "bind": [
+            "eth0"
+        ]
+    },
+    "accessories": [],
+    "platforms": [
+        {
+            "name": "Config",
+            "port": 8581,
+            "auth": "none",
+            "theme": "dark-mode",
+            "tempUnits": "c",
+            "lang": "auto",
+            "platform": "config"
+        },
+        {
+            "platform": "WLED",
+            "name": "WLED",
+            "wleds": [
+                {
+                    "name": "LED-TV",
+                    "host": "192.168.88.19"
+                },
+                {
+                    "name": "Computer LED",
+                    "host": "192.168.88.47"
+                }
+            ],
+            "_bridge": {
+                "username": "0E:A7:35:C6:48:69",
+                "port": 50694
+            }
+        },
+        {
+            "platform": "BroadlinkRM",
+            "name": "Broadlink RM",
+            "hideScanFrequencyButton": true,
+            "hideLearnButton": false,
+            "hideWelcomeMessage": true,
+            "hosts": [
+                {
+                    "address": "192.168.88.14",
+                    "mac": "A0:43:B0:B9:F9:01",
+                    "isRFSupported": false,
+                    "isRM4": true
+                },
+                {
+                    "address": "192.168.88.16",
+                    "mac": "A0:43:B0:70:8A:C0",
+                    "isRFSupported": false,
+                    "isRM4": true
+                },
+                {
+                    "address": "192.168.88.27",
+                    "mac": "24:DF:A7:2D:65:20",
+                    "isRFSupported": false,
+                    "isRM4": false
+                }
+            ],
+            "accessories": [
+                {
+                    "name": "Learn Living",
+                    "type": "learn-code",
+                    "host": "192.168.88.16"
+                },
+                {
+                    "name": "Learn Bedroom",
+                    "type": "learn-code",
+                    "host": "192.168.88.14"
+                },
+                {
+                    "name": "Learn Guest",
+                    "type": "learn-code",
+                    "host": "192.168.88.27"
+                },
+                {
+                    "name": "Guest Fan",
+                    "type": "fan",
+                    "host": "192.168.88.27",
+                    "defaultFanSpeed": 100,
+                    "showSwingMode": false,
+                    "hideRotationDirection": true,
+                    "speedSteps": 1,
+                    "data": {
+                        "on": "2600ec00723a0e0e0f2a0f0e0f0e0e0f0e0e0f0e0e0f0e0e0f0e0e0f0e0e0f0e0e2b0f0e0e0f0e0e0f0e0f0e0e0e0f2b0e0e0f2b0e2b0f0e0e0f0e2b0e0f0e0e0f0e0e0f0e2b0e0f0e0e0f0e0e0f0e2b0f2a0f0e0f0e0e2b0f0e0e0e0f0e0f2b0e2b0e0f0e0e0f2b0e0e0f2b0e0e0f2b0e0e0f2b0e0e0f0009a3723a0e0f0e2b0e0f0e0e0f0e0f0e0e0e0f0e0f0e0e0f0e0e0f0e0e0f0e2b0e0f0e0e0f0e0e0f0e0e0f0e0f2a0f0e0f2a0f2b0e0f0e0e0f2b0e0e0f0e0e0f0e0e0f2b0e0e0f0e0e0f0e0e0f2b0e2b0f0e0e0e0f2b0e0f0e0e0f0e0e2b0f2b0e0e0f0e0e2b0f0e0f2a0f0e0f2a0f0e0f2b0e0e0f000d05000000000000000000000000",
+                        "off": "2600ec007437110c1128110c110c110b110c110c110b110c110c110b110c110c1128110c110b110c110c110b110c1128110c11281129110b110c1128110c110c100d100c1129100c110c110c110b11291029100d100c11290f0d110c100d0f2a1029100d100d1128100d0f2a100d1128100d1128100d0f0009a2723a110c1128110c110b110c110c100c110c110c100c110c110c110b1129110c110b110c110c100c110c1128110c11281129100c110c1128110c110c100c110c1128110c110c100d100c11281129110c110b1129100c110c110c10291128110c110c1128110c1128110c1128110c1128110c11000d05000000000000000000000000"
+                    }
+                },
+                {
+                    "name": "Guest Air",
+                    "type": "air-conditioner",
+                    "noHumidity": true,
+                    "host": "192.168.88.27",
+                    "defaultCoolTemperature": 25,
+                    "coolOnly": true,
+                    "logLevel": "none",
+                    "data": {
+                        "off": "2600ca00909013331311123413331410121112341311121112341212121113331235121112341311123412341433123413111234123512341310131112111211123413111310123413341234131013111310121112111211131112111234133412341334133312aa918f12341311123413341310131012351211121112341311121112341334121113331311123413331334123413111234133313341211121113111211123413101311123413331334121112111311121112111211121113111333123413341234133413000d050000000000000000000000000000",
+                        "temperature25": {
+                            "pseudo-mode": "cool",
+                            "data": "2600ca008c8f13341112123412341112121111351211131112341211111211351234121113341234111211351234123512341234123412111333121211121112121112111211113512351211111212111211121111121112131012351135123412341234133411aa8f9012341211133313341112111211351211131012341311111212341234111212341334121111351234123412351135123412111135121112111212111212111211113511351211131112111310111212111310111212341234133411351234123413000d050000000000000000000000000000"
+                        }
+                    }
+                },
+                {
+                    "name": "Vinsmart",
+                    "type": "tv",
+                    "host": "192.168.88.16",
+                    "data": {
+                        "on": "260058000001259413131113131311131239121312391113133712381338113813131336121411391114113a1114101511391113121510141238111411391139121311391338103a110005190001274b11000c500001264c11000d050000000000000000000000000000",
+                        "off": "260050000001259412131114121312131238131213371214113912371338123811141238121312381312133713121312123813121312131312381213123813371312133713371337120005190001274b12000d05000000000000"
+                    }
+                },
+                {
+                    "name": "Air Conditioner",
+                    "type": "air-conditioner",
+                    "noHumidity": true,
+                    "host": "192.168.88.14",
+                    "defaultCoolTemperature": 25,
+                    "tempStepSize": 1,
+                    "logLevel": "none",
+                    "data": {
+                        "off": "2600ca008d8e13331310133314331113121013331212131013331310121114331333121114331310113513331235133312111235113513331211141013101112113513101212113511351235131011121112121112111410111213101333123513331333133312aa909012341112123412351310111212341212111211351112121113341135111211351211123511351333143311121135113512351310131011121310123412121112113513331234141013101211131011121112121112111235113511351234143311000d050000000000000000000000000000",
+                        "temperature30": {
+                            "pseudo-mode": "heat",
+                            "data": "2600ca008c8f12341211113512351212101212341112121211341311111211351135111212341235111211351135113513341135123412111234121112121112111212111112123411351234131112111135111211121211121112121135123411121135113512aa8f9011351113103512351211121111351212111111351211121211351135111212341235121210351135113511351235123411121135121112111311111211121113103511351234121211121135111212111211121112111334133311121135123412000d050000000000000000000000000000"
+                        },
+                        "temperature29": {
+                            "pseudo-mode": "auto",
+                            "data": "2600ca008f9012341211123512341212121112341212121112341212121112341235121112351234121112351234123512341334123512111234121212111211121112121211123412121234121112121211121112111212113512111235123412351234123512aa918f1235121112351234121112121234121112121234111212121234123512111234123512111235123412351234123512341212123412111212140f121112111212113512111235121112121112121111121211123512111136123411361234123512000d05000000000000000000000000"
+                        },
+                        "temperature28": {
+                            "pseudo-mode": "auto",
+                            "data": "2600ca00909012351211123412351211121212341211121212341211121212341235121112341235121112351234123512341235123412121135121112121211121112111212113512111212111212111211121211121211123412351234123512351234123512aa909012341311123412351211121112351211121112351211121112351234121212341235121112341235123412351135123512111235121112111212111212111211123512111211121211121211121112111212123412351234123512341235123412000d05000000000000000000000000"
+                        },
+                        "temperature27": {
+                            "pseudo-mode": "auto",
+                            "data": "2600ce008f9012341212123412351310121111361211121112351211121112351234121112351234121212341235123412351234123512111235121112111211121212111211123511121211123413111211121112111212123412351211123412351234123512aa918f123512111235123412121112123412111212123412111212123313351211123412351211123512341136123412351234121212341211121212111211121113111234121112121234121112121112121112111235123412121135123412351235120004ae04000d050000000000000000"
+                        },
+                        "temperature26": {
+                            "pseudo-mode": "cool",
+                            "data": "2600ce000a00050a929012351211123512351211121112351211121212341212121112351234131112351234121212341235123512341235123512111235121112111212121112111212123412121211123512111211121212111211123512351211123512341235123512ab909012351211123512351211121112351211121212341212121112351234121212341235111212351235123412351235123412121234121212111211121212111211123512111212123412121211121112121211113612341212123412351235123412000d050000000000000000"
+                        },
+                        "temperature25": {
+                            "pseudo-mode": "cool",
+                            "data": "2600ca008c8f13341112123412341112121111351211131112341211111211351234121113341234111211351234123512341234123412111333121211121112121112111211113512351211111212111211121111121112131012351135123412341234133411aa8f9012341211133313341112111211351211131012341311111212341234111212341334121111351234123412351135123412111135121112111212111212111211113511351211131112111310111212111310111212341234133411351234123413000d050000000000000000000000000000"
+                        },
+                        "temperature24": {
+                            "pseudo-mode": "cool",
+                            "data": "2600ca008e9012351211113511361211121112351211121112351112121112331434121212341136121112341235123411361234123512111235121112111112121211121211121112351211121112111212121111121235111211351235113512351234123512aa918f12351211113512351112121212341211111311341212121112351234121212341136121111351235123412351234123512111136121112111211121211121211111213341112121111131112121111121235121111351235123511351235113511000d05000000000000000000000000"
+                        },
+                        "temperature23": {
+                            "pseudo-mode": "cool",
+                            "data": "2600ca008e9012351211123412351211121112351211121211351211121112351234121212341235121112341235123412351234133412111235121111121211121212111211121112351211123512111211121112121234121112351211113611351136123412aa918f12351211123512341211121212341211121212341211121212341235121112341235121112351234123512341235123412121135121112111212121112111211121212341211123512111211121212111234121212341211123512341235123412000d05000000000000000000000000"
+                        },
+                        "temperature22": {
+                            "pseudo-mode": "cool",
+                            "data": "2600ca008f9012341211123512341212121112341212121112341212121112341235121112351234121112351234123512341235123412121234121211121112121112111212121112341235113512121211121112111235121112111212123412351234123512aa909012351211123412351211121112351211121112351211121112351234121211351235121112341235123412351234123512111235121112111211121212111211121112351234123512111211121212111234121212111112123511351234133412000d05000000000000000000000000"
+                        },
+                        "temperature21": {
+                            "pseudo-mode": "cool",
+                            "data": "2600ca008d8e13341211123412341310121212341211121111361210131112341234121112341234131012351234113512341334123411121135111213101311111212111211111212341234131012121112121111121234121111121333133412341234123413a98f9012341211113512341212111211351211121111351211121112351234121112341333131112341135123413331334123412111135121113101310121211121211121112341234131012121211121111121234121112111234133412341234123412000d050000000000000000000000000000"
+                        },
+                        "temperature19": {
+                            "pseudo-mode": "cool",
+                            "data": "2600ca008c8f13331310133412341211121112341310131111351211121112341234131013341234121112351134133313341135123412111234131112111112121112111211121112111333133412111112121112111234133412111211123412341234133412a9908f12341310133412341211121112341211131013341211121112341234131012351234121112341234133312351234123412111234131013111211111212111211111212111333133412111211121112111135133313111112123412341234133313000d050000000000000000000000000000"
+                        },
+                        "temperature16": {
+                            "pseudo-mode": "cool",
+                            "data": "2600ca008d8e1334121112341234121113101333131112111234121112111234133412111234123412111333133412341234123412351211123412111112121113101310131111121211121112111211121113101310133412341234172f133313341234123413a9908f12341211123413331310131112341211111212341310131013341234121112341333131112341234123412341334123411121234131013101311121112111211121112111211131013101311121112111234113513331235123412341135133314000d050000000000000000000000000000"
+                        }
+                    }
+                },
+                {
+                    "name": "Ceiling Fan",
+                    "type": "fan",
+                    "host": "192.168.88.14",
+                    "defaultFanSpeed": 100,
+                    "showSwingMode": false,
+                    "hideRotationDirection": true,
+                    "speedSteps": 3,
+                    "data": {
+                        "on": "2600ec0073380d100d2c0e0f0e0f0d0f0e0f0e0f0e0f0d100d0f0e0f0e0f0d100d2c0e0f0e0f0d100d0f0e0f0e0f0e2b0e0f0e2c0e2b0e0f0e0f0e2c0d0f0e0f0e0f0e0f0d2c0e0f0e0f0e0f0d0f0e2c0e2c0d0f0e0f0e2c0d100d0f0e0f0e2c0d2c0e0f0e0f0d2c0e0f0e2c0d100d2c0e0f0e2b0e0f0e000a6f74380d100d2c0e0f0e0f0d0f0e0f0e0f0e0f0d100d0f0e0f0e0f0d100d2c0e0f0e0f0d0f0e0f0e0f0e0f0d2c0e0f0e2c0d2c0e0f0e0f0d2c0e0f0e0f0e0f0d0f0e2c0e0f0d100d0f0e0f0e2c0d2c0e0f0e0f0d2c0e0f0e0f0e0f0d2c0e2c0e0f0d0f0e2c0e0f0e2b0e0f0e2c0d100d2c0e0f0e000d05000000000000000000000000",
+                        "off": "2600ec0073380d100d2c0e0f0e0f0d0f0e0f0e0f0e0f0d100d0f0e0f0e0f0d100d2c0e0f0e0f0d100d0f0e0f0e0f0e2b0e0f0e2c0e2b0e0f0e0f0e2c0d0f0e0f0e0f0e0f0d2c0e0f0e0f0e0f0d0f0e2c0e2c0d0f0e0f0e2c0d100d0f0e0f0e2c0d2c0e0f0e0f0d2c0e0f0e2c0d100d2c0e0f0e2b0e0f0e000a6f74380d100d2c0e0f0e0f0d0f0e0f0e0f0e0f0d100d0f0e0f0e0f0d100d2c0e0f0e0f0d0f0e0f0e0f0e0f0d2c0e0f0e2c0d2c0e0f0e0f0d2c0e0f0e0f0e0f0d0f0e2c0e0f0d100d0f0e0f0e2c0d2c0e0f0e0f0d2c0e0f0e0f0e0f0d2c0e2c0e0f0d0f0e2c0e0f0e2b0e0f0e2c0d100d2c0e0f0e000d05000000000000000000000000",
+                        "fanSpeed10": "2600ec0071380e0f0e2c0e0f0d0f0e0f0e0f0e0f0e0f0d0f0e0f0e0f0e0f0d100d2c0e0f0e0f0d100d0f0e0f0e0f0e2b0e0f0e2c0d2c0e0f0e0f0e2c0d0f0e0f0e0f0e0f0d2c0e0f0e0f0d100d0f0e2c0e2b0e0f0e0f0e2c0d0f0e0f0e0f0e0f0d2c0e0f0e0f0e2b0e0f0e2c0e0f0d0f0e0f0e2c0d100d000aaa723a0d0f0e2c0e0f0d100d0f0e0f0e0f0e0f0d100d0f0e0f0e0f0e0f0d2c0e0f0e0f0e0f0d0f0e0f0e0f0e2c0d0f0e2c0d2c0e0f0e0f0e2b100d0e0f0e0f0d100d2c0e0f0e0f0d100d0f0e2c0d2c0e0f0e0f0e2b0e0f0e0f0e0f0d100d2c0e0f0e0f0d2c0e0f0e2c0d0f0e0f0e0f0e2b0e0f0e000d05000000000000000000000000",
+                        "fanSpeed50": "2600ec0071380d0f0e2c0e0f0d100d0f0e0f0e0f0e0f0d100d0f0e0f0e0f0e0f0d2c0e0f0e0f0e0f0d100d0f0e0f0e2c0d100d2c0e2c0e0f0d0f0e2c0e0f0e0f0d0f0e0f0e2c0d100d0f0e0f0e0f0e2c0d2c0e0f0e0f0e0f0d2c0e0f0e0f0e0f0d2c0e0f0e0f0e0f0d2c0e2c0e0f0e0f0d0f0e2c0e0f0e000aaa74380e0f0e2c0d100d0f0e0f0e0f0e0f0e0f0d0f0e0f0e0f0e0f0d100d2c0e0f0e0f0d100d0f0e0f0e0f0e2b0e0f0e2c0e2b0e0f0e0f0e2c0d0f0e0f0e0f0e0f0d2c0e0f0e0f0e0f0e0f0d2c0e2c0d100d0f0e0f0e2c0d100d0f0e0f0e2c0d100d0f0e0f0e2c0d2c0e0f0e0f0e0f0d2c0e0f0e000d05000000000000000000000000",
+                        "fanSpeed100": "2600ec0072370e0f0d2c0e0f0e0f0e0f0d100e0e0e0f0e0f0e0f0d100d0f0e0f0e2c0d0f0e0f0e0f0e0f0e0f0d0f0e2c0e0f0d2c0e2c0e0f0d100d2c0e0f0e0f0d100d0f0e2c0e0f0d100d0f0e0f0e2c0d2c0e0f0e0f0d2c0e2c0e0f0d100d0f0e2c0e0f0d100d2c0e2c0d2c0e0f0e0f0e0f0d2c0e0f0e000a7072390e0f0d2c0e0f0e0f0e0f0d0f0e0f0e0f0e0f0d100d0f0e0f0e0f0e2b0e0f0e0f0e0f0d100d0f0e0f0e2c0d0f0e2c0e2c0d0f0e0f0e2c0d100d0f0e0f0e0f0e2b0e0f0e0f0e0f0d100d2c0e2c0d0f0e0f0e2c0d2c0e120b0f0d100d2c0e0f0e0f0d2c0e2c0d2c0e0f0e0f0e0f0d2c0e0f0e000d05000000000000000000000000"
+                    }
+                }
+            ],
+            "_bridge": {
+                "username": "0E:94:B6:96:6F:15",
+                "port": 15089
+            }
+        },
+        {
+            "devices": [
+                {
+                    "name": "Mi Air Purifier 2H",
+                    "ip": "192.168.88.55",
+                    "token": "6d4cd88f2e28141591144f659a616a14",
+                    "deviceId": "134084262",
+                    "model": "zhimi.airpurifier.mc2",
+                    "pollingInterval": 7,
+                    "deepDebugLog": false,
+                    "micloud": {
+                        "username": "art.leolion@gmail.com",
+                        "password": "q21411941",
+                        "country": "sg",
+                        "forceMiCloud": false,
+                        "timeout": 5000
+                    },
+                    "buzzerControl": false,
+                    "ledControl": false,
+                    "childLockControl": true,
+                    "modeControl": true,
+                    "fanLevelControl": false,
+                    "showTemperature": true
+                },
+                {
+                    "name": "Pixel",
+                    "ip": "192.168.88.22",
+                    "token": "6609ba71881491b1c681c05fcf5bf9f7",
+                    "deviceId": "456015938",
+                    "model": "yeelink.light.colorb",
+                    "pollingInterval": 10,
+                    "deepDebugLog": false,
+                    "buzzerControl": false,
+                    "ledControl": false,
+                    "childLockControl": false,
+                    "modeControl": false
+                }
+            ],
+            "_bridge": {
+                "username": "0E:AE:DE:D0:08:C9",
+                "port": 37101
+            },
+            "platform": "miot"
+        },
+        {
+            "devices": [
+                {
+                    "api_key": "a107fee8-8733-4df7-bfec-0d86e97ead35",
+                    "device_id": "1e869faa-3c15-a403-4c21-050febf64f1f",
+                    "name": "Kitchen TV",
+                    "ip": "192.168.88.54",
+                    "mac": "70:b1:3d:e5:17:18",
+                    "delay": 400,
+                    "inputs": [
+                        {
+                            "type": "command",
+                            "name": "Live TV",
+                            "value": "KEY_SOURCE,KEY_LEFT*3,KEY_ENTER"
+                        },
+                        {
+                            "type": "app",
+                            "name": "FPT Play",
+                            "value": "3201707014491"
+                        },
+                        {
+                            "type": "app",
+                            "name": "YouTube",
+                            "value": "111299001912"
+                        },
+                        {
+                            "type": "app",
+                            "name": "Plex",
+                            "value": "3201512006963"
+                        },
+                        {
+                            "type": "app",
+                            "name": "Netflix",
+                            "value": "3201907018807"
+                        },
+                        {
+                            "type": "app",
+                            "name": "Spotify",
+                            "value": "3201606009684"
+                        },
+                        {
+                            "type": "app",
+                            "name": "VieON",
+                            "value": "3201812017388"
+                        },
+                        {
+                            "type": "app",
+                            "name": "Galaxy Play",
+                            "value": "3201604008808"
+                        },
+                        {
+                            "type": "app",
+                            "name": "VTV Giải Trí",
+                            "value": "3201910019453"
+                        }
+                    ],
+                    "keys": {
+                        "ARROW_UP": "KEY_UP",
+                        "SELECT": "KEY_ENTER",
+                        "INFORMATION": "KEY_HOME"
+                    }
+                },
+                {
+                    "name": "Living Room TV",
+                    "ip": "192.168.88.178",
+                    "mac": "70:b1:3d:b2:9f:24",
+                    "inputs": [
+                        {
+                            "type": "command",
+                            "name": "Live TV",
+                            "value": "KEY_SOURCE,KEY_LEFT*3,KEY_ENTER"
+                        },
+                        {
+                            "type": "app",
+                            "name": "FPT Play",
+                            "value": "3201707014491"
+                        },
+                        {
+                            "type": "app",
+                            "name": "YouTube",
+                            "value": "111299001912"
+                        },
+                        {
+                            "type": "app",
+                            "name": "Netflix",
+                            "value": "3201907018807"
+                        },
+                        {
+                            "type": "app",
+                            "name": "VieON",
+                            "value": "3201812017388"
+                        },
+                        {
+                            "type": "app",
+                            "name": "Galaxy Play",
+                            "value": "3201604008808"
+                        }
+                    ],
+                    "keys": {
+                        "ARROW_UP": "KEY_UP",
+                        "SELECT": "KEY_ENTER",
+                        "INFORMATION": "KEY_HOME"
+                    }
+                }
+            ],
+            "platform": "SamsungTizen"
+        },
+        {
+            "units": "si",
+            "interval": 10,
+            "stations": [
+                {
+                    "nameNow": "Weather",
+                    "service": "openweathermap",
+                    "key": "52b64a9c919843d31b975b8ddf280f08",
+                    "locationGeo": [
+                        10.8985642,
+                        106.76859221
+                    ],
+                    "locationCity": "Di An, VN",
+                    "language": "en",
+                    "compatibility": "both",
+                    "conditionCategory": "simple",
+                    "now": true,
+                    "extraHumidity": true,
+                    "hidden": [
+                        "Air Pressure",
+                        "Cloud Cover",
+                        "Dew Point",
+                        "Forecast Day",
+                        "Observation Station",
+                        "Observation Time",
+                        "Ozone",
+                        "Rain 1h",
+                        "Rain Day",
+                        "Rain Chance",
+                        "Snow",
+                        "Solar Radiation",
+                        "Sunrise Time",
+                        "Sunset Time",
+                        "Temperature Min",
+                        "Visibility",
+                        "Wind Direction",
+                        "Wind Speed",
+                        "Wind Speed Max"
+                    ],
+                    "tresholdAirPressure": 1020,
+                    "tresholdCloudCover": 50,
+                    "tresholdUvIndex": 5,
+                    "tresholdWindSpeed": 10
+                }
+            ],
+            "platform": "WeatherPlus"
+        },
+        {
+            "name": "eWeLink",
+            "username": "+840968801157",
+            "password": "q21411941",
+            "mode": "auto",
+            "language": "en",
+            "disableNoResponse": true,
+            "countryCode": "+84",
+            "singleDevices": [
+                {
+                    "label": "Máy xịt",
+                    "deviceId": "100151c95e",
+                    "ignoreDevice": false,
+                    "deviceModel": "single",
+                    "showAs": "valve"
+                },
+                {
+                    "label": "Máy bơm",
+                    "deviceId": "10013ec7ba",
+                    "ignoreDevice": false,
+                    "deviceModel": "single",
+                    "showAs": "valve"
+                },
+                {
+                    "label": "Ổ cắm",
+                    "deviceId": "10013eb644",
+                    "ignoreDevice": false,
+                    "deviceModel": "single",
+                    "showAs": "outlet",
+                    "isInched": false
+                },
+                {
+                    "label": "Power Station",
+                    "deviceId": "100179f0d8",
+                    "ignoreDevice": true,
+                    "deviceModel": "pow",
+                    "showAs": "outlet",
+                    "inUsePowerThreshold": 10,
+                    "isInched": false
+                },
+                {
+                    "label": "Hồ cá",
+                    "deviceId": "100151862b",
+                    "deviceModel": "single",
+                    "showAs": "tap"
+                },
+                {
+                    "label": "Quạt phòng cha",
+                    "deviceId": "100143c075",
+                    "ignoreDevice": true
+                },
+                {
+                    "label": "Quạt bàn",
+                    "deviceId": "10015d1f3b",
+                    "deviceModel": "s",
+                    "showAs": "outlet"
+                }
+            ],
+            "multiDevices": [
+                {
+                    "label": "Garage",
+                    "deviceId": "100129d788",
+                    "deviceModel": "4ch",
+                    "showAs": "garage",
+                    "showAsMotor": "garage"
+                }
+            ],
+            "sensorDevices": [
+                {
+                    "label": "Garage Sensor",
+                    "deviceId": "100171b3ee",
+                    "ignoreDevice": true,
+                    "deviceModel": "dw",
+                    "showAs": "default"
+                }
+            ],
+            "rfDevices": [
+                {
+                    "label": "Doorbell",
+                    "deviceId": "1000d02184",
+                    "ignoreDevice": true,
+                    "ipAddress": "192.168.2.158"
+                }
+            ],
+            "_bridge": {
+                "username": "0E:65:D1:96:C4:79",
+                "port": 47540
+            },
+            "platform": "eWeLink"
+        },
+        {
+            "name": "Google Smart Home",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Imdvb2dsZS1vYXV0aDJ8MTE2OTg0NDUwMDMyNzc0MjU1NjUyIiwiaWF0IjoxNjY2Mzc3NzY1fQ.dgRYNzd0ThzPZyiRblt5ydQq8KWhSRuWUx0nnAJ_bnY",
+            "notice": "Keep your token a secret!",
+            "disablePinCodeRequirement": true,
+            "platform": "google-smarthome"
+        },
+        {
+            "name": "TuyaWebPlatform",
+            "options": {
+                "username": "art.leolion@gmail.com",
+                "password": "q21411941",
+                "countryCode": "84",
+                "platform": "smart_life"
+            },
+            "defaults": [
+                {
+                    "id": "ebf287959f88433a88eabe",
+                    "device_type": "light",
+                    "max_kelvin": "2000",
+                    "light_characteristics": [
+                        "Brightness",
+                        "Color Temperature"
+                    ]
+                }
+            ],
+            "scenes": false,
+            "platform": "TuyaWebPlatform",
+            "_bridge": {
+                "username": "0E:56:5A:58:FB:2C",
+                "port": 33591
+            }
+        },
+        {
+            "mqtt": {
+                "base_topic": "zigbee2mqtt",
+                "server": "mqtt://192.168.2.151:1883",
+                "reject_unauthorized": false,
+                "keepalive": 60,
+                "version": 4,
+                "disable_qos": false
+            },
+            "defaults": {
+                "exclude": false
+            },
+            "exclude_grouped_devices": false,
+            "_bridge": {
+                "username": "0E:B2:22:4A:BD:86",
+                "port": 34109
+            },
+            "platform": "zigbee2mqtt",
+            "name": "Zigbee to Mqtt"
+        }
+    ],
+    "disabledPlugins": [
+        "homebridge-camera-ffmpeg",
+        "homebridge-gsh",
+        "homebridge-ttlock",
+        "homebridge-yeelighter",
+        "homebridge-z2m"
+    ]
+}
