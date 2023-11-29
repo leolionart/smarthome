@@ -1,5 +1,7 @@
 # Xây dựng Home LAB nhu cầu cơ bản
+![](https://egg.d.pr/i/TuTrWz.jpg)
 Với niềm yêu thích công nghệ, luôn tìm kiếm giải pháp xoay quanh việc tối ưu các vấn đề thường gặp. Tôi dành thời gian cho dự án cá nhân này để học thêm các kỹ năng liên quan tới lập trình và các công nghệ phổ biến. Hiểu cách các service vận hành cùng với nhau, cách xây dựng cấu trúc dữ liệu, cách tối ưu hoá phần cứng...
+
 
 **Thông tin cấu hình thiết bị sử dụng trong HomeLABS**
 | BananaPI | Cấu hình 
@@ -65,6 +67,8 @@ Trong trường hợp hệ thống chính gặp sự cố vẫn cần hệ thố
 
 ## Theo dõi hệ thống
 ![](https://egg.d.pr/i/zRDjAi.jpg)
+Theo đõi lượng điện tiêu thụ trong nhà, nhiệt độ thu thập từ cảm biến về độ chênh lệch nhiệt độ trong phòng và ngoài trời để tắt điều hoà đúng lúc, hạn chế sử dụng điện không hiệu quả
+
 | Serices | Description
 |--------------|-------
 | Node-RED | Thiết lập các automation flows, tuỳ biến thêm kịch bản mới
