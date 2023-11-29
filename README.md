@@ -26,7 +26,7 @@ Không một hãng nào có tất cả thiết bị đáp ứng cả 3 tiêu ch�
 
 ## Hệ thống giải trí miễn phí
 ![](https://egg.d.pr/i/KB4YQS.jpg)
-Bạn yêu thích nhiều series phim hay chiếu trên nhiều nền tảng khác nhau, mong muốn có thể xem sớm nhất khi được phát hành kể cả là bản CAM. Tôi thiết lập một hệ thống với nhiệm vụ
+>Bạn yêu thích nhiều series phim hay chiếu trên nhiều nền tảng khác nhau, mong muốn có thể xem sớm nhất khi được phát hành kể cả là bản CAM. Tôi thiết lập một hệ thống với nhiệm vụ
 - Tìm kiếm trên internet về thông tin bộ phim tôi muốn
 - Tự tìm link và tải về bằng torrent khi xuất hiện
 - Tự nâng cấp bản CAM lên bản chất lượng cao hơn nếu phim hay và tôi muốn giữ lại xem tiếp
@@ -54,6 +54,7 @@ Bạn yêu thích nhiều series phim hay chiếu trên nhiều nền tảng kh�
 
 ## Home HUB dự phòng & Zigbee HUB
 Trong trường hợp hệ thống chính gặp sự cố vẫn cần hệ thống khác khởi động được lên ngay để không làm dán đoạn các hoạt động như mở cửa garage hay hệ thống báo động trong nhà
+
 | Serices | Description
 |--------------|-------
 | Docker | Dễ dàng cài đặt các dịch vụ được đóng gói sẵn
