@@ -20,8 +20,8 @@ Không một hãng nào có tất cả thiết bị đáp ứng cả 3 tiêu ch�
 | Docker | Dễ dàng cài đặt các dịch vụ được đóng gói sẵn
 | Portainer | Quản lý trực quan trên nền tảng web  
 | Watchtower |  Tự cập nhật phiên bản cho các dịch vụ trong portainer
-| Homebridge | Kết nối thiết bị vào Homkit
-| Scryted | Đưa các camera không hỗ trợ Homkit lên nền tảng Apple Home
+| Homebridge | Kết nối thiết bị vào HomeKit
+| Scryted | Đưa các camera không hỗ trợ HomeKit lên nền tảng Apple Home
 
 
 ## Hệ thống giải trí miễn phí
