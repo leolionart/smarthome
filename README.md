@@ -1,12 +1,13 @@
-# Các bước thiết lập môi trường trên BananaPI (BPI M5)
+# Xây dựng Home LAB
 
+## 1. Thiết lập môi trường trên BananaPI (BPI M5)
 1. Tải image, sử dụng phần mềm BalenaEther để nạp hệ điều hành vào thẻ nhớ
 https://wiki.banana-pi.org/Getting_Started_with_M5/M2Pro#Install_Image_to_EMMC
 2. Mở boot folder bằng Terminal, gõ lệch sau để tạo truy cập từ xa: touch ssh
 3. Cắm thẻ nhớ và cấp nguồn cho BPi. Truy cập từ xa bằng terminal: ssh pi@192.168.2.151 Mật khẩu bananapi
 4. Sử dụng công cụ cài hệ điều hành vào EMMC. Copy file img vào ổ cứng/usb và sử dụng nó để copy (đỡ phải tìm cách copy vào phân vùng hạn hẹp của SD cart). Các bước thực hiện dưới đây
 
-## Setup Docker Compose và Portainer để tiếp tục setup các dịch vụ dưới đây
+## 2. Setup Docker Compose và Portainer để tiếp tục setup các dịch vụ dưới đây
 Sử dụng câu lệnh `curl -sk https://raw.githubusercontent.com/leolionart/smarthome/main/Docker_AIO_setup.sh | sudo bash -`
 
 **Toàn bộ các dịch vụ được sử dụng trên HUB của tôi**
@@ -24,25 +25,32 @@ Sử dụng câu lệnh `curl -sk https://raw.githubusercontent.com/leolionart/s
 > Các config liên quan tới dịch vụ trên đang được lưu trữ ở ổ cứng. Khi setup stack trên docker khai báo đúng volumn sẽ gọi đủ config lên (Restore bằng portainer sẽ có lại toàn bộ config)
 > Folder chứa các config file: 
 
-## Thiết lập hệ thống theo dõi Home LAB
-https://egg.d.pr/i/zRDjAi
+## 3. Thiết lập hệ thống theo dõi Home LAB
+![](https://egg.d.pr/i/zRDjAi.jpg)
 
 ### Sử dụng Prometheus và InluxDB để show hiển thị dữ liệu bằng grafana
+Tôi muốn theo dõi trực quan các dữ liệu thu thập từ cảm biến, tốc độ mạng hiện tại, tiền điện sử dụng hàng tháng. Tập trung tất cả trên một dashboard
 1. Promehteus: Chứa metrics trong RAM
 2. Grafana: Dựng dashboard trực quan
 3. SNMP_exporter: Đọc dữ liệu từ Mikrotik Router
 4. Node-exporter: Đọc dữ liệu từ linux. Có thể dùng cadvisor có thể xem chi tiết hơn các node đang chiếm dụng tài nguyên
 5. Node-RED: Xây dựng flow dữ liệu đưa vào InluxDB. Chi tiết các flow hữu ích
 
+
 **NodeRED-Flow**
-1. Cài thêm 
-2. Flow lấy log sensors từ Homebridge: https://raw.githubusercontent.com/leolionart/smarthome/main/Monitoring/node-red-flow.json
+1. Cài thêm các Palette sau: 
+    - node-red-contrib-homebridge-automation
+    - node-red-contrib-influxdb
+2. Import Flow lấy log sensors từ Homebridge: https://raw.githubusercontent.com/leolionart/smarthome/main/Monitoring/node-red-flow.json
+![](https://egg.d.pr/i/FbA9oe.jpg)
 
-### Theo dõi bằng widget & nhận thông báo
-1. Cài Script
-2. Sử dụng config: https://raw.githubusercontent.com/leolionart/smarthome/main/Monitoring/homebridgeStatusWidget.js
+### Theo dõi bằng widget & nhận thông báo trên IOS
+Làm thế nào để biết khi nào cần cập nhật, hệ thống đang bị quá tải hay không, bị sụp nguồn hay không?
+1. Cài app [Scriptable](https://scriptable.app/)
+2. Tạo mới scripts
+3. Sử dụng config: https://raw.githubusercontent.com/leolionart/smarthome/main/Monitoring/homebridgeStatusWidget.js
 
-## Với PI-III sử dụng làm HUB Zigbee đa năng
+## 4. Với PI-III sử dụng làm HUB Zigbee đa năng
 Thiết lập bằng homebridge firmware qua Raspberry Pi Imager để đơn giản quá trình setup
 Hoạt động với toàn bộ thiết bị sử dụng sóng Zigbee không kể hãng nào. Lệnh cài đặt tự động
 
