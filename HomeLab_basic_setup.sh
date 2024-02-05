@@ -36,29 +36,10 @@ echo " "
 echo "----------------------------------------------------------------"
 echo "Commence Portainer Setup"
 echo "----------------------------------------------------------------"
-sudo docker run -d -p 9000:9000 --name=portainer --restart unless-stopped -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest
+docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ee:latest
 echo "----------------------------------------------------------------"
-echo "Portainer Interface is reachable at homebridge.local:9000"
+echo "Portainer Interface is reachable at port:9443"
 echo "----------------------------------------------------------------"
-echo " "
-echo " "
-echo " "
-# Watch Tower setup
-echo "----------------------------------------------------------------"
-echo "Commence Watch Tower Setup"
-echo "----------------------------------------------------------------"
-sudo docker run --name="watchtower" -d --restart unless-stopped -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower
-echo "----------------------------------------------------------------"
-echo "Watch Tower Setup Completed"
-echo "----------------------------------------------------------------"
-echo " "
-echo " "
-echo " "
-echo "----------------------------------------------------------------"
-echo "ALL PACKAGES INSTALLED WITH NO ERRORS"
-echo "----------------------------------------------------------------"
-echo " "
-echo " "
-echo " "
+
 echo "Rebooting Now"
 # sudo reboot
