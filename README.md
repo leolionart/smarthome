@@ -3,7 +3,7 @@
 
 ![](https://egg.d.pr/i/TuTrWz.jpg)
 Với niềm yêu thích công nghệ, luôn tìm kiếm giải pháp xoay quanh việc tối ưu các vấn đề thường gặp. Tôi dành thời gian cho dự án cá nhân này để học thêm các kỹ năng liên quan tới lập trình và các công nghệ phổ biến. Hiểu cách các service vận hành cùng với nhau, cách xây dựng cấu trúc dữ liệu, cách tối ưu hoá phần cứng...
-<p><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=leolionart&show_icons=true&locale=en&layout=compact" alt="leolionart" /></p>
+
 
 **Thông tin cấu hình thiết bị sử dụng trong HomeLABS**
 | BananaPI | Cấu hình 
