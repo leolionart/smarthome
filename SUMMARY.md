@@ -16,9 +16,9 @@
 
 * [Chặn quảng cáo cho cả nhà](nhung-du-an-thu-vi-voi-homelab/chan-quang-cao-cho-ca-nha/README.md)
   * [Adguard Home: Sửa lỗi fail to bind on port 53](nhung-du-an-thu-vi-voi-homelab/chan-quang-cao-cho-ca-nha/adguard-home-sua-loi-fail-to-bind-on-port-53.md)
-* [Hệ thống giải trí tại gia](nhung-du-an-thu-vi-voi-homelab/he-thong-giai-tri-tai-gia/README.md)
-  * [Tự động tìm kiếm phim ảnh và subtitle có trên internet](nhung-du-an-thu-vi-voi-homelab/he-thong-giai-tri-tai-gia/tu-dong-tim-kiem-phim-anh-va-subtitle-co-tren-internet.md)
-  * [Quản lý phim ảnh](nhung-du-an-thu-vi-voi-homelab/he-thong-giai-tri-tai-gia/quan-ly-phim-anh.md)
+* [Hệ thống giải trí, xem phim tại nhà](nhung-du-an-thu-vi-voi-homelab/he-thong-giai-tri-xem-phim-tai-nha/README.md)
+  * [Tự động tìm kiếm phim ảnh và subtitle có trên internet](nhung-du-an-thu-vi-voi-homelab/he-thong-giai-tri-xem-phim-tai-nha/tu-dong-tim-kiem-phim-anh-va-subtitle-co-tren-internet.md)
+  * [Quản lý phim ảnh](nhung-du-an-thu-vi-voi-homelab/he-thong-giai-tri-xem-phim-tai-nha/quan-ly-phim-anh.md)
 * [Thiết lập hệ thống theo dõi Home LAB](nhung-du-an-thu-vi-voi-homelab/thiet-lap-he-thong-theo-doi-home-lab/README.md)
   * [Prometheus](nhung-du-an-thu-vi-voi-homelab/thiet-lap-he-thong-theo-doi-home-lab/prometheus.md)
   * [Tự động thu thập dữ liệu từ Homebridge đưa lên InfluxDB](nhung-du-an-thu-vi-voi-homelab/thiet-lap-he-thong-theo-doi-home-lab/tu-dong-thu-thap-du-lieu-tu-homebridge-dua-len-influxdb.md)
@@ -27,10 +27,11 @@
   * [NAS Server](nhung-du-an-thu-vi-voi-homelab/chia-se-file-trong-mang-lan-backup-du-lieu/nas-server.md)
   * [Backup trên Cloud](nhung-du-an-thu-vi-voi-homelab/chia-se-file-trong-mang-lan-backup-du-lieu/backup-tren-cloud.md)
 * [Làm đẹp, trang trí nhà cửa](nhung-du-an-thu-vi-voi-homelab/lam-dep-trang-tri-nha-cua/README.md)
-  * [Cài server chạy Ambilight cho TV](nhung-du-an-thu-vi-voi-homelab/lam-dep-trang-tri-nha-cua/cai-server-chay-ambilight-cho-tv.md)
+  * [Cấu hình LED cho TV](nhung-du-an-thu-vi-voi-homelab/lam-dep-trang-tri-nha-cua/cau-hinh-led-cho-tv.md)
+  * [Cài server chạy Ambilight](nhung-du-an-thu-vi-voi-homelab/lam-dep-trang-tri-nha-cua/cai-server-chay-ambilight.md)
 
 ## Pro Tips
 
 * [Use memory card as RAM](pro-tips/use-memory-card-as-ram.md)
 * [Frequently used command](pro-tips/frequently-used-command.md)
-* [Reset Default - Làm lại cuộc đời](pro-tips/reset-default-lam-lai-cuoc-doi.md)
+* [Networking & Wi-Fi](pro-tips/networking-and-wi-fi.md)

@@ -6,13 +6,28 @@ description: >-
 
 # Frequently used command
 
+### Nếu gặp lỗi ở bất cứ bước nào
+
+Cố gắng dùng cấu trúc dưới đây để làm mới source và thử lại câu lện
+
+```
+sudo apt-get autoremove
+sudo apt update & sudo apt upgrade -y
+```
+
+### Kiểm tra khả năng chịu tải hệ thống
+
+Kiểm tra mức sử dụng RAM
+
+`top -o -%MEM`
+
+Hoặc sử dụng các tuỳ chọn tại [use-memory-card-as-ram.md](use-memory-card-as-ram.md "mention")
+
 ## Uninstall Docker Engine
 
-### Gỡ cài đặt Docker Engine, CLI, containerd, và Docker Compose:
+### Uninstall the Docker Engine, CLI, containerd, and Docker Compose packages:
 
-```
-sudo apt-get purge docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin docker-ce-rootless-extras
-```
+$ sudo apt-get purge docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin docker-ce-rootless-extras
 
 ### Xóa hình ảnh, containers, volumes hoặc tệp cấu hình tùy chỉnh trên máy chủ:
 
