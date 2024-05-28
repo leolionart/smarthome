@@ -4,7 +4,7 @@ Flex về hệ thống smarthome và tiện ích mình tự xây dựng từ 202
 
 > Với niềm yêu thích công nghệ, luôn tìm kiếm giải pháp xoay quanh việc tối ưu các vấn đề thường gặp. Tôi dành thời gian cho dự án cá nhân này để học thêm các kỹ năng liên quan tới lập trình và các công nghệ phổ biến.
 
-## Xây dựng Home LAB nhu cầu cơ bản
+## Tối ưu hoá việc dùng mạng trong gia đình
 
 <figure><img src="https://egg.d.pr/i/TuTrWz.jpg" alt=""><figcaption></figcaption></figure>
 
@@ -38,11 +38,18 @@ Với phần cứng này tôi có thể vận hành được các tiện ích nh
 
 </div>
 
-### Theo dõi hệ thống
+[dua-thiet-bi-camera-len-apple-homekit.md](smarthome-hub/apple-homekit-cho-thiet-bi-khong-ho-tro/dua-thiet-bi-camera-len-apple-homekit.md "mention")
+
+### Theo dõi lịch sử cảm biến, nhiệt độ, tiền điện sử dụng toàn căn nhà
 
 <figure><img src="https://egg.d.pr/i/zRDjAi.jpg" alt=""><figcaption></figcaption></figure>
 
-Theo đõi lượng điện tiêu thụ trong nhà, nhiệt độ thu thập từ cảm biến về độ chênh lệch nhiệt độ trong phòng và ngoài trời để tắt điều hoà đúng lúc, hạn chế sử dụng điện không hiệu quả.
+Theo đõi lượng điện tiêu thụ trong nhà, nhiệt độ thu thập từ cảm biến về độ chênh lệch nhiệt độ trong phòng và ngoài trời để tắt điều hoà đúng lúc, hạn chế sử dụng điện không hiệu quả. Tôi thiết lập một màn hình trung tâm để theo dõi tất cả chỉ số này. Dự án này giúp tôi hiểu rõ hơn về cách lưu, clean và visually dữ liệu lên các công cụ vẽ biểu đồ. \
+\
+Nếu bạn cũng muốn có được trải nghiệm tương tự, loạt bài này sẽ cực kỳ hữu ích:\
+
+
+[thiet-lap-he-thong-dashboard-theo-doi-hieu-nang-tien-dien-cam-bien](nhung-du-an-thu-vi-voi-homelab/thiet-lap-he-thong-dashboard-theo-doi-hieu-nang-tien-dien-cam-bien/ "mention")
 
 ***
 
@@ -52,26 +59,50 @@ Theo đõi lượng điện tiêu thụ trong nhà, nhiệt độ thu thập t�
 
 <table><thead><tr><th width="156">RaspberryPI</th><th>Cấu hình</th></tr></thead><tbody><tr><td>CPU</td><td>4 CPU</td></tr><tr><td>RAM</td><td>1G</td></tr><tr><td>ROM</td><td>16G</td></tr></tbody></table>
 
+{% hint style="success" %}
+Với đặc thù hoạt động 24/7, tiết kiệm điện năng, vận hành ổn định. Tôi chọn Raspberry cũ cỡ 500k cho các nhiệm vụ trên. Với 2 tác vụ này CPU và RAM của thiết bị gần như luôn hoạt động ở mức >70% trong 2 năm chưa một lần gặp sự cố
+{% endhint %}
+
 ### Đưa thiết bị lên HomeKit
 
-Không một hãng nào có tất cả thiết bị đáp ứng cả 3 tiêu chí rẻ, ổn định, bền bỉ. Mục tiêu của dự án là đưa thiết bị IOT của bất cứ hãng nào lên Apple HomeKit và hoạt động một cách ổn định với chi phí thấp nhất.
+Không một hãng nào có tất cả thiết bị đáp ứng cả 3 tiêu chí rẻ, ổn định, bền bỉ. Mục tiêu của dự án là đưa thiết bị IOT của bất cứ hãng nào lên Apple HomeKit và hoạt động một cách ổn định với chi phí thấp nhất có thể nhưng vẫn cần đảm bảo tính ổn định&#x20;
 
-<div align="left">
+<div align="center">
 
 <figure><img src="https://egg.d.pr/i/IBIEzi.jpg" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
+**Có 2 phương án để Fake HomeKIT:**&#x20;
+
+* Mode firmware tuỳ biến cho thiết bị phần cứng
+* Tích hợp thông qua Homebridge (vẫn giữ firmware của hãng)
+
+Tôi thường chọn giải pháp thứ 2 vì đơn giản và hoạt động ổn định hơn. Bạn có thể tham khảo loạt bài:\
+[apple-homekit-cho-thiet-bi-khong-ho-tro](smarthome-hub/apple-homekit-cho-thiet-bi-khong-ho-tro/ "mention")
+
+{% hint style="info" %}
+Tuy nhiên trong một số trường hợp việc tích hợp này sẽ khiến thiết bị phản hồi chậm. Do thông thường lệnh vẫn phải đi lên server của hãng (nếu k có tuỳ chọn control via LAN)  sau đó mới xuống thiết bị. Khi đấy nên xem xét tới việc up firmware để add thẳng vào homekit
+{% endhint %}
+
 ### Zigbee HUB cho toàn bộ thiết bị
 
-<div align="left">
+<div align="center">
 
 <figure><img src=".gitbook/assets/image.png" alt="" width="375"><figcaption><p>Các cảm biến của 2 hãng khác nhau vẫn kết nối được chung 1 HUB Zigbee</p></figcaption></figure>
 
 </div>
 
-Trong trường hợp hệ thống chính gặp sự cố vẫn cần hệ thống khác khởi động được lên ngay để không làm dán đoạn các hoạt động như mở cửa garage hay hệ thống báo động trong nhà.
+Thiết bị Zigbee rất đa dạng, pin trâu và thiết kế rất nhỏ gọn vì vậy có nhiều sản phẩm đẹp, rẻ trên thị trường phù hợp với từng nhu cầu sử dụng cụ thể. Tuy nhiên, yếu điểm của Zigbee luôn cần một HUB trung tâm để giao tiếp với internet; mỗi hãng sẽ lại có một HUB khác nhau và giá không hề rẻ. Làm thế nào để xoá bỏ rào cản này?
+
+
+
+Tự tuỳ biến một HUB để thu nhận sóng Zigbee là một giải pháp vô cùng hiệu quả. Hướng dẫn chi tiết:
+
+[mot-hub-ket-noi-duoc-toan-bo-thiet-bi-zigbee-cua-tat-ca-cac-hang.md](smarthome-hub/apple-homekit-cho-thiet-bi-khong-ho-tro/mot-hub-ket-noi-duoc-toan-bo-thiet-bi-zigbee-cua-tat-ca-cac-hang.md "mention")
 
 ## Connect with me
 
 {% embed url="https://aitran.naai.studio/" %}
+Blog cá nhân chia sẻ thêm nhiều thứ về bản thân mình
+{% endembed %}

@@ -9,6 +9,8 @@ coverY: 0
 Khi bước vào thế giới smarthome bạn sẽ được mời vào ma trận với rất nhiều lựa chọn về hãng với các mức giá khác nhau. Và thông thường bạn chỉ được chọn 1 trong số các hãng để xài. \
 [cac-phuong-an-choi-nha-thong-minh-tinh-toi-hien-tai.md](cac-phuong-an-choi-nha-thong-minh-tinh-toi-hien-tai.md "mention")
 
+> Tôi ở đây để cung cấp cho bạn một góc nhìn mới và lộ trình chi tiết để từng bước trở thành người chơi đồ smarthome
+
 ## Tiêu chí cá nhân mình khi lựa chọn thiết bị:
 
 1. **Kiểu dáng thiết kế:** Phải đẹp, phù hợp với nội thất căn nhà, lắp vào không mất thẩm mỹ
