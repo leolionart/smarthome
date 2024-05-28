@@ -1,5 +1,8 @@
 ---
-description: Những gì bạn có thể làm với phần cứng RaspberryPi
+description: >-
+  Flex về hệ thống smarthome và tiện ích mình tự xây dựng từ 2022 tới hiện tại,
+  qua nhiều cải tiến mình quyết định chia sẻ lại để các bạn có một lộ trình chơi
+  đồ phù hợp
 ---
 
 # Welcome to my HomeLAB
@@ -43,7 +46,7 @@ Không một hãng nào có tất cả thiết bị đáp ứng cả 3 tiêu ch�
 * Tự tìm Eng và Việt Sub cho các phim này để khi tôi xem thì có sẵn sub chất lượng
 * Thêm phim vào danh sách theo dõi dễ dàng: Xem trailer thích có thể vào Plex add to watchlist là xong
 
-<table data-view="cards"><thead><tr><th>Service</th><th>Description</th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td>Plex</td><td>Tự tạo server xem phim ở nhà</td><td></td></tr><tr><td>qBittorrent</td><td>Tải phim</td><td></td></tr><tr><td>Radarr</td><td>Quản lí phim lẻ</td><td><a href=".gitbook/assets/image (2).png">image (2).png</a></td></tr><tr><td>Sonarr</td><td>Quản lí phim bộ</td><td><a href=".gitbook/assets/image (1).png">image (1).png</a></td></tr><tr><td>Prowlarr</td><td>Sẽ tìm nguồn tải phim cho 2 cái trên</td><td></td></tr><tr><td>Bazarr</td><td>Tự động tải sub việt, sub anh theo tên phim</td><td></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th>Service</th><th>Description</th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td>Plex</td><td>Tự tạo server xem phim ở nhà (hoặc từ xa nếu muốn)</td><td><a href=".gitbook/assets/image (7).png">image (7).png</a></td></tr><tr><td>qBittorrent</td><td>Tải phim</td><td><a href=".gitbook/assets/image (4).png">image (4).png</a></td></tr><tr><td>Radarr</td><td>Quản lí phim lẻ</td><td><a href=".gitbook/assets/image (2).png">image (2).png</a></td></tr><tr><td>Sonarr</td><td>Quản lí phim bộ</td><td><a href=".gitbook/assets/image (1).png">image (1).png</a></td></tr><tr><td>Prowlarr</td><td>Sẽ tìm nguồn tải phim cho 2 cái trên</td><td><a href=".gitbook/assets/image (6).png">image (6).png</a></td></tr><tr><td>Bazarr</td><td>Tự động tải sub việt, sub anh theo tên phim</td><td><a href=".gitbook/assets/image (5).png">image (5).png</a></td></tr></tbody></table>
 
 ## HUB backup - Zigbee, Monitoring
 

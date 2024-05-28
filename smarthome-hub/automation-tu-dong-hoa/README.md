@@ -6,7 +6,7 @@ coverY: 0
 
 # Automation - Tự động hoá
 
-Chủ đề tự động hoá trong nhà thông minh là một chủ đề rộng lớn, phạm vi bài viết này không thể giải thích và hướng dẫn hết. Vì thế mình chỉ sơ lược để anh em mới chơi SmartHome hiểu và sử dụng hiệu quả.&#x20;
+> Tự động hoá có thể thiết lập ở Apple Home hoặc ở trong chính app của hãng hoặc bạn có thể tự lập trình trên HomeLAB. Tôi sẽ có từng hướng dẫn cụ thể cho từng loại tự đọng hoá khác nhau ở loạt bài viết tiếp theo
 
 Đối với các anh em mới bắt đầu tiếp cận với Nhà Thông Minh. Thì đa số sẽ dừng lại ở nhu cầu đơn giản kiểu như: Nâng cấp thiết bị để có thể bật tắt các thiết bị như: Công tắc, bóng đèn, điều chỉnh màu, độ sáng, bật tắt điều hoà, quạt… trên app, trên smartphone.&#x20;
 

@@ -23,13 +23,7 @@ Thiết lập bằng homebridge firmware qua Raspberry Pi Imager để đơn gi�
 
 **Các dịch vụ đi kèm bao gồm**
 
-| Serices        | Description                                             |
-| -------------- | ------------------------------------------------------- |
-| Docker         | Dễ dàng cài đặt các dịch vụ được đóng gói sẵn           |
-| Portainer      | Quản lý trực quan trên nền tảng web                     |
-| Hombridge      | Đưa các thiết bị quan trọng vào một Home khác           |
-| Mqtt Brocker   | Nhận event gửi từ các service cần vận hành qua cách này |
-| Zigbee to Mqtt | Trigger event gửi vào MQTT service                      |
+<table><thead><tr><th width="174">Serices</th><th>Description</th></tr></thead><tbody><tr><td>Docker</td><td>Dễ dàng cài đặt các dịch vụ được đóng gói sẵn</td></tr><tr><td>Portainer</td><td>Quản lý trực quan trên nền tảng web</td></tr><tr><td>Hombridge</td><td>Đưa các thiết bị quan trọng vào một Home khác</td></tr><tr><td>Mqtt Brocker</td><td>Nhận event gửi từ các service cần vận hành qua cách này</td></tr><tr><td>Zigbee to Mqtt</td><td>Trigger event gửi vào MQTT service</td></tr></tbody></table>
 
 Lưu ý: Cần USB Dongle để bắt sóng Zigbee. [Hướng dẫn chi tiết tham khảo của bác Mr. Old](https://youtu.be/eTe0UU9oxPE?si=Pccp5agdG\_qfdiX8)
 
