@@ -38,8 +38,6 @@ Không một hãng nào có tất cả thiết bị đáp ứng cả 3 tiêu ch�
 * Tự tìm Eng và Việt Sub cho các phim này để khi tôi xem thì có sẵn sub chất lượng
 * Thêm phim vào danh sách theo dõi dễ dàng: Xem trailer thích có thể vào Plex add to watchlist là xong
 
-#### [Hướng dẫn cài các dịch vụ sưu tập phim](https://github.com/leolionart/smarthome/wiki/MovieHUB)
-
 <table><thead><tr><th width="154">Service</th><th>Description</th></tr></thead><tbody><tr><td>Plex</td><td>Tự tạo server xem phim ở nhà</td></tr><tr><td>qBittorrent</td><td>Tải phim</td></tr><tr><td>Radarr</td><td>Quản lí phim lẻ</td></tr><tr><td>Sonarr</td><td>Quản lí phim bộ</td></tr><tr><td>Prowlarr</td><td>Sẽ tìm nguồn tải phim cho 2 cái trên</td></tr><tr><td>Bazarr</td><td>Tự động tải sub việt, sub anh theo tên phim</td></tr><tr><td>Heimdall</td><td>Shortcut truy cập các ứng dụng chứ nhiều port quá không nhớ</td></tr></tbody></table>
 
 ## HUB backup - Zigbee, Monitoring
@@ -58,8 +56,8 @@ Trong trường hợp hệ thống chính gặp sự cố vẫn cần hệ thố
 
 ### Theo dõi hệ thống
 
-![](https://egg.d.pr/i/zRDjAi.jpg) Theo đõi lượng điện tiêu thụ trong nhà, nhiệt độ thu thập từ cảm biến về độ chênh lệch nhiệt độ trong phòng và ngoài trời để tắt điều hoà đúng lúc, hạn chế sử dụng điện không hiệu quả.
+![](https://egg.d.pr/i/zRDjAi.jpg)&#x20;
 
-#### [Hướng dẫn thiết lập dashboard theo dõi tiền điện và nhiệt độ các thiết bị quan trọng](https://github.com/leolionart/smarthome/wiki/Monitor-system-HomeLab)
+Theo đõi lượng điện tiêu thụ trong nhà, nhiệt độ thu thập từ cảm biến về độ chênh lệch nhiệt độ trong phòng và ngoài trời để tắt điều hoà đúng lúc, hạn chế sử dụng điện không hiệu quả.
 
 <table><thead><tr><th width="166">Serices</th><th>Description</th></tr></thead><tbody><tr><td>Node-RED</td><td>Thiết lập các automation flows, tuỳ biến thêm kịch bản mới</td></tr><tr><td>InfluxDB</td><td>Chứa dữ liệu log từ Node-RED gửi về</td></tr><tr><td>Prometheus</td><td>Đóng vai trò trigger để collect dữ liệu từ các service lấy dữ liệu. Lưu tạm trên RAM</td></tr><tr><td>Node_exporter</td><td>Đọc các chỉ số hệ thống linux (CPU, RAM, Nhiệt độ...)</td></tr><tr><td>SNMP_exporter</td><td>Đọc các chỉ số trên Mikrotik (tốc độ mạng, số thiết bị đang kết nối)</td></tr><tr><td>Grafana</td><td>Đóng vai trò visually các dữ liệu trên dưới dạng dashboard</td></tr></tbody></table>
