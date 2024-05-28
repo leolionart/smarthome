@@ -108,7 +108,7 @@ Loa như Apple HomePod, Sonos One có thể tích hợp vào các kịch bản t
 
 Do sự giới hạn của HomeKit trong việc khác thác chi tiết các thông số thiết bị. Chúng ta cần kết hợp thêm 2 ứng dụng miễn phí để khai thác chi tiết thông số của các thiết ví dụ cường độ dòng điện, chỉ số vol, công suất tiêu thụ… của các thiết bị điện.&#x20;
 
-Hai ứng dụng đó là EVE và Controler for Home
+Hai ứng dụng đó là EVE và Controler for Home. [Chi tiết](tu-dong-hoa-nang-cao.md)
 
 ## KẾT BÀI:&#x20;
 

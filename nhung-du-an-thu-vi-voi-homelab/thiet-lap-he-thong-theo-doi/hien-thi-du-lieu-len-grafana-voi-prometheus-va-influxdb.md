@@ -1,8 +1,4 @@
-# Thiết lập hệ thống theo dõi Home LAB
-
-![](https://egg.d.pr/i/zRDjAi.jpg)
-
-## Sử dụng Prometheus và InfluxDB để show hiển thị dữ liệu bằng grafana
+# Hiển thị dữ liệu lên Grafana với Prometheus và InfluxDB
 
 Tôi muốn theo dõi trực quan các dữ liệu thu thập từ cảm biến, tốc độ mạng hiện tại, tiền điện sử dụng hàng tháng. Tập trung tất cả trên một dashboard
 
@@ -15,16 +11,6 @@ Tôi muốn theo dõi trực quan các dữ liệu thu thập từ cảm biến,
    * node-red-contrib-influxdb
 2. Import Flow lấy log sensors từ Homebridge: https://raw.githubusercontent.com/leolionart/smarthome/main/Monitoring/node-red-flow.json ![](https://egg.d.pr/i/FbA9oe.jpg)
 
-## Theo dõi bằng widget & nhận thông báo trên IOS
+## Cài đặt
 
-<div align="left">
-
-<img src="https://egg.d.pr/i/kUYfiu.jpg" alt="" width="188">
-
-</div>
-
-Làm thế nào để biết khi nào cần cập nhật, hệ thống đang bị quá tải hay không, bị sụp nguồn hay không?
-
-1. Cài app [Scriptable](https://scriptable.app/)
-2. Tạo mới scripts
-3. Sử dụng config: https://raw.githubusercontent.com/leolionart/smarthome/main/Monitoring/homebridgeStatusWidget.js
+## Cấu hình

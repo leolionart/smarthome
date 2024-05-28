@@ -4,7 +4,7 @@ cover: >-
 coverY: 0
 ---
 
-# Hệ thống giải trí tại gia
+# Hệ thống giải trí, xem phim tại nhà miễn phí
 
 ![](https://egg.d.pr/i/KB4YQS.jpg)
 
