@@ -1,2 +1,0 @@
-# Quản lý phim ảnh
-

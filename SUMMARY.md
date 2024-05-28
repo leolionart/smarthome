@@ -19,10 +19,12 @@
 ## Những dự án thú vị với HomeLAB
 
 * [Chặn quảng cáo cho cả nhà](nhung-du-an-thu-vi-voi-homelab/chan-quang-cao-cho-ca-nha/README.md)
+  * [Danh sách các nguồn chặn quảng cáo](nhung-du-an-thu-vi-voi-homelab/chan-quang-cao-cho-ca-nha/danh-sach-cac-nguon-chan-quang-cao.md)
   * [Adguard Home: Sửa lỗi fail to bind on port 53](nhung-du-an-thu-vi-voi-homelab/chan-quang-cao-cho-ca-nha/adguard-home-sua-loi-fail-to-bind-on-port-53.md)
 * [Hệ thống giải trí, xem phim tại nhà miễn phí](nhung-du-an-thu-vi-voi-homelab/he-thong-giai-tri-xem-phim-tai-nha-mien-phi/README.md)
+  * [Cài đặt Plex Media Server](nhung-du-an-thu-vi-voi-homelab/he-thong-giai-tri-xem-phim-tai-nha-mien-phi/cai-dat-plex-media-server.md)
   * [Tự động tìm kiếm phim ảnh và subtitle có trên internet](nhung-du-an-thu-vi-voi-homelab/he-thong-giai-tri-xem-phim-tai-nha-mien-phi/tu-dong-tim-kiem-phim-anh-va-subtitle-co-tren-internet.md)
-  * [Quản lý phim ảnh](nhung-du-an-thu-vi-voi-homelab/he-thong-giai-tri-xem-phim-tai-nha-mien-phi/quan-ly-phim-anh.md)
+  * [Tự động tải về phim yêu thích](nhung-du-an-thu-vi-voi-homelab/he-thong-giai-tri-xem-phim-tai-nha-mien-phi/tu-dong-tai-ve-phim-yeu-thich.md)
 * [Thiết lập hệ thống dashboard (theo dõi hiệu năng, tiền điện, cảm biến)](nhung-du-an-thu-vi-voi-homelab/thiet-lap-he-thong-dashboard-theo-doi-hieu-nang-tien-dien-cam-bien/README.md)
   * [Hiển thị dữ liệu lên Grafana với Prometheus và InfluxDB](nhung-du-an-thu-vi-voi-homelab/thiet-lap-he-thong-dashboard-theo-doi-hieu-nang-tien-dien-cam-bien/hien-thi-du-lieu-len-grafana-voi-prometheus-va-influxdb.md)
   * [Tự động thu thập dữ liệu từ Homebridge đưa lên InfluxDB](nhung-du-an-thu-vi-voi-homelab/thiet-lap-he-thong-dashboard-theo-doi-hieu-nang-tien-dien-cam-bien/tu-dong-thu-thap-du-lieu-tu-homebridge-dua-len-influxdb.md)
@@ -40,7 +42,3 @@
 * [Use memory card as RAM](pro-tips/use-memory-card-as-ram.md)
 * [Frequently used command](pro-tips/frequently-used-command.md)
 * [Networking & Wi-Fi](pro-tips/networking-and-wi-fi.md)
-
-***
-
-* [Google Verification File.html](google-verification-file.html.md)
