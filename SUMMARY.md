@@ -3,6 +3,7 @@
 * [Welcome to my HomeLAB](README.md)
   * [Script: Thiết lập toàn bộ dịch vụ smarthome cơ bản](welcome-to-my-homelab/script-thiet-lap-toan-bo-dich-vu-smarthome-co-ban.md)
   * [Script: Thiết lập các dịch vụ để làm media server](welcome-to-my-homelab/script-thiet-lap-cac-dich-vu-de-lam-media-server.md)
+  * [Script: Thiết lập dịch vụ theo dõi và tự động hoá](welcome-to-my-homelab/script-thiet-lap-dich-vu-theo-doi-va-tu-dong-hoa.md)
 
 ## Smarthome HUB
 
@@ -10,10 +11,11 @@
   * [Bảng thống kê chi phí đầu tư thiết bị phục vụ SmartHome](smarthome-hub/kien-thuc-nen-tang-can-biet-truoc-khi-bat-dau/bang-thong-ke-chi-phi-dau-tu-thiet-bi-phuc-vu-smarthome.md)
   * [Các phương án chơi nhà thông minh tính tới hiện tại](smarthome-hub/kien-thuc-nen-tang-can-biet-truoc-khi-bat-dau/cac-phuong-an-choi-nha-thong-minh-tinh-toi-hien-tai.md)
 * [Apple HomeKIT - Cho thiết bị không hỗ trợ](smarthome-hub/apple-homekit-cho-thiet-bi-khong-ho-tro/README.md)
-  * [Mở cửa cuốn bằng ewelink 4CH](smarthome-hub/apple-homekit-cho-thiet-bi-khong-ho-tro/mo-cua-cuon-bang-ewelink-4ch.md)
   * [Một HUB kết nối được toàn bộ thiết bị Zigbee của tất cả các hãng](smarthome-hub/apple-homekit-cho-thiet-bi-khong-ho-tro/mot-hub-ket-noi-duoc-toan-bo-thiet-bi-zigbee-cua-tat-ca-cac-hang.md)
   * [Đưa samsungTV lên Apple Home](smarthome-hub/apple-homekit-cho-thiet-bi-khong-ho-tro/dua-samsungtv-len-apple-home.md)
   * [Đưa thiết bị, camera lên Apple Homekit](smarthome-hub/apple-homekit-cho-thiet-bi-khong-ho-tro/dua-thiet-bi-camera-len-apple-homekit.md)
+  * [Mở cửa cuốn bằng eWeLink 4CH Pro](smarthome-hub/apple-homekit-cho-thiet-bi-khong-ho-tro/mo-cua-cuon-bang-ewelink-4ch-pro.md)
+  * [Danh sách plugin hữu ích trên Homebridge](smarthome-hub/apple-homekit-cho-thiet-bi-khong-ho-tro/danh-sach-plugin-huu-ich-tren-homebridge.md)
 * [Automation - Tự động hoá](smarthome-hub/automation-tu-dong-hoa/README.md)
   * [Các kịch bản tự động hoá mình đang sử dụng](smarthome-hub/automation-tu-dong-hoa/cac-kich-ban-tu-dong-hoa-minh-dang-su-dung.md)
   * [Tự động hoá nâng cao](smarthome-hub/automation-tu-dong-hoa/tu-dong-hoa-nang-cao.md)

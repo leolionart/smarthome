@@ -15,6 +15,6 @@
 
 1. Truy cập **Sonarr**/**Radarr**
 2. Vào phần Setting > Import List > Plex Watch List\
-   ![](<../../.gitbook/assets/image (3).png>)
+   ![](<../../.gitbook/assets/image (3) (1).png>)
 3. Chọn **Authenticate** để xác thực quyền truy cập Wishlist trên Plex
 4. **Save** nữa là xong. Từ giờ cứ có phim mới trong wishlist hệ thống tự quét để thêm vào

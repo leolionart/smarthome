@@ -1,15 +1,11 @@
----
-description: Làm HUB Zigbee đa năng
----
-
 # Một HUB kết nối được toàn bộ thiết bị Zigbee của tất cả các hãng
 
 ### Chuẩn bị
 
 * USB Zigbee
-*
+* Pi-III (hoặc máy tính Linux bất kỳ)
 
-### PI-III sử dụng làm HUB Zigbee đa năng
+### Pi-III sử dụng làm HUB Zigbee đa năng
 
 Thiết lập bằng homebridge firmware qua Raspberry Pi Imager để đơn giản quá trình setup Hoạt động với toàn bộ thiết bị sử dụng sóng Zigbee không kể hãng nào. Lệnh cài đặt tự động để chạy các dịch vụ liên quan
 

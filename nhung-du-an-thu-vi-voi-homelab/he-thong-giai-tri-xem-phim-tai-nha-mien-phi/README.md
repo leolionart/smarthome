@@ -16,12 +16,12 @@ coverY: 0
 
 <div align="center" data-full-width="false">
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Quản lý phim bộ</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Quản lý phim bộ</p></figcaption></figure>
 
 </div>
 
 <div align="right" data-full-width="false">
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Quản lý phim lẻ</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>Quản lý phim lẻ</p></figcaption></figure>
 
 </div>

@@ -1,4 +1,4 @@
-# NAS Server
+# Chia sẻ file trong mạng LAN - Hệ thống NAS nhà làm
 
 ## Tạo NAS server với Samba
 
@@ -67,3 +67,7 @@ UUID=a63e1694-79fe-4d7d-9e69-a9d4f67ce28a /mnt/sda1 ext4 defaults,auto,users,rw,
 UUID=03055c59-3346-451a-be85-7ac95c4ae633 /mnt/sda2 ext4 defaults,auto,users,rw,nofail,noatime 0 0
 UUID=586a5114-39ee-4aae-bc0a-30b6ae315949 /mnt/sda3 ext4 defaults,auto,users,rw,nofail,noatime 0 0
 ```
+
+{% hint style="warning" %}
+Lấy mã UUID theo thông tin trả về trong câu lệnh: `lsblk`
+{% endhint %}

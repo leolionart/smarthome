@@ -12,40 +12,6 @@ coverY: 0
 
 Nhưng giá trị của nhà thông minh không phải chỉ đơn giản vậy. Mà mục tiêu là tự động hoá kết hợp.&#x20;
 
-## Ví dụ cụ thể trong trường hợp của mình:&#x20;
-
-### From A: TRƯỜNG HỢP 1 - GIẢI TRÍ
-
-Mình có một dàn thiết bị xem phim gia đình theo tiêu chuẩn Dolby Atmos với cấu hình 11.2 loa. Trước đây mỗi lần muốn xem phim thì cần bấm rất nhiều thao tác:&#x20;
-
-\- Bật tivi, chuyển In put HDMI.&#x20;
-
-\- Bật Receiver, chọn Ngõ vào Tín hiệu.&#x20;
-
-\- Bật đầu chiếu phim.
-
-\- Bật quạt (hoặc điều hoà, chọn nhiệt độ, tốc độ)
-
-\- Kém rèm, tắt đèn phòng. …
-
-Nói chung là khá nhiều thao tác để có thể bắt đầu xem phim.&#x20;
-
-Nhưng từ khi nâng cấp toàn bộ thiết bị lên thành công tắc thông minh, ổ cắm thông minh, điều khiển quạt, điều khiển máy lạnh, rèm tự động…&#x20;
-
-Thì với tính năng Tự động hoá (Automation). Mình chỉ cần nhấn 1 nút duy nhất là các thiết bị sẽ lần lượt được kích hoạt và hoạt động theo thứ tự lập trình trước, cái nào trước, cái nào sau, cách nhau mấy giây, mấy phút….&#x20;
-
-### To Z: TRƯỜNG HỢP 2 - ĐI TẮM, Ẻ.&#x20;
-
-Trong WC nhà tắm mình lắp các thiết bị thông minh như: Công tắc đèn, công tắc quạt hút, cảm biến đóng mở cửa, quạt treo tường và cảm biến hiện diện gắn âm trần và cảm biến đo nhiệt độ.&#x20;
-
-Kịch bản gồm:&#x20;
-
-\- Nếu có người trong WC thì chỉ đèn sáng. Nếu phát hiện cửa được đóng thì quạt hút trần sẽ chạy. Nếu cảm biến nhiệt độ phát hiện nhiệt độ trên 32 độ thì quạt treo tường sẽ chạy.&#x20;
-
-\- Nếu cửa mở, người vẫn ở trong đó thì tắt quạt hút đèn vẫn sáng. Quạt vẫn chạy. Còn nếu cảm biến hiện diện phát hiện không có người. Thì sau 5s sẽ tắt hết các thiết bị.&#x20;
-
-## VẬY THÌ…&#x20;
-
 ### 1. HomeKit Automation là gì?&#x20;
 
 HomeKit Automation là một tính năng của Apple HomeKit cho phép người dùng tạo ra các kịch bản tự động cho các thiết bị thông minh trong nhà. Thay vì phải điều khiển các thiết bị thủ công, bạn có thể thiết lập các hành động tự động dựa trên các sự kiện hoặc điều kiện cụ thể.
