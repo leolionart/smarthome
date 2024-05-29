@@ -50,10 +50,10 @@
 
 ## Pro Tips
 
+* [Pin thủ nhào vào đây](pro-tips/pin-thu-nhao-vao-day/README.md)
+  * [Biến sạc thường thành sạc nhanh](pro-tips/pin-thu-nhao-vao-day/bien-sac-thuong-thanh-sac-nhanh.md)
+  * [Tự làm bộ sạc nhiều cổng hỗ trợ PD siêu rẻ](pro-tips/pin-thu-nhao-vao-day/tu-lam-bo-sac-nhieu-cong-ho-tro-pd-sieu-re.md)
 * [Truy cập vào các Home Service từ bên ngoài thông qua domain](pro-tips/truy-cap-vao-cac-home-service-tu-ben-ngoai-thong-qua-domain.md)
 * [Use memory card as RAM](pro-tips/use-memory-card-as-ram.md)
 * [Frequently used command](pro-tips/frequently-used-command.md)
 * [Networking & Wi-Fi](pro-tips/networking-and-wi-fi.md)
-* [Pin thủ nhào vào đây](pro-tips/pin-thu-nhao-vao-day/README.md)
-  * [Biến sạc thường thành sạc nhanh](pro-tips/pin-thu-nhao-vao-day/bien-sac-thuong-thanh-sac-nhanh.md)
-  * [Tự làm bộ sạc nhiều cổng hỗ trợ PD siêu rẻ](pro-tips/pin-thu-nhao-vao-day/tu-lam-bo-sac-nhieu-cong-ho-tro-pd-sieu-re.md)

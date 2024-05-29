@@ -84,7 +84,7 @@ Riêng phần cứng yêu cầu cho chức năng này đã phải cần ít nh�
 
 Camera hỗ trợ sẵn HomeKit sẽ đắt hơn ít nhất gấp 2 lần camera thông thường với cùng cấu hình độ phân giải. Đôi khi còn có ít chức năng hơn. Mục tiêu của tôi là khiến nó phải hỗ trợ HomeKit để lúc cần xem camera chỉ cần mở Apple Home. Hoặc khi có ai bấm chuông thì mặc định sẽ hiển thị được hình ảnh camera trên Apple TV. Chi tiết:
 
-### Theo dõi lịch sử cảm biến, nhiệt độ, tiền điện sử dụng toàn căn nhà
+### Theo dõi lịch sử cảm biến, nhiệt độ, tiền điện sử dụng
 
 <figure><img src="https://egg.d.pr/i/zRDjAi.jpg" alt=""><figcaption></figcaption></figure>
 

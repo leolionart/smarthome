@@ -1,3 +1,7 @@
+---
+coverY: 0
+---
+
 # Chặn quảng cáo cho cả nhà
 
 ```docker
