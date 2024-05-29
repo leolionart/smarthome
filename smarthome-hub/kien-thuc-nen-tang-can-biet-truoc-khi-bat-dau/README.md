@@ -34,11 +34,23 @@ Dự án này phù hợp với những người yêu thích nghiên cứu thử 
 2. Dễ dàng thay thế, mở rộng kịch bản sử dụng (mua thiết bị mới) một cách dễ dàng
 3. Lỡ đầu tư rồi, có cách nào tối đa hoá đầu tư để làm những thứ khác không
 
+{% hint style="info" %}
+Bạn có thể bắt đầu theo từng level cho dễ, không cần đầu tư ngay từ ban đầu quá nhiều, và khi lên level tiếp theo bạn cũng chả cần thay thế gì các thiết bị cũ của bạn. Còn nếu bác nào muốn chi phí rẻ nhất thì cứ vào thẳng level 3 luôn nhé
+{% endhint %}
+
+#### **Tôi sẽ tạm chia 3 cấp độ chơi đồ như sau**
+
+1. **Level 1:** Sử dụng nền tảng sẵn có, mua cái nào hợp túi tiền và ổn định để xài\
+   _(Nhược điểm: phải sử dụng nhiều app khác nhau để quản lý)_
+2. **Level 2:** Muốn quản lý tất cả trên một nền tảng duy nhất. Ở đây tôi chọn IOS (Apple Home)\
+   _(Nhược điểm: tích hợp qua lại để chạy nên nhiều lúc thiếu ổn định)_
+3. **Level 3:** Tuỳ biến phần cứng, phần mềm từ một mạch điện tử để sử dụng thêm chức năng&#x20;
+
+## Phần cứng hiện có
+
 {% hint style="warning" %}
 Đã chơi smarthome sẽ nghe tới các khái niệm Home Assistant, Homebridge, Hoobs. Với mình để tối ưu hiệu năng (sử dụng phần cứng nhẹ) mình sẽ sử dụng Homebridge.
 {% endhint %}
-
-## Phần cứng hiện có
 
 <table><thead><tr><th width="159.33333333333331">Tên phần cứng</th><th>Nhiệm vụ</th><th>Note</th></tr></thead><tbody><tr><td>Aqara HUB</td><td>Đưa các thiết bị Zigbee của Aqara lên Apple Home</td><td><a data-mention href="bang-thong-ke-chi-phi-dau-tu-thiet-bi-phuc-vu-smarthome.md">bang-thong-ke-chi-phi-dau-tu-thiet-bi-phuc-vu-smarthome.md</a></td></tr><tr><td>RaspberryPi 3</td><td>Đưa các thiết bị không hỗ trợ homekit lên Apple Home</td><td>Tách 1 thiết bị riêng chỉ làm 1 nhiệm vụ duy nhất cho ổn định</td></tr><tr><td>BananaPi</td><td>Vai trò tương tự RaspberryPI, cài linux chạy các dịch vụ phù hợp</td><td>Bạn cần cái này cho các dự án thú vị với HOMELAB</td></tr></tbody></table>
 

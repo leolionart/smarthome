@@ -19,11 +19,11 @@
 * [Automation - Tự động hoá](smarthome-hub/automation-tu-dong-hoa/README.md)
   * [Các kịch bản tự động hoá mình đang sử dụng](smarthome-hub/automation-tu-dong-hoa/cac-kich-ban-tu-dong-hoa-minh-dang-su-dung.md)
   * [Tự động hoá nâng cao](smarthome-hub/automation-tu-dong-hoa/tu-dong-hoa-nang-cao.md)
-* [DIY thiết bị để hỗ trợ Apple HomeKit](smarthome-hub/diy-thiet-bi-de-ho-tro-apple-homekit/README.md)
-  * [Cảm biến hiện diện bằng bất cứ thiết bị bluetooth nào (đồng hồ, xe hơi...)](smarthome-hub/diy-thiet-bi-de-ho-tro-apple-homekit/cam-bien-hien-dien-bang-bat-cu-thiet-bi-bluetooth-nao-dong-ho-xe-hoi....md)
-  * [Cảm biến hiện diện chia theo khu vực](smarthome-hub/diy-thiet-bi-de-ho-tro-apple-homekit/cam-bien-hien-dien-chia-theo-khu-vuc.md)
-  * [Biến quạt thường thành quạt thông minh full chức năng](smarthome-hub/diy-thiet-bi-de-ho-tro-apple-homekit/bien-quat-thuong-thanh-quat-thong-minh-full-chuc-nang.md)
-  * [Hướng dẫn làm bộ điều khiển máy lạnh thông minh hoạt động trên Apple HomeKit và có tính năng phản hồ](smarthome-hub/diy-thiet-bi-de-ho-tro-apple-homekit/huong-dan-lam-bo-dieu-khien-may-lanh-thong-minh-hoat-dong-tren-apple-homekit-va-co-tinh-nang-phan-ho.md)
+* [DIY thiết bị hỗ trợ Apple HomeKit](smarthome-hub/diy-thiet-bi-ho-tro-apple-homekit/README.md)
+  * [Cảm biến hiện diện bằng bất cứ thiết bị bluetooth nào (đồng hồ, xe hơi...)](smarthome-hub/diy-thiet-bi-ho-tro-apple-homekit/cam-bien-hien-dien-bang-bat-cu-thiet-bi-bluetooth-nao-dong-ho-xe-hoi....md)
+  * [Cảm biến hiện diện chia theo khu vực](smarthome-hub/diy-thiet-bi-ho-tro-apple-homekit/cam-bien-hien-dien-chia-theo-khu-vuc.md)
+  * [Biến quạt thường thành quạt thông minh full chức năng](smarthome-hub/diy-thiet-bi-ho-tro-apple-homekit/bien-quat-thuong-thanh-quat-thong-minh-full-chuc-nang.md)
+  * [Hướng dẫn làm bộ điều khiển máy lạnh thông minh hoạt động trên Apple HomeKit và có tính năng phản hồ](smarthome-hub/diy-thiet-bi-ho-tro-apple-homekit/huong-dan-lam-bo-dieu-khien-may-lanh-thong-minh-hoat-dong-tren-apple-homekit-va-co-tinh-nang-phan-ho.md)
 
 ## Những dự án thú vị với HomeLAB
 
