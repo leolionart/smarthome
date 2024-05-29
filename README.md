@@ -11,20 +11,20 @@ Mình cần một thiết bị trung gian để đưa camera lên Apple Home, tu
 ## Danh sách thiết bị đang vận hành
 
 {% tabs %}
-{% tab title="BPI M5" %}
-**Thông tin cấu hình thiết bị sử dụng cho HomeLAB**
+{% tab title="BPI M5 (BananaPi)" %}
+**Phục vụ ác dự án HomeLAB (xem phim, đưa camera lên homekit...)**
 
-<table><thead><tr><th width="163">BananaPI</th><th>Cấu hình</th></tr></thead><tbody><tr><td>CPU</td><td>4 CPU</td></tr><tr><td>RAM</td><td>4G</td></tr><tr><td>ROM</td><td>32G (SD Card để cài hệ điều hành)</td></tr><tr><td>EMMC</td><td>16G (dùng làm bộ nhớ đệm mở rộng cho RAM)</td></tr><tr><td>HHD</td><td>3Tb (4 ổ cứng cũ)</td></tr></tbody></table>
+<table><thead><tr><th width="163">BananaPi</th><th>Cấu hình</th></tr></thead><tbody><tr><td>CPU</td><td>4 CPU</td></tr><tr><td>RAM</td><td>4G</td></tr><tr><td>ROM</td><td>32G (SD Card để cài hệ điều hành)</td></tr><tr><td>EMMC</td><td>16G (dùng làm bộ nhớ đệm mở rộng cho RAM)</td></tr><tr><td>HHD</td><td>3Tb (4 ổ cứng cũ)</td></tr></tbody></table>
 
 {% hint style="success" %}
 Với phần cứng này tôi có thể vận hành được các tiện ích như ở dưới 24/7 với chi phí tiền điện chưa tới 50k/tháng. Để tối ưu hơn về hiệu năng bạn có thể sử dụng một laptop cũ hoặc một mini PC để cài đặt. Hoặc chơi lớn bằng PC luôn thì càng tốt, chỉ có điều tốn điện hơn thôi
 {% endhint %}
 {% endtab %}
 
-{% tab title="RaspPi 3" %}
-**Thông tin cấu hình thiết bị sử dụng trong HomeHUB**
+{% tab title="RaspberryPi 3" %}
+**Chuyên chạy Homebridge, Zigbee HUB => Phục vụ SmartHome**
 
-<table><thead><tr><th width="156">RaspberryPI</th><th>Cấu hình</th></tr></thead><tbody><tr><td>CPU</td><td>4 CPU</td></tr><tr><td>RAM</td><td>1G</td></tr><tr><td>ROM</td><td>16G</td></tr></tbody></table>
+<table><thead><tr><th width="156">RaspberryPi</th><th>Cấu hình</th></tr></thead><tbody><tr><td>CPU</td><td>4 CPU</td></tr><tr><td>RAM</td><td>1G</td></tr><tr><td>ROM</td><td>16G</td></tr></tbody></table>
 
 {% hint style="success" %}
 Với đặc thù hoạt động 24/7, tiết kiệm điện năng, vận hành ổn định. Tôi chọn Raspberry cũ cỡ 500k cho các nhiệm vụ trên. Với 2 tác vụ này CPU và RAM của thiết bị gần như luôn hoạt động ở mức >70% trong 2 năm chưa một lần gặp sự cố
@@ -32,7 +32,7 @@ Với đặc thù hoạt động 24/7, tiết kiệm điện năng, vận hành 
 {% endtab %}
 {% endtabs %}
 
-## Những tính năng mình đang có với HomeLAB
+## Những gì mình có thể làm với HomeLAB
 
 ### Hệ thống giải trí miễn phí
 
@@ -46,7 +46,27 @@ Với đặc thù hoạt động 24/7, tiết kiệm điện năng, vận hành 
 * Tự tìm Eng và Việt Sub cho các phim này để khi tôi xem thì có sẵn sub chất lượng
 * Thêm phim vào danh sách theo dõi dễ dàng: Xem trailer thích có thể vào Plex add to watchlist là xong. Hệ thống tự chạy ngầm để tải phim về.
 
-<table data-view="cards"><thead><tr><th>Service</th><th>Description</th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td>Plex</td><td>Tự tạo server xem phim ở nhà (hoặc từ xa nếu muốn)</td><td><a href=".gitbook/assets/image (7) (1).png">image (7) (1).png</a></td></tr><tr><td>qBittorrent</td><td>Tải phim</td><td><a href=".gitbook/assets/image (4) (1).png">image (4) (1).png</a></td></tr><tr><td>Radarr</td><td>Quản lí phim lẻ</td><td><a href=".gitbook/assets/image (2) (1) (1).png">image (2) (1) (1).png</a></td></tr><tr><td>Sonarr</td><td>Quản lí phim bộ</td><td><a href=".gitbook/assets/image (1) (1) (1).png">image (1) (1) (1).png</a></td></tr><tr><td>Prowlarr</td><td>Sẽ tìm nguồn tải phim cho 2 cái trên</td><td><a href=".gitbook/assets/image (6) (1).png">image (6) (1).png</a></td></tr><tr><td>Bazarr</td><td>Tự động tải sub việt, sub anh theo tên phim</td><td><a href=".gitbook/assets/image (5) (1).png">image (5) (1).png</a></td></tr></tbody></table>
+[he-thong-giai-tri-xem-phim-tai-nha-mien-phi](nhung-du-an-thu-vi-voi-homelab/he-thong-giai-tri-xem-phim-tai-nha-mien-phi/ "mention")
+
+<table data-view="cards"><thead><tr><th>Service</th><th>Description</th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td>Plex</td><td>Tự tạo server xem phim ở nhà (hoặc từ xa nếu muốn)</td><td><a href=".gitbook/assets/image (7) (1).png">image (7) (1).png</a></td></tr><tr><td>qBittorrent</td><td>Tải phim</td><td><a href=".gitbook/assets/image (4) (1).png">image (4) (1).png</a></td></tr><tr><td>Radarr</td><td>Quản lí phim lẻ</td><td><a href=".gitbook/assets/image (2) (1) (1) (1).png">image (2) (1) (1) (1).png</a></td></tr><tr><td>Sonarr</td><td>Quản lí phim bộ</td><td><a href=".gitbook/assets/image (1) (1) (1) (1).png">image (1) (1) (1) (1).png</a></td></tr><tr><td>Prowlarr</td><td>Sẽ tìm nguồn tải phim cho 2 cái trên</td><td><a href=".gitbook/assets/image (6) (1).png">image (6) (1).png</a></td></tr><tr><td>Bazarr</td><td>Tự động tải sub việt, sub anh theo tên phim</td><td><a href=".gitbook/assets/image (5) (1).png">image (5) (1).png</a></td></tr></tbody></table>
+
+### Chia sẻ file trong mạng LAN, Fake NAS
+
+<figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+Nếu bạn có dư nhiều ổ cứng từ các bộ PC cũ, chả biết cắm vào đâu thì dự án này sẽ giúp bạn tận dụng tối đa cho mục tiêu truy cập dữ liệu bất cứ lúc nào, đỡ phải chi nhiều tiền cho các dịch vụ CloudBackup
+
+**Với NAS nhà trồng, bạn vẫn có thể**
+
+* Backup toàn bộ hệ điều hành MacOS qua time machine
+* Truy cập file ở bất cứ đâu, bất cứ hệ điều hành nào. Không cần quá quan tâm về định dạng ổ cứng phù hợp
+* Copy qua lại file dễ dàng, có thể dùng chứa tạm dự án đang làm trên đây để truy cập bằng bất cứ máy tính nào trong mạng LAN
+
+[chia-se-file-trong-mang-lan-backup-du-lieu](nhung-du-an-thu-vi-voi-homelab/chia-se-file-trong-mang-lan-backup-du-lieu/ "mention")
+
+{% hint style="warning" %}
+Dự án này yêu cầu phần cứng mạnh một chút, nếu bạn chỉ đang đầu tư phần cứng như mình, chỉ dùng để copy vài file nhẹ nhẹ hoặc dùng để truy cập file hình ảnh video thôi nhé. Cho nó chạy các tác vụ copy file nặng nó chậm rì luôn á.
+{% endhint %}
 
 ### Camera IMOU hỗ trợ full chức năng của [HomeKit Secure Video](https://support.apple.com/guide/icloud/set-up-homekit-secure-video-mm7c90d21583/icloud)
 
@@ -60,7 +80,7 @@ Riêng phần cứng yêu cầu cho chức năng này đã phải cần ít nh�
 
 </div>
 
-[dua-thiet-bi-camera-len-apple-homekit.md](smarthome-hub/apple-homekit-cho-thiet-bi-khong-ho-tro/dua-thiet-bi-camera-len-apple-homekit.md "mention")
+[dua-camera-len-apple-homekit.md](smarthome-hub/apple-homekit-cho-thiet-bi-khong-ho-tro/dua-camera-len-apple-homekit.md "mention")
 
 Camera hỗ trợ sẵn HomeKit sẽ đắt hơn ít nhất gấp 2 lần camera thông thường với cùng cấu hình độ phân giải. Đôi khi còn có ít chức năng hơn. Mục tiêu của tôi là khiến nó phải hỗ trợ HomeKit để lúc cần xem camera chỉ cần mở Apple Home. Hoặc khi có ai bấm chuông thì mặc định sẽ hiển thị được hình ảnh camera trên Apple TV. Chi tiết:
 
@@ -107,7 +127,7 @@ Không cần mua HUB zigbee cho từng hãng Xiaomi, Aqara, Tuya, eWelink... th�
 
 <div align="center">
 
-<figure><img src=".gitbook/assets/image (2).png" alt="" width="375"><figcaption><p>Các cảm biến của 2 hãng khác nhau vẫn kết nối được chung 1 HUB Zigbee</p></figcaption></figure>
+<figure><img src=".gitbook/assets/image (2) (1).png" alt="" width="375"><figcaption><p>Các cảm biến của 2 hãng khác nhau vẫn kết nối được chung 1 HUB Zigbee</p></figcaption></figure>
 
 </div>
 

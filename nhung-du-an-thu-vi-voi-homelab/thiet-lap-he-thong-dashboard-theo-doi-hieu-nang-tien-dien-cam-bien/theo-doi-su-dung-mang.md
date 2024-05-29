@@ -1,6 +1,6 @@
 # Theo dõi sử dụng mạng
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Báo cáo chi tiết của Ruijie về sức khoẻ kết nối mạng</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Báo cáo chi tiết của Ruijie về sức khoẻ kết nối mạng</p></figcaption></figure>
 
 {% hint style="success" %}
 Thời điểm hiện tại, vấn đề kết nối đã ổn định. Cũng đã đầu tư thiết bị mạng có thể quản lý trên cloud với các tính năng báo cáo chi tiết. Dự án này bị huỷ do không còn phục vụ đúng mục đích nữa. Giảm logs của hệ thống

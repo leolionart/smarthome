@@ -10,7 +10,7 @@ Dịch vụ Zero Trust của CloudFlare
 
 1. Truy cập CloudFlare Zero Trust vào phần Networks/Tunnels
 2. Làm theo hướng dẫn để cài đặt một connector\
-   ![](../.gitbook/assets/image.png)
+   ![](<../.gitbook/assets/image (2).png>)
 
 {% hint style="info" %}
 Bạn có thể sử dụng ChatGPT để chuyển đổi cấu trúc trên thành dạng Docker Compose để tiện kiểm soát

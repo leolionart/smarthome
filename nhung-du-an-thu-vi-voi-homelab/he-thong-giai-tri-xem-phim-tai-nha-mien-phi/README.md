@@ -31,3 +31,7 @@ Nếu bạn có nhu cầu xem phim mọi lúc mọi nơi với Home media server
 [tu-dong-tim-kiem-phim-anh-va-subtitle-co-tren-internet.md](tu-dong-tim-kiem-phim-anh-va-subtitle-co-tren-internet.md "mention")
 
 [tu-dong-tai-ve-phim-yeu-thich.md](tu-dong-tai-ve-phim-yeu-thich.md "mention")
+
+{% hint style="info" %}
+Để chia sẻ cho bạn bè cùng xem phim chung, bạn cần một phần cứng có khả năng encoding mạnh mẽ hơn, giúp stream nhiều độ phân giải cùng lúc. Nếu dùng trong mạng LAN thì không cần nên bạn có thể sử dụng phần cứng của các mạch máy tính nhúng như này là đủ. Nếu có nhu cầu cao hơn vui lòng chọn nền tảng phần cứng mạnh mẽ hơn nhé
+{% endhint %}
