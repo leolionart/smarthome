@@ -18,21 +18,21 @@ HomeKit Automation là một tính năng của Apple HomeKit cho phép người 
 
 ### 2. Các thành phần của HomeKit Automation
 
-#### 2.1 \*\*Kích hoạt (Triggers):\*\*
+#### 2.1 Kích hoạt (Triggers):
 
-&#x20;  \- \*\*Thời gian:\*\* Automation có thể được kích hoạt vào một thời điểm cụ thể hoặc trong một khoảng thời gian nhất định, ví dụ như bật đèn vào lúc hoàng hôn hoặc tắt đèn vào lúc nửa đêm.
+&#x20;  \- **Thời gian**: Automation có thể được kích hoạt vào một thời điểm cụ thể hoặc trong một khoảng thời gian nhất định, ví dụ như bật đèn vào lúc hoàng hôn hoặc tắt đèn vào lúc nửa đêm.
 
-&#x20;  \- \*\*Địa điểm:\*\* Dựa trên vị trí của bạn, như khi bạn rời khỏi hoặc trở về nhà.
+&#x20;  \- **Địa điểm**: Dựa trên vị trí của bạn, như khi bạn rời khỏi hoặc trở về nhà.
 
-&#x20;  \- \*\*Cảm biến:\*\* Sử dụng dữ liệu từ các cảm biến như cảm biến chuyển động, cảm biến cửa, hoặc cảm biến môi trường.
+&#x20;  \- **Cảm biến**: Sử dụng dữ liệu từ các cảm biến như cảm biến chuyển động, cảm biến cửa, hoặc cảm biến môi trường.
 
-&#x20;  \- \*\*Hoạt động của thiết bị:\*\* Kích hoạt dựa trên trạng thái của các thiết bị khác, chẳng hạn như khi một thiết bị được bật hoặc tắt.
+&#x20;  \- **Hoạt động của thiết bị**: Kích hoạt dựa trên trạng thái của các thiết bị khác, chẳng hạn như khi một thiết bị được bật hoặc tắt.
 
-#### 2.2 \*\*Điều kiện (Conditions):\*\*
+#### 2.2 Điều kiện (Conditions):
 
 &#x20;  \- Điều kiện bổ sung giúp tinh chỉnh khi nào Automation sẽ được kích hoạt, ví dụ như chỉ khi có người ở nhà, hoặc chỉ vào những ngày nhất định trong tuần.
 
-#### 2.3 \*\*Hành động (Actions):\*\*
+#### 2.3 Hành động (Actions):
 
 &#x20;  \- Các hành động mà các thiết bị sẽ thực hiện khi Automation được kích hoạt, chẳng hạn như bật/tắt đèn, điều chỉnh nhiệt độ, hoặc khóa/mở khóa cửa.
 

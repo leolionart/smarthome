@@ -44,13 +44,6 @@ docker stop $(docker ps -a -q)
 docker rm $(docker ps -a -q)
 ```
 
-> Nếu gặp lỗi ở bất cứ bước nào, cố gắng dùng cấu trúc dưới đây để làm mới source và thử lại câu lện
-
-```
-$ sudo apt-get autoremove
-$ sudo apt update & sudo apt upgrade
-```
-
 ### Sửa lỗi không truy cập được ssh
 
 `$ ssh-keygen -R 192.168.88.23`
@@ -59,36 +52,37 @@ $ sudo apt update & sudo apt upgrade
 
 ### Với file và folder
 
-| Câu lệnh                                                                                                               | Mục đích          |
-| ---------------------------------------------------------------------------------------------------------------------- | ----------------- |
-| `sudo rm -r foldername`                                                                                                | Xoá folder bất kỳ |
-| `sudo mv /usr/local/lib/node_modules/homebridge-config-ui-x /usr/local/lib/node_modules/homebridge-config-ui-x_Backup` | Đổi tên folder    |
-| ## Với các node                                                                                                        |                   |
+#### Xoá folder bất kỳ
 
-| Câu lệnh                            | Mục đích                 |
-| ----------------------------------- | ------------------------ |
-| `sudo systemctl daemon-reload`      | Reload systemd           |
-| `sudo systemctl restart prometheus` | Restart prometheus       |
-| `sudo systemctl enable prometheus`  | Start prometheus at boot |
-| `systemctl status prometheus`       | Startus prometheus       |
+`sudo rm -r foldername`
+
+#### Đổi tên folder
+
+`sudo mv /usr/local/lib/node_modules/homebridge-config-ui-x /usr/local/lib/node_modules/homebridge-config-ui-x_Backup`
+
+### Với các node
+
+#### Reload systemd
+
+`sudo systemctl daemon-reload`
+
+#### Restart a service
+
+`sudo systemctl restart prometheus`
+
+#### Start a service at boot
+
+`sudo systemctl enable prometheus`
+
+#### Startus a service
+
+`systemctl status prometheus`
 
 ## Lệnh thường dùng
-
-### Chỉnh cấu hình prometheus
-
-`sudo nano /mnt/sda1/Config/prometheus/prometheus.yml`
 
 ### Check port
 
 `sudo lsof -i -P -n | grep 9090`
-
-### Tạo Influxdb
-
-```
-docker exec -it influxdb influx
-CREATE DATABASE sensor_data
-quit
-```
 
 ### Update Plex
 

@@ -19,7 +19,7 @@ Bạn có thể bắt đầu theo từng level cho dễ, không cần đầu tư
 ## Danh sách thiết bị cần mua
 
 {% hint style="warning" %}
-Bảng giá được note tại thời điểm tôi mua thiết bị, tôi gắn link để tham khảo
+Bảng giá được note tại thời điểm tôi mua thiết bị, tôi gắn link để tham khảo giá hiện tại
 {% endhint %}
 
 {% embed url="https://docs.google.com/spreadsheets/d/1cYl3ENtDU8KVfVWXs8nO1jfOQWTnzEwQ9KW65MKXdwA/edit?usp=sharing" fullWidth="true" %}

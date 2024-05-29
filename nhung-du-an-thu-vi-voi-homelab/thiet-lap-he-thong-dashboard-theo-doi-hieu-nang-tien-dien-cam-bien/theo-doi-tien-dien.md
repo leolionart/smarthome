@@ -1,16 +1,11 @@
----
-cover: >-
-  https://images.unsplash.com/photo-1547119957-637f8679db1e?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHw0fHxNb25pdG9yfGVufDB8fHx8MTcxNjc5OTAzN3ww&ixlib=rb-4.0.3&q=85
-coverY: 0
----
+# Theo dõi tiền điện
 
-# Theo dõi tiền điện, tốc độ mạng sử dụng trên từng thiết bị
+## Yêu cầu
 
-## Yêu cầu phần cứng
-
-* Đang sử dụng router Mikrotik
 * Lắp đặt các công tắc, mạch có chức năng đo điện năng
+* Đã cài đặt các dịch vụ [hien-thi-du-lieu-len-grafana-voi-prometheus-va-influxdb.md](hien-thi-du-lieu-len-grafana-voi-prometheus-va-influxdb.md "mention")
 
-## Tính năng
+## Mục tiêu
 
+* Có được lịch sử chi tiết về mức độ tiêu thụ điện năng trên các đồng hồ điện tử đã lắp đặt
 *

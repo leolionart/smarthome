@@ -12,16 +12,22 @@ coverY: 0
 
 </div>
 
-<table><thead><tr><th width="141">Serices</th><th>Description</th></tr></thead><tbody><tr><td>Plex</td><td>Tự tạo server xem phim ở nhà, xem trên mọi thiết bị</td></tr><tr><td>qBittorrent</td><td>Tải phim</td></tr><tr><td>Radarr</td><td>Quản lí phim lẻ</td></tr><tr><td>Sonarr</td><td>Quản lí phim bộ</td></tr><tr><td>Prowlarr</td><td>Sẽ tìm nguồn tải phim cho 2 cái trên</td></tr><tr><td>Bazarr</td><td>Tự động tải sub việt, sub anh theo tên phim</td></tr></tbody></table>
+Với nhu cầu thi thoảng xem phim vào cuối tuần, tôi không muốn có một khoản phải thanh toán cố định trên nhiều nền tảng xem phim trực tuyến khác nhau như Netflix, Hulu, HBO... Vì vậy một giải pháp để tôi chủ động lưu trữ các bộ phim yêu thích để stream lên các thiết bị màn hình lớn như TV, máy tính, iPad, Điện thoại để xem là một nhu cầu cần thiết. Hoặc đơn giản là biết chừng nào phim ra để lên các dịch vụ kia xem thôi.
 
-<div align="center" data-full-width="false">
+{% hint style="success" %}
+Nếu bạn có nhu cầu xem phim mọi lúc mọi nơi với Home media server sẽ yêu cầu kiến thức về open port hoặc tunnel, tôi có hướng dẫn ở bài viết [truy-cap-vao-cac-home-service-tu-ben-ngoai-thong-qua-domain.md](../../pro-tips/truy-cap-vao-cac-home-service-tu-ben-ngoai-thong-qua-domain.md "mention")\
+\
+Ở trong bài viết này chúng ta tập trung vào việc xây dựng dịch vụ này bên trong mạng LAN
+{% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Quản lý phim bộ</p></figcaption></figure>
+## Các dịch vụ yêu cầu
 
-</div>
+<table><thead><tr><th width="141">Serices</th><th>Description</th></tr></thead><tbody><tr><td>Plex</td><td>Tự tạo server xem phim ở nhà, xem trên mọi thiết bị</td></tr><tr><td>qBittorrent</td><td>Tải phim bằng torrent</td></tr><tr><td>Radarr</td><td>Quản lí phim lẻ</td></tr><tr><td>Sonarr</td><td>Quản lí phim bộ</td></tr><tr><td>Prowlarr</td><td>Sẽ tìm nguồn tải phim cho 2 cái trên</td></tr><tr><td>Bazarr</td><td>Tự động tải sub việt, sub anh theo tên phim</td></tr></tbody></table>
 
-<div align="right" data-full-width="false">
+## Cách cài đặt và cấu hình
 
-<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>Quản lý phim lẻ</p></figcaption></figure>
+[cai-dat-plex-media-server.md](cai-dat-plex-media-server.md "mention")
 
-</div>
+[tu-dong-tim-kiem-phim-anh-va-subtitle-co-tren-internet.md](tu-dong-tim-kiem-phim-anh-va-subtitle-co-tren-internet.md "mention")
+
+[tu-dong-tai-ve-phim-yeu-thich.md](tu-dong-tai-ve-phim-yeu-thich.md "mention")
