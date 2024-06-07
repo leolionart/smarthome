@@ -39,17 +39,17 @@ scrape_configs:
       - targets: ['localhost:9090']
 
   - job_name: 'cadvisor'
-    static_configs:
-    - targets: ['192.168.88.88:8082']
+   static_configs:
+#    - targets: ['192.168.88.88:8082']
 #     label:
 #       instance: 'BPI'
-    - targets: ['192.168.88.11:8082']
+#    - targets: ['192.168.88.11:8082']
 #     label: 
 #       service: 'Pi-III'
 
   - job_name: 'node_exporter'
     static_configs:
-     - targets: ['192.168.88.88:9100']   
+#     - targets: ['192.168.88.88:9100']   
 #     - targets: ['192.168.88.11:9100']
 
 #  - job_name: homebridge-exporter
