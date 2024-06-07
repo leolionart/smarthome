@@ -24,7 +24,7 @@ layout:
 
 # Networking & Wi-Fi
 
-<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption><p>Hệ thống Mesh để phủ sóng Wi-Fi khắp căn nhà</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption><p>Hệ thống Mesh để phủ sóng Wi-Fi khắp căn nhà</p></figcaption></figure>
 
 ## Cấu hình mạng hiện tại mình đang sử dụng
 

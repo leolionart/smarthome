@@ -21,7 +21,7 @@ Kiểm tra mức sử dụng RAM
 
 `top -o -%MEM`
 
-Hoặc sử dụng các tuỳ chọn tại [use-memory-card-as-ram.md](use-memory-card-as-ram.md "mention")
+Hoặc sử dụng các tuỳ chọn tại [use-memory-card-as-ram.md](../use-memory-card-as-ram.md "mention")
 
 ## Uninstall Docker Engine
 

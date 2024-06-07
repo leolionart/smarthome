@@ -1,6 +1,6 @@
 # Theo dõi sử dụng mạng
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Báo cáo chi tiết của Ruijie về sức khoẻ kết nối mạng</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>Báo cáo chi tiết của Ruijie về sức khoẻ kết nối mạng</p></figcaption></figure>
 
 {% hint style="success" %}
 Thời điểm hiện tại, vấn đề kết nối đã ổn định. Cũng đã đầu tư thiết bị mạng có thể quản lý trên cloud với các tính năng báo cáo chi tiết. Dự án này bị huỷ do không còn phục vụ đúng mục đích nữa. Giảm logs của hệ thống
@@ -13,6 +13,8 @@ Thời điểm hiện tại, vấn đề kết nối đã ổn định. Cũng đ
 
 ## Mục tiêu
 
-* Kiểm soát traffic sử dụng internet, tìm ra nguồn gốc điểm tắc nghẽn
+* Kiểm soát traffic sử dụng internet, tìm ra nguồn gốc điểm tắc nghẽn thông qua việc liên tục ping tới các domain và lưu lại các metrics liên quan tới tốc độ mạng
 * Biết được lịch sử rớt kết nối trên từng cổng LAN, trên từng thiết bị để có phương án tối ưu
 * Biết được nhu cầu thực tế của gia đình, có cần thiết nâng gói cước không
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
