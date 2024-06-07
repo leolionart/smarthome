@@ -48,11 +48,11 @@ Với đặc thù hoạt động 24/7, tiết kiệm điện năng, vận hành 
 
 [he-thong-giai-tri-xem-phim-tai-nha-mien-phi](nhung-du-an-thu-vi-voi-homelab/he-thong-giai-tri-xem-phim-tai-nha-mien-phi/ "mention")
 
-<table data-view="cards"><thead><tr><th>Service</th><th>Description</th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td>Plex</td><td>Tự tạo server xem phim ở nhà (hoặc từ xa nếu muốn)</td><td><a href=".gitbook/assets/image (7) (1).png">image (7) (1).png</a></td></tr><tr><td>qBittorrent</td><td>Tải phim</td><td><a href=".gitbook/assets/image (4) (1).png">image (4) (1).png</a></td></tr><tr><td>Radarr</td><td>Quản lí phim lẻ</td><td><a href=".gitbook/assets/image (2) (1) (1) (1).png">image (2) (1) (1) (1).png</a></td></tr><tr><td>Sonarr</td><td>Quản lí phim bộ</td><td><a href=".gitbook/assets/image (1) (1) (1) (1) (1).png">image (1) (1) (1) (1) (1).png</a></td></tr><tr><td>Prowlarr</td><td>Sẽ tìm nguồn tải phim cho 2 cái trên</td><td><a href=".gitbook/assets/image (6) (1).png">image (6) (1).png</a></td></tr><tr><td>Bazarr</td><td>Tự động tải sub việt, sub anh theo tên phim</td><td><a href=".gitbook/assets/image (5) (1).png">image (5) (1).png</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th>Service</th><th>Description</th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td>Plex</td><td>Tự tạo server xem phim ở nhà (hoặc từ xa nếu muốn)</td><td><a href=".gitbook/assets/image (7) (1).png">image (7) (1).png</a></td></tr><tr><td>qBittorrent</td><td>Tải phim</td><td><a href=".gitbook/assets/image (4) (1).png">image (4) (1).png</a></td></tr><tr><td>Radarr</td><td>Quản lí phim lẻ</td><td><a href=".gitbook/assets/image (2) (1) (1) (1).png">image (2) (1) (1) (1).png</a></td></tr><tr><td>Sonarr</td><td>Quản lí phim bộ</td><td><a href=".gitbook/assets/image (1) (1) (1) (1) (1) (1).png">image (1) (1) (1) (1) (1) (1).png</a></td></tr><tr><td>Prowlarr</td><td>Sẽ tìm nguồn tải phim cho 2 cái trên</td><td><a href=".gitbook/assets/image (6) (1).png">image (6) (1).png</a></td></tr><tr><td>Bazarr</td><td>Tự động tải sub việt, sub anh theo tên phim</td><td><a href=".gitbook/assets/image (5) (1).png">image (5) (1).png</a></td></tr></tbody></table>
 
 ### Chia sẻ file trong mạng LAN, Fake NAS
 
-<figure><img src=".gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Nếu bạn có dư nhiều ổ cứng từ các bộ PC cũ, chả biết cắm vào đâu thì dự án này sẽ giúp bạn tận dụng tối đa cho mục tiêu truy cập dữ liệu bất cứ lúc nào, đỡ phải chi nhiều tiền cho các dịch vụ CloudBackup
 
@@ -140,6 +140,8 @@ Tự tuỳ biến một HUB để thu nhận sóng Zigbee là một giải pháp
 [mot-hub-ket-noi-duoc-toan-bo-thiet-bi-zigbee-cua-tat-ca-cac-hang.md](smarthome-hub/apple-homekit-cho-thiet-bi-khong-ho-tro/mot-hub-ket-noi-duoc-toan-bo-thiet-bi-zigbee-cua-tat-ca-cac-hang.md "mention")
 
 ## Connect with me
+
+Background của mình học về đồ hoạ, thích công nghệ nên tự học và làm nhiều thứ tuy nhiên chưa học qua trường lớp bài bản nào về coding. Nghề chính mình làm Product Manager cho các công ty công nghệ. Mình tin rằng với kinh nghiệm của mình có thể truyền tài và giúp cho mọi người cho dù ở bất cứ background như thế nào đều tự vọc vạch được những thứ mình đã học. Vì mình luôn tin rằng khi bạn dạy lại người khác là bạn đang học lại gấp 3 lần 1 thứ bất kỳ. Nếu có nhu cầu đọc thêm về bản thân hoặc tham khảo về ngành của mình có thể đọc thêm ở chuyên trang cá nhân mình ở đây nhé&#x20;
 
 {% embed url="https://aitran.naai.studio/" %}
 Blog cá nhân chia sẻ thêm nhiều thứ về bản thân mình
