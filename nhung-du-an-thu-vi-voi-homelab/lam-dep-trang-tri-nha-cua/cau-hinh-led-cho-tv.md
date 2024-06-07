@@ -1,4 +1,4 @@
-# Cấu hình LED cho TV
+# Cấu hình Ambilight LED cho TV, gia tăng trải nghiệm xem
 
 {% embed url="https://youtu.be/f9EFYBNnLPw?si=k7PLEV3B_GpL-ugz" %}
 Hướng dẫn đầy đủ

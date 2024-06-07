@@ -1,4 +1,4 @@
-# Cài server chạy Ambilight cho TV
+# Cài server chạy Ambilight
 
 ## First we import the public key from Hyperion:
 

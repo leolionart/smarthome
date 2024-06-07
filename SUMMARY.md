@@ -5,8 +5,8 @@
   * [Script: Thiết lập các dịch vụ để làm media server](welcome-to-my-homelab/script-thiet-lap-cac-dich-vu-de-lam-media-server.md)
   * [Script: Thiết lập dịch vụ theo dõi và tự động hoá](welcome-to-my-homelab/script-thiet-lap-dich-vu-theo-doi-va-tu-dong-hoa.md)
   * [Docker Compose Template](welcome-to-my-homelab/docker-compose-template/README.md)
-    * [prometheus](welcome-to-my-homelab/docker-compose-template/prometheus.md)
-    * [portainer](welcome-to-my-homelab/docker-compose-template/portainer.md)
+    * [prometheus.yaml](welcome-to-my-homelab/docker-compose-template/prometheus.yaml.md)
+    * [portainer.yaml](welcome-to-my-homelab/docker-compose-template/portainer.yaml.md)
 
 ## Smarthome HUB
 
@@ -18,7 +18,7 @@
   * [Đưa camera lên Apple HomeKit](smarthome-hub/apple-homekit-cho-thiet-bi-khong-ho-tro/dua-camera-len-apple-homekit.md)
   * [Một HUB kết nối được toàn bộ thiết bị Zigbee của tất cả các hãng](smarthome-hub/apple-homekit-cho-thiet-bi-khong-ho-tro/mot-hub-ket-noi-duoc-toan-bo-thiet-bi-zigbee-cua-tat-ca-cac-hang.md)
   * [Đưa samsungTV lên Apple Home](smarthome-hub/apple-homekit-cho-thiet-bi-khong-ho-tro/dua-samsungtv-len-apple-home.md)
-  * [Mở cửa cuốn bằng eWeLink (SonOFF) 4CH Pro](smarthome-hub/apple-homekit-cho-thiet-bi-khong-ho-tro/mo-cua-cuon-bang-ewelink-sonoff-4ch-pro.md)
+  * [Mở cửa cuốn bằng eWeLink (SonOFF) 4CH Pro](smarthome-hub/apple-homekit-cho-thiet-bi-khong-ho-tro/mo-cua-cuon-bang-ewelink-4ch-pro.md)
 * [Automation - Tự động hoá](smarthome-hub/automation-tu-dong-hoa/README.md)
   * [Các kịch bản tự động hoá mình đang sử dụng](smarthome-hub/automation-tu-dong-hoa/cac-kich-ban-tu-dong-hoa-minh-dang-su-dung.md)
   * [Tự động hoá nâng cao](smarthome-hub/automation-tu-dong-hoa/tu-dong-hoa-nang-cao.md)
@@ -46,9 +46,9 @@
 * [Chặn quảng cáo cho cả nhà](nhung-du-an-thu-vi-voi-homelab/chan-quang-cao-cho-ca-nha/README.md)
   * [Danh sách các nguồn chặn quảng cáo](nhung-du-an-thu-vi-voi-homelab/chan-quang-cao-cho-ca-nha/danh-sach-cac-nguon-chan-quang-cao.md)
   * [Adguard Home: Sửa lỗi fail to bind on port 53](nhung-du-an-thu-vi-voi-homelab/chan-quang-cao-cho-ca-nha/adguard-home-sua-loi-fail-to-bind-on-port-53.md)
-* [Làm đẹp - trang trí không gian làm việc, giải trí](nhung-du-an-thu-vi-voi-homelab/lam-dep-trang-tri-khong-gian-lam-viec-giai-tri/README.md)
-  * [Cấu hình Ambilight LED cho TV, gia tăng trải nghiệm xem](nhung-du-an-thu-vi-voi-homelab/lam-dep-trang-tri-khong-gian-lam-viec-giai-tri/cau-hinh-ambilight-led-cho-tv-gia-tang-trai-nghiem-xem.md)
-  * [Cài server chạy Ambilight](nhung-du-an-thu-vi-voi-homelab/lam-dep-trang-tri-khong-gian-lam-viec-giai-tri/cai-server-chay-ambilight.md)
+* [Làm đẹp - trang trí không gian làm việc, giải trí](nhung-du-an-thu-vi-voi-homelab/lam-dep-trang-tri-nha-cua/README.md)
+  * [Cấu hình Ambilight LED cho TV, gia tăng trải nghiệm xem](nhung-du-an-thu-vi-voi-homelab/lam-dep-trang-tri-nha-cua/cau-hinh-led-cho-tv.md)
+  * [Cài server chạy Ambilight](nhung-du-an-thu-vi-voi-homelab/lam-dep-trang-tri-nha-cua/cai-server-chay-ambilight.md)
 
 ## Pro Tips
 
@@ -58,12 +58,12 @@
 * [Use memory card as RAM](pro-tips/use-memory-card-as-ram.md)
 * [Frequently used command](pro-tips/frequently-used-command/README.md)
   * [Thao tác với ổ cứng](pro-tips/frequently-used-command/thao-tac-voi-o-cung.md)
-* [Vấn đề đối với Wi-Fi khi sử dụng smarthome](pro-tips/van-de-doi-voi-wi-fi-khi-su-dung-smarthome.md)
+* [Vấn đề đối với Wi-Fi khi sử dụng smarthome](pro-tips/networking-and-wi-fi/README.md)
 
 ## Hosting & Networking
 
-* [Mini Webserver - Selfhosting](hosting-and-networking/mini-webserver-selfhosting/README.md)
-  * [Sử dụng Proxmox để vui chơi không để lại nhiều hậu quả](hosting-and-networking/mini-webserver-selfhosting/su-dung-proxmox-de-vui-choi-khong-de-lai-nhieu-hau-qua.md)
-  * [Gắn thêm ổ cứng cho Proxmox](hosting-and-networking/mini-webserver-selfhosting/gan-them-o-cung-cho-proxmox.md)
-  * [IP động thì làm sao hosting? - Tự động hoá với Cosmos Server](hosting-and-networking/mini-webserver-selfhosting/ip-dong-thi-lam-sao-hosting-tu-dong-hoa-voi-cosmos-server.md)
-* [Truy cập vào các Home Service từ bên ngoài thông qua domain](hosting-and-networking/truy-cap-vao-cac-home-service-tu-ben-ngoai-thong-qua-domain.md)
+* [Mini Webserver - Selfhosting](nhung-du-an-thu-vi-voi-homelab/mini-webserver-selfhosting/README.md)
+  * [Sử dụng Proxmox để vui chơi không để lại nhiều hậu quả](nhung-du-an-thu-vi-voi-homelab/mini-webserver-selfhosting/su-dung-proxmox-de-vui-choi-khong-de-lai-nhieu-hau-qua.md)
+  * [Gắn thêm ổ cứng cho Proxmox](nhung-du-an-thu-vi-voi-homelab/mini-webserver-selfhosting/gan-them-o-cung-cho-proxmox.md)
+  * [IP động thì làm sao hosting? - Tự động hoá với Cosmos Server](nhung-du-an-thu-vi-voi-homelab/mini-webserver-selfhosting/ip-dong-thi-lam-sao-hosting-tu-dong-hoa-voi-cosmos-server.md)
+* [Truy cập vào các Home Service từ bên ngoài thông qua domain](pro-tips/networking-and-wi-fi/truy-cap-vao-cac-home-service-tu-ben-ngoai-thong-qua-domain.md)

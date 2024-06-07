@@ -4,5 +4,5 @@ cover: >-
 coverY: 128
 ---
 
-# Làm đẹp, trang trí nhà cửa
+# Làm đẹp - trang trí không gian làm việc, giải trí
 

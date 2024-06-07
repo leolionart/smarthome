@@ -1,4 +1,4 @@
-# prometheus
+# prometheus.yaml
 
 ```
 ---

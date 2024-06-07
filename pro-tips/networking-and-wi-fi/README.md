@@ -22,7 +22,7 @@ layout:
     visible: true
 ---
 
-# Networking & Wi-Fi
+# Vấn đề đối với Wi-Fi khi sử dụng smarthome
 
 <figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption><p>Hệ thống Mesh để phủ sóng Wi-Fi khắp căn nhà</p></figcaption></figure>
 
