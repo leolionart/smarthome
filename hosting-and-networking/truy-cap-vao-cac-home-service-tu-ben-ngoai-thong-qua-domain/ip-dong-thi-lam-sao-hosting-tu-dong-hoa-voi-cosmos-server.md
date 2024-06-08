@@ -132,3 +132,47 @@ Sau khi đăng nhập, Cosmos sẽ hiện ra trang Home trắng trơn vì lúc n
 Chọn mục Market ở menu bên tay trái để xem danh sách các ứng dụng có sẵn. Bạn cũng có thể cài đặt ứng dụng bất kỳ bằng cách bấm vào nút Import Compose File và nhập nội dung file `docker-compose.yml` vào đó.
 
 <figure><img src="https://thuanbui.me/wp-content/uploads/2023/10/cosmos-11.jpg" alt=""><figcaption></figcaption></figure>
+
+### IV. Cấu hình Wildcard SSL
+
+Để tối ưu việc cài đặt ứng dụng và xác thực chứng chỉ SSL, mình sẽ cấu hình sử dụng Wildcard SSL cho hệ thống. Chỉ cần 1 chứng chỉ SSL duy nhất cho tên miền `cosmos-server.thuanbui.me` sẽ sử dụng được cho tất cả các tên miền con như `vscode.cosmos-server.thuanbui.me` hay `plex.cosmos-server.thuanbui.me`.
+
+#### 1. Trỏ DNS về IP của server
+
+Sử dụng Cloudflare DNS, tạo chỉ mục DNS mới cho tên miền `*.cosmos-server.thuanbui.me` và trỏ về IP của Server đang cài đặt Cosmos-Server.
+
+#### 2. Thiết lập Cloudflare API Token
+
+Tạo API Tokens mới:
+
+* Permision: Edit DNS và Read Zone
+* Zone Resources: chọn tên miền bạn muốn sử dụng
+
+<figure><img src="https://thuanbui.me/wp-content/uploads/2023/10/cloudflare-api-token-1.png" alt=""><figcaption></figcaption></figure>
+
+Sau khi tạo xong, copy API Tokens để chuẩn bị paste vào mục cấu hình trên Cosmos-Server
+
+<figure><img src="https://thuanbui.me/wp-content/uploads/2023/10/cloudflare-api-token-2.png" alt=""><figcaption></figcaption></figure>
+
+#### 3. Cấu hình DNS Challenge
+
+Quay lại Cosmos-Server, truy cập vào mục Configuration, tìm đến phần Encryption và nhập vào các thông tin cần thiết:
+
+* Bấm chọn vào mục Use Wildcard Certificate for the root domain of …
+* Mục (optional, only…) nhập vào `*.cosmos-server.thuanbui.me` và `cosmos-server.thuanbui.me`
+* Pick a DNS provider: chọn cloudflare, sau đó nhập Token API đã tạo ở trên vào mục CF\_DNS\_API\_TOKEN.
+
+<figure><img src="https://thuanbui.me/wp-content/uploads/2023/10/cosmos-18.png" alt=""><figcaption></figcaption></figure>
+
+Bấm Save để lưu lại. Hệ thống sẽ khởi động lại sau 1-2 phút.
+
+### V. Các tính năng khác
+
+Cosmos-Server còn nhiều tính năng mạnh mẽ khác mà mình chưa có thời gian mò đến
+
+* **Tạo Reverse Proxy**: truy cập vào mục URLS để xem các tên miền đã được cấu hình. Bạn có thể bấm vào nút Create để tạo Reverse Proxy mới.
+* **Quản lý Docker**: truy cập vào mục ServApps để xem các container đang hoạt động. Bạn có thể tạm ngừng, khởi động lại, xem logs, truy cập vào Terminal,… của container ở đây.
+* **Quản lý User**: truy cập mục User để tạo thêm người sử dụng cho Cosmos-Server
+* **VPN**: truy cập mục Constellation để tạo VPN
+
+Chúc bạn cài đặt thành công và tận hưởng thời gian khám phá Cosmos-Server.

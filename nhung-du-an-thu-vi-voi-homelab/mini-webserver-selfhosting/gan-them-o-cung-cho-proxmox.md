@@ -7,7 +7,7 @@
 <pre><code><strong>ls -l /dev/disk/by-id/
 </strong></code></pre>
 
-Set HDD to VM
+**Set HDD to VM**
 
 ```
 qm set 100 -scsi5 /dev/disk/by-id/ata-xxxxxxxxx-xxxxx_xxx

@@ -11,7 +11,7 @@ coverY: 0
 
 <div align="center">
 
-<img src="https://user-images.githubusercontent.com/3979615/78016493-9b89a800-7396-11ea-9442-414ad9ffcdf2.png" alt="" width="250">
+<img src="https://user-images.githubusercontent.com/3979615/78016493-9b89a800-7396-11ea-9442-414ad9ffcdf2.png" alt="" width="188">
 
 </div>
 

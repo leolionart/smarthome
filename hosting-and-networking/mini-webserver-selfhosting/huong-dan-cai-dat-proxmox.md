@@ -1,11 +1,6 @@
-# Sử dụng Proxmox để vui chơi không để lại nhiều hậu quả
+# Hướng dẫn cài đặt Proxmox
 
-## Ideas/Mục tiêu
-
-* Tận dụng tối đa phần cứng mạnh mẽ đang có để làm nhiều thứ, chạy nhiều hệ điều hành trên đó, quản lý được tài nguyên phần cứng tốt
-* Lỡ có làm hư hỏng hệ điều hành thì có thể restore lại nhanh, hoặc chuyển đổi hệ điều hành qua một ổ cứng khác nhanh chóng
-
-## Phương pháp thực hiện
+### Chuẩn bị
 
 Bạn cần tải file ISO của Proxmox về máy tính: [Proxmox VE 71. ISO Installer](https://www.proxmox.com/en/downloads/item/proxmox-ve-7-1-iso-installer) (986 MB)
 
@@ -21,7 +16,7 @@ Sau khi ổ đĩa USB sẵn sàng, bạn cắm nó vào máy tính đang chờ c
 
 Sau khi tạo máy ảo, bạn chọn file ISO Proxmox đã tạo ở trên làm ổ đĩa quang khởi động cho máy ảo và làm tiếp theo các bước bên dưới đây
 
-### III. Cài đặt Proxmox VE
+### Cài đặt Proxmox VE
 
 Quy trình cài đặt Proxmox VE nói chung là trực quan đơn giản. Nếu bạn đã quen cài Ubuntu, Debian thì sẽ thấy nó quen thuộc.
 
@@ -78,7 +73,7 @@ Bạn có thể đăng nhập bằng thông tin sau:
 
 <figure><img src="https://thuanbui.me/wp-content/uploads/2022/01/cai-dat-proxmox-12.jpg" alt=""><figcaption></figcaption></figure>
 
-### IV. Truy cập Proxmox Web UI
+### Truy cập Proxmox Web UI
 
 Để quản lý Proxmox, chúng ta sẽ sử dụng trình duyệt web truy cập vào giao diện Web UI theo địa chỉ IP đã thiết lập ở bước cài đặt kèm theo port 8006. Mình sẽ truy cập vào địa chỉ: `https://192.168.0.15:8006`
 

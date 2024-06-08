@@ -4,9 +4,7 @@
   * [Script: Thiết lập toàn bộ dịch vụ smarthome cơ bản](welcome-to-my-homelab/script-thiet-lap-toan-bo-dich-vu-smarthome-co-ban.md)
   * [Script: Thiết lập các dịch vụ để làm media server](welcome-to-my-homelab/script-thiet-lap-cac-dich-vu-de-lam-media-server.md)
   * [Script: Thiết lập dịch vụ theo dõi và tự động hoá](welcome-to-my-homelab/script-thiet-lap-dich-vu-theo-doi-va-tu-dong-hoa.md)
-  * [Docker Compose Template](welcome-to-my-homelab/docker-compose-template/README.md)
-    * [prometheus.yaml](welcome-to-my-homelab/docker-compose-template/prometheus.yaml.md)
-    * [portainer.yaml](welcome-to-my-homelab/docker-compose-template/portainer.yaml.md)
+  * [Docker Compose Template](welcome-to-my-homelab/docker-compose-template.md)
 
 ## Smarthome HUB
 
@@ -37,7 +35,8 @@
 * [Thiết lập hệ thống dashboard (theo dõi hiệu năng, tiền điện, cảm biến)](nhung-du-an-thu-vi-voi-homelab/thiet-lap-he-thong-dashboard-theo-doi-hieu-nang-tien-dien-cam-bien/README.md)
   * [Hiển thị dữ liệu lên Grafana với Prometheus và InfluxDB](nhung-du-an-thu-vi-voi-homelab/thiet-lap-he-thong-dashboard-theo-doi-hieu-nang-tien-dien-cam-bien/hien-thi-du-lieu-len-grafana-voi-prometheus-va-influxdb.md)
   * [Tự động thu thập dữ liệu từ cảm biến thông qua NodeRED](nhung-du-an-thu-vi-voi-homelab/thiet-lap-he-thong-dashboard-theo-doi-hieu-nang-tien-dien-cam-bien/tu-dong-thu-thap-du-lieu-tu-cam-bien-thong-qua-nodered.md)
-  * [Theo dõi sử dụng mạng](nhung-du-an-thu-vi-voi-homelab/thiet-lap-he-thong-dashboard-theo-doi-hieu-nang-tien-dien-cam-bien/theo-doi-su-dung-mang.md)
+  * [Theo dõi sử dụng mạng](nhung-du-an-thu-vi-voi-homelab/thiet-lap-he-thong-dashboard-theo-doi-hieu-nang-tien-dien-cam-bien/theo-doi-su-dung-mang/README.md)
+    * [Sử dụng Window/MacOS/Linux](nhung-du-an-thu-vi-voi-homelab/thiet-lap-he-thong-dashboard-theo-doi-hieu-nang-tien-dien-cam-bien/theo-doi-su-dung-mang/su-dung-window-macos-linux.md)
   * [Theo dõi tiền điện](nhung-du-an-thu-vi-voi-homelab/thiet-lap-he-thong-dashboard-theo-doi-hieu-nang-tien-dien-cam-bien/theo-doi-tien-dien/README.md)
     * [Thực tế sử dụng điện của một số thiết bị vận hành 24/7](nhung-du-an-thu-vi-voi-homelab/thiet-lap-he-thong-dashboard-theo-doi-hieu-nang-tien-dien-cam-bien/theo-doi-tien-dien/thuc-te-su-dung-dien-cua-mot-so-thiet-bi-van-hanh-24-7.md)
 * [Chia sẻ file trong mạng LAN, backup dữ liệu](nhung-du-an-thu-vi-voi-homelab/chia-se-file-trong-mang-lan-backup-du-lieu/README.md)
@@ -57,13 +56,19 @@
   * [Tự làm bộ sạc nhiều cổng hỗ trợ PD siêu rẻ](pro-tips/pin-thu-nhao-vao-day/tu-lam-bo-sac-nhieu-cong-ho-tro-pd-sieu-re.md)
 * [Use memory card as RAM](pro-tips/use-memory-card-as-ram.md)
 * [Frequently used command](pro-tips/frequently-used-command/README.md)
+  * [Phân quyền linux](pro-tips/frequently-used-command/phan-quyen-linux/README.md)
+    * [Tự động phân quyền trên linux](pro-tips/frequently-used-command/phan-quyen-linux/tu-dong-phan-quyen-tren-linux.md)
+  * [Thao tác với Docker](pro-tips/frequently-used-command/thao-tac-voi-docker.md)
   * [Thao tác với ổ cứng](pro-tips/frequently-used-command/thao-tac-voi-o-cung.md)
 * [Vấn đề đối với Wi-Fi khi sử dụng smarthome](pro-tips/networking-and-wi-fi/README.md)
 
 ## Hosting & Networking
 
 * [Mini Webserver - Selfhosting](nhung-du-an-thu-vi-voi-homelab/mini-webserver-selfhosting/README.md)
-  * [Sử dụng Proxmox để vui chơi không để lại nhiều hậu quả](nhung-du-an-thu-vi-voi-homelab/mini-webserver-selfhosting/su-dung-proxmox-de-vui-choi-khong-de-lai-nhieu-hau-qua.md)
+  * [Hướng dẫn cài đặt Proxmox](hosting-and-networking/mini-webserver-selfhosting/huong-dan-cai-dat-proxmox.md)
   * [Gắn thêm ổ cứng cho Proxmox](nhung-du-an-thu-vi-voi-homelab/mini-webserver-selfhosting/gan-them-o-cung-cho-proxmox.md)
-  * [IP động thì làm sao hosting? - Tự động hoá với Cosmos Server](nhung-du-an-thu-vi-voi-homelab/mini-webserver-selfhosting/ip-dong-thi-lam-sao-hosting-tu-dong-hoa-voi-cosmos-server.md)
-* [Truy cập vào các Home Service từ bên ngoài thông qua domain](pro-tips/networking-and-wi-fi/truy-cap-vao-cac-home-service-tu-ben-ngoai-thong-qua-domain.md)
+* [Hướng dẫn Mikrotik Router](hosting-and-networking/huong-dan-mikrotik-router/README.md)
+  * [Hướng dẫn cấu hình cơ bản](hosting-and-networking/huong-dan-mikrotik-router/huong-dan-cau-hinh-co-ban.md)
+  * [Mở NAT port ra bên ngoài](hosting-and-networking/huong-dan-mikrotik-router/mo-nat-port-ra-ben-ngoai.md)
+* [Truy cập vào các Home Service từ bên ngoài thông qua domain](hosting-and-networking/truy-cap-vao-cac-home-service-tu-ben-ngoai-thong-qua-domain/README.md)
+  * [IP động thì làm sao hosting? - Tự động hoá với Cosmos Server](hosting-and-networking/truy-cap-vao-cac-home-service-tu-ben-ngoai-thong-qua-domain/ip-dong-thi-lam-sao-hosting-tu-dong-hoa-voi-cosmos-server.md)
