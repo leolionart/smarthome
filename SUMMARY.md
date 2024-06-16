@@ -19,6 +19,7 @@
   * [Mở cửa cuốn bằng eWeLink (SonOFF) 4CH Pro](smarthome-hub/apple-homekit-cho-thiet-bi-khong-ho-tro/mo-cua-cuon-bang-ewelink-4ch-pro.md)
 * [Automation - Tự động hoá](smarthome-hub/automation-tu-dong-hoa/README.md)
   * [Các kịch bản tự động hoá mình đang sử dụng](smarthome-hub/automation-tu-dong-hoa/cac-kich-ban-tu-dong-hoa-minh-dang-su-dung.md)
+  * [Tạm ngưng tự động tắt đèn. Bật đèn bằng phím vật lý thì ngưng không tắt](smarthome-hub/automation-tu-dong-hoa/tam-ngung-tu-dong-tat-den.-bat-den-bang-phim-vat-ly-thi-ngung-khong-tat.md)
   * [Tự động hoá nâng cao](smarthome-hub/automation-tu-dong-hoa/tu-dong-hoa-nang-cao.md)
 * [DIY thiết bị hỗ trợ Apple HomeKit](smarthome-hub/diy-thiet-bi-ho-tro-apple-homekit/README.md)
   * [Cảm biến hiện diện bằng bất cứ thiết bị bluetooth nào (đồng hồ, xe hơi...)](smarthome-hub/diy-thiet-bi-ho-tro-apple-homekit/cam-bien-hien-dien-bang-bat-cu-thiet-bi-bluetooth-nao-dong-ho-xe-hoi....md)
