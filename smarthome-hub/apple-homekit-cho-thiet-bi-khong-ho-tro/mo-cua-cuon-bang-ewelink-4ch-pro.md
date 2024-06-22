@@ -11,7 +11,7 @@
 
 <figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption><p>Sơ đồ mạch điện, bạn mở ra nhớ kỹ màu sắc dây để biết dây nào L/N/D</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Sơ đồ mạch điện, bạn mở ra nhớ kỹ màu sắc dây để biết dây nào L/N/D</p></figcaption></figure>
 
 {% embed url="http://noha.vn/dieu-khien-cua-cuon-bang-cong-tac-sonoff-tx-3-nut/" %}
 Hướng dẫn chi tiết

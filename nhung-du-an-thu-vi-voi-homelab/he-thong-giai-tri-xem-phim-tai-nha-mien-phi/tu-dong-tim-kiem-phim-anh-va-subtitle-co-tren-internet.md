@@ -122,7 +122,7 @@ Chi tiết thao tác với ổ cứng gắn ngoài và chia sẻ file: [chia-se-
 
 {% tabs %}
 {% tab title="Sonarr - Quản lý phim bộ" %}
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Tự động tải tập mới nhất, theo dõi theo season mới nhất hoặc toàn bộ season</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Tự động tải tập mới nhất, theo dõi theo season mới nhất hoặc toàn bộ season</p></figcaption></figure>
 {% endtab %}
 
 {% tab title="Radarr - Quản lý phim lẻ" %}

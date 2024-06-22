@@ -12,12 +12,14 @@ Xem dung lượng ram được sử dụng: `$ htop` hoặc `free --mega`
 
 ### Disable the swap file:
 
-`sudo dphys-swapfile swapoff` `sudo nano /etc/dphys-swapfile`
+`sudo dphys-swapfile swapoff`&#x20;
+
+`sudo nano /etc/dphys-swapfile`
 
 #### Khai báo Swapfile
 
 ```
-SWAP_SIZE=8G && SWAP_FILE=/swapfile && sudo swapoff -a && sudo rm -rf $SWAP_FILE && sudo fallocate -l $SWAP_SIZE $SWAP_FILE && sudo chmod 600 $SWAP_FILE && sudo mkswap $SWAP_FILE && sudo swapon -a
+SWAP_SIZE=1G && SWAP_FILE=/swapfile && sudo swapoff -a && sudo rm -rf $SWAP_FILE && sudo fallocate -l $SWAP_SIZE $SWAP_FILE && sudo chmod 600 $SWAP_FILE && sudo mkswap $SWAP_FILE && sudo swapon -a
 ```
 
 ### Enable the swap file:

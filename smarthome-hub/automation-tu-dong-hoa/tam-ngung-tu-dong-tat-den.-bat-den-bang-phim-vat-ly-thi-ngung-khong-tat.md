@@ -6,7 +6,7 @@ Chắc hẳn trong các kịch bản sử dụng smarthome hằng ngày, có nhi
 
 Cách làm ở đây là thiết lập một automation để khi kích hoạt sẽ tạm ngưng automation tắt đèn. Ở đây mình thiết lập bằng Aqara Home (các hãng khác bạn tìm kiếm chức năng tương tự nhé).
 
-<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
 
 ### **Giải thích**
 

@@ -1,5 +1,18 @@
 # IP động thì làm sao hosting? - Tự động hoá với Cosmos Server
 
+Trước giờ, quy trình cài đặt và quản lý các ứng dụng self-host trong homelab ở nhà của mình thường diễn ra như sau:
+
+1. Tạo máy ảo VM hoặc container LXC mới trên [Proxmox](https://thuanbui.me/tag/proxmox), cài đặt thêm Docker và Docker Compose.
+2. Cài đặt ứng dụng bằng Docker-Compose, hoặc [Portainer](https://thuanbui.me/tag/portainer).
+3. Tạo Reverse Proxy với [Nginx Proxy Manager](https://thuanbui.me/nginx-proxy-manager-reverse-proxy-docker-container/) để có thể truy cập ứng dụng thông qua tên miền.
+4. Thêm ứng dụng vào Dashboard của [Homepage](https://github.com/gethomepage/homepage) để tiện việc truy cập khi cần.
+
+Mình đã thao tác quen tay nên tất cả các bước này thường chỉ mất tối đa 10 phút. Nhưng với những bạn mới bắt đầu tìm hiểu về Docker / Self-Host, đây rõ ràng là một thách thức khi có quá nhiều khái niệm và ứng dụng phải nghiên cứu làm quen.
+
+Để giúp tinh gọn việc cài đặt và quản lý homelab, gần đây mình đang dần chuyển qua sử dụng [Cosmos-Server](https://github.com/azukaar/Cosmos-Server), một công cụ miễn phí cực kỳ mạnh mẽ dành cho các homelabber. Quan trọng hơn là nó rất dễ sử dụng, dễ quản lý, phù hợp cho các bạn mới bắt đầu hay đã có kinh nghiệm.
+
+
+
 Với đa số nhu cầu sử dụng cá nhân thì nhà mạng không cố định địa chỉ IP, dẫn tới việc domain sẽ liên tục phải thay đổi cấu hình IP thì mới truy cập được. Dưới dây là hướng dẫn để tự động hoá việc này.
 
 ## Yêu cầu
@@ -14,17 +27,6 @@ Phương pháp dưới đây sẽ giúp bạn tự động hoá được 2 bư�
 2. Khi phát sinh một service mới dễ dàng tạo sub domain và truy cập được
 3. Gia hạn SSL một cách miễn phí
 {% endhint %}
-
-Trước giờ, quy trình cài đặt và quản lý các ứng dụng self-host trong homelab ở nhà của mình thường diễn ra như sau:
-
-1. Tạo máy ảo VM hoặc container LXC mới trên [Proxmox](https://thuanbui.me/tag/proxmox), cài đặt thêm Docker và Docker Compose.
-2. Cài đặt ứng dụng bằng Docker-Compose, hoặc [Portainer](https://thuanbui.me/tag/portainer).
-3. Tạo Reverse Proxy với [Nginx Proxy Manager](https://thuanbui.me/nginx-proxy-manager-reverse-proxy-docker-container/) để có thể truy cập ứng dụng thông qua tên miền.
-4. Thêm ứng dụng vào Dashboard của [Homepage](https://github.com/gethomepage/homepage) để tiện việc truy cập khi cần.
-
-Mình đã thao tác quen tay nên tất cả các bước này thường chỉ mất tối đa 10 phút. Nhưng với những bạn mới bắt đầu tìm hiểu về Docker / Self-Host, đây rõ ràng là một thách thức khi có quá nhiều khái niệm và ứng dụng phải nghiên cứu làm quen.
-
-Để giúp tinh gọn việc cài đặt và quản lý homelab, gần đây mình đang dần chuyển qua sử dụng [Cosmos-Server](https://github.com/azukaar/Cosmos-Server), một công cụ miễn phí cực kỳ mạnh mẽ dành cho các homelabber. Quan trọng hơn là nó rất dễ sử dụng, dễ quản lý, phù hợp cho các bạn mới bắt đầu hay đã có kinh nghiệm.
 
 Bài viết này sẽ hướng dẫn bạn cách cài đặt và sử dụng Cosmos-Server.
 

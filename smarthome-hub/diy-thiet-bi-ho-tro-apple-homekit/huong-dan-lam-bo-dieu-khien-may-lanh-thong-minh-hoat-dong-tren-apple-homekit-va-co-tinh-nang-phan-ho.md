@@ -38,7 +38,7 @@ Link tải tools, firmware: https://drive.google.com/file/d/1r47DjV0\_6ePzaVbOYt
 UPDATE: Với trường hợp mạch điều hòa không học được Remote và không nhận diện được mã điều hòa. Các bạn có thể chọn thủ công bằng cách bấm vào: 18. KELVINATOR, Sau đó chọn hãng điều hòa hỗ trợ trong danh sách (Ảnh chụp phía dưới).
 {% endhint %}
 
-![](<../../.gitbook/assets/image (1) (1).png>)\
+![](<../../.gitbook/assets/image (1) (1) (1).png>)\
 
 
 ### Link mua link kiện:
