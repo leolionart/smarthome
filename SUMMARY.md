@@ -4,7 +4,7 @@
   * [Script: Thiết lập toàn bộ dịch vụ smarthome cơ bản](welcome-to-my-homelab/script-thiet-lap-toan-bo-dich-vu-smarthome-co-ban.md)
   * [Script: Thiết lập các dịch vụ để làm media server](welcome-to-my-homelab/script-thiet-lap-cac-dich-vu-de-lam-media-server.md)
   * [Script: Thiết lập dịch vụ theo dõi và tự động hoá](welcome-to-my-homelab/script-thiet-lap-dich-vu-theo-doi-va-tu-dong-hoa.md)
-  * [Docker Compose Template](welcome-to-my-homelab/docker-compose-template.md)
+  * [Docker Compose Template - Manual Setup](welcome-to-my-homelab/docker-compose-template-manual-setup.md)
 
 ## Smarthome HUB
 
@@ -53,15 +53,18 @@
 ## Pro Tips
 
 * [Pin thủ nhào vào đây](pro-tips/pin-thu-nhao-vao-day/README.md)
-  * [Biến sạc thường thành sạc nhanh](pro-tips/pin-thu-nhao-vao-day/bien-sac-thuong-thanh-sac-nhanh.md)
-  * [Tự làm bộ sạc nhiều cổng hỗ trợ PD siêu rẻ](pro-tips/pin-thu-nhao-vao-day/tu-lam-bo-sac-nhieu-cong-ho-tro-pd-sieu-re.md)
+  * [Biến sạc thường thành sạc nhanh PD](pro-tips/pin-thu-nhao-vao-day/bien-sac-thuong-thanh-sac-nhanh-pd.md)
+  * [Tự làm bộ sạc nhiều cổng hỗ trợ PD siêu rẻ, có thể gắn lên xe máy & oto để sạc nhanh](pro-tips/pin-thu-nhao-vao-day/tu-lam-bo-sac-nhieu-cong-ho-tro-pd-sieu-re-co-the-gan-len-xe-may-and-oto-de-sac-nhanh.md)
+  * [Tận dụng pin cũ của điện thoại](pro-tips/pin-thu-nhao-vao-day/tan-dung-pin-cu-cua-dien-thoai.md)
 * [Use memory card as RAM](pro-tips/use-memory-card-as-ram.md)
 * [Frequently used command](pro-tips/frequently-used-command/README.md)
   * [Phân quyền linux](pro-tips/frequently-used-command/phan-quyen-linux/README.md)
     * [Tự động phân quyền trên linux](pro-tips/frequently-used-command/phan-quyen-linux/tu-dong-phan-quyen-tren-linux.md)
   * [Thao tác với Docker](pro-tips/frequently-used-command/thao-tac-voi-docker.md)
   * [Thao tác với ổ cứng](pro-tips/frequently-used-command/thao-tac-voi-o-cung.md)
-* [Vấn đề đối với Wi-Fi khi sử dụng smarthome](pro-tips/networking-and-wi-fi/README.md)
+* [Điện mặt trời - Solar](pro-tips/dien-mat-troi-solar/README.md)
+  * [Những điều cần biết khi đầu tư hệ thống điện mặt trời](pro-tips/dien-mat-troi-solar/nhung-dieu-can-biet-khi-dau-tu-he-thong-dien-mat-troi.md)
+  * [Các thương hiệu Pin và Invester phổ biến](pro-tips/dien-mat-troi-solar/cac-thuong-hieu-pin-va-invester-pho-bien.md)
 
 ## Hosting & Networking
 
@@ -72,7 +75,9 @@
   * [Tunnels - Truy cập qua domain không cần mở port public](hosting-and-networking/truy-cap-vao-cac-home-service-tu-ben-ngoai-thong-qua-domain/tunnels-truy-cap-qua-domain-khong-can-mo-port-public.md)
   * [IP động thì làm sao hosting? - Tự động hoá với Cosmos Server](hosting-and-networking/truy-cap-vao-cac-home-service-tu-ben-ngoai-thong-qua-domain/ip-dong-thi-lam-sao-hosting-tu-dong-hoa-voi-cosmos-server.md)
   * [Reverse proxy - Truy cập từ domain vào nhiều server trên 1 public IP](hosting-and-networking/truy-cap-vao-cac-home-service-tu-ben-ngoai-thong-qua-domain/reverse-proxy-truy-cap-tu-domain-vao-nhieu-server-tren-1-public-ip/README.md)
+    * [Thao tác với Caddy Proxy](hosting-and-networking/truy-cap-vao-cac-home-service-tu-ben-ngoai-thong-qua-domain/reverse-proxy-truy-cap-tu-domain-vao-nhieu-server-tren-1-public-ip/thao-tac-voi-caddy-proxy.md)
     * [Không thể truy cập vào home server thông qua public IP từ nội bộ](hosting-and-networking/truy-cap-vao-cac-home-service-tu-ben-ngoai-thong-qua-domain/reverse-proxy-truy-cap-tu-domain-vao-nhieu-server-tren-1-public-ip/khong-the-truy-cap-vao-home-server-thong-qua-public-ip-tu-noi-bo.md)
 * [Hướng dẫn Mikrotik Router](hosting-and-networking/huong-dan-mikrotik-router/README.md)
   * [Hướng dẫn cấu hình cơ bản](hosting-and-networking/huong-dan-mikrotik-router/huong-dan-cau-hinh-co-ban.md)
   * [Mở NAT port ra bên ngoài](hosting-and-networking/huong-dan-mikrotik-router/mo-nat-port-ra-ben-ngoai.md)
+* [Vấn đề đối với Wi-Fi khi sử dụng smarthome](hosting-and-networking/van-de-doi-voi-wi-fi-khi-su-dung-smarthome.md)

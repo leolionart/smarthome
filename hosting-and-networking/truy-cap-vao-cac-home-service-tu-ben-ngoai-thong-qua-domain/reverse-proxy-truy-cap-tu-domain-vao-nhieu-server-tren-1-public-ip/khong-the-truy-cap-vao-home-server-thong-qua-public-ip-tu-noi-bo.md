@@ -6,7 +6,7 @@ Tuy nhiên có một hạn chế là bạn không thể truy cập vào server t
 
 Để giải quyết vấn đề này, bắt buộc bạn phải cấu hình thêm Hairpin NAT cho router. Trong bài viết này mình sẽ chia sẻ cách thiết lập Hairpin NAT trên router Mikrotik để có thể truy cập vào dịch vụ mạng trong nhà bằng tên miền, khỏi phải gõ địa chỉ IP của server.
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 Trong sơ đồ trên, chúng ta có 4 thiết bị:
 
