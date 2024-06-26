@@ -6,7 +6,7 @@ Nhiều khả năng khi thiết lập AdGuard Home trên Ubuntu, bạn sẽ bị
 
 `sudo nano /etc/systemd/resolved.conf.d/adguardhome.conf`&#x20;
 
-Code language: Nginx (nginx) Điền vào nội dung sau
+Điền vào nội dung sau
 
 `[Resolve] DNS=127.0.0.1 DNSStubListener=no`&#x20;
 
@@ -18,8 +18,8 @@ Tiếp theo chạy lệnh này để cập nhật thông số và khởi động
 
 `sudo ln -s /run/systemd/resolve/resolv.conf /etc/resolv.conf sudo systemctl restart systemd-resolved`&#x20;
 
-Code language: Dockerfile (dockerfile) Port 53 giờ đã được trả tự do để AdGuard Home sử dụng. Bạn có thể kiểm tra lại bằng lệnh
+Port 53 giờ đã được trả tự do để AdGuard Home sử dụng. Bạn có thể kiểm tra lại bằng lệnh
 
 `sudo lsof -i :53`&#x20;
 
-Code language: CSS (css) Nếu không thấy kết quả nào trả lại nghĩa là port 53 đã được tự do.
+Nếu không thấy kết quả nào trả lại nghĩa là port 53 đã được tự do.

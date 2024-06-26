@@ -1,2 +1,0 @@
-# Điện mặt trời - Solar
-

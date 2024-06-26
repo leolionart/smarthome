@@ -1,6 +1,12 @@
+---
+description: >-
+  Site này được xây dựng như là một thư viện tra cứu nhanh cho các câu lệnh,
+  hướng dẫn cần thiết để xây dựng các dự án smarthome
+---
+
 # Welcome to my HomeLAB
 
-Flex về hệ thống smarthome và tiện ích mình tự xây dựng từ 2022 tới hiện tại, qua nhiều cải tiến mình quyết định chia sẻ lại để các bạn có một lộ trình chơi đồ phù hợp.&#x20;
+Mình bắt tay vào xây dựng smarthome và tiện ích mình tự xây dựng từ 2022 tới hiện tại, qua nhiều cải tiến mình quyết định chia sẻ lại để các bạn có một lộ trình chơi đồ phù hợp.&#x20;
 
 > Với niềm yêu thích công nghệ, luôn tìm kiếm giải pháp xoay quanh việc tối ưu các vấn đề thường gặp. Tôi dành thời gian cho dự án cá nhân này để học thêm các kỹ năng liên quan tới lập trình và các công nghệ phổ biến.
 
@@ -12,7 +18,7 @@ Mình cần một thiết bị trung gian để đưa camera lên Apple Home, tu
 
 {% tabs %}
 {% tab title="BPI M5 (BananaPi)" %}
-**Phục vụ ác dự án HomeLAB (xem phim, đưa camera lên homekit...)**
+**Phục vụ các dự án HomeLAB (xem phim, đưa camera lên homekit, tự động hoá...)**
 
 <table><thead><tr><th width="163">BananaPi</th><th>Cấu hình</th></tr></thead><tbody><tr><td>CPU</td><td>4 CPU</td></tr><tr><td>RAM</td><td>4G</td></tr><tr><td>ROM</td><td>32G (SD Card để cài hệ điều hành)</td></tr><tr><td>EMMC</td><td>16G (dùng làm bộ nhớ đệm mở rộng cho RAM)</td></tr><tr><td>HDD</td><td>3Tb (4 ổ cứng cũ)</td></tr></tbody></table>
 
@@ -28,6 +34,16 @@ Với phần cứng này tôi có thể vận hành được các tiện ích nh
 
 {% hint style="success" %}
 Với đặc thù hoạt động 24/7, tiết kiệm điện năng, vận hành ổn định. Tôi chọn Raspberry cũ cỡ 500k cho các nhiệm vụ trên. Với 2 tác vụ này CPU và RAM của thiết bị gần như luôn hoạt động ở mức >70% trong 2 năm chưa một lần gặp sự cố
+{% endhint %}
+{% endtab %}
+
+{% tab title="Home Server" %}
+**Phục vụ học tập và thử nghiệm các dự án mới thông qua nền tảng ảo hoá (proxmox)**
+
+<table><thead><tr><th width="163">BananaPi</th><th>Cấu hình</th></tr></thead><tbody><tr><td>CPU</td><td>12 CPU</td></tr><tr><td>RAM</td><td>32G</td></tr><tr><td>GPU</td><td>4G (RX560)</td></tr><tr><td>SSD</td><td>1Tb (4 ổ SSD)</td></tr><tr><td>HDD</td><td>10Tb (4 ổ cứng cũ)</td></tr></tbody></table>
+
+{% hint style="success" %}
+Tận dụng triệt để đỡ phí tiền đóng tiền internet 2 line cáp quang cỡ 500k/tháng + tiền điện từ pin mặt trời. Không bỏ tiền hàng tháng cho dịch vụ cloud (ngoài iCloud và Gdrive mỗi tháng \~100k) hay giải trí nào như Netflix, Disney+... Hay hosting mấy cái web tự build traffic <1000/tháng. Dùng nó để học mọi thứ về web application không tốn tiền thuê VPS
 {% endhint %}
 {% endtab %}
 {% endtabs %}

@@ -62,12 +62,92 @@ NASpath = /mnt/sda1
 
 `$ sudo nano /etc/fstab`
 
-```
-UUID=a63e1694-79fe-4d7d-9e69-a9d4f67ce28a /mnt/sda1 ext4 defaults,auto,users,rw,nofail,noatime 0 0
+<pre><code>UUID=a63e1694-79fe-4d7d-9e69-a9d4f67ce28a /mnt/sda1 ext4 defaults,auto,users,rw,nofail,noatime 0 0
 UUID=03055c59-3346-451a-be85-7ac95c4ae633 /mnt/sda2 ext4 defaults,auto,users,rw,nofail,noatime 0 0
-UUID=586a5114-39ee-4aae-bc0a-30b6ae315949 /mnt/sda3 ext4 defaults,auto,users,rw,nofail,noatime 0 0
-```
+<strong>UUID=586a5114-39ee-4aae-bc0a-30b6ae315949 /mnt/sda3 ext4 defaults,auto,users,rw,nofail,noatime 0 0
+</strong><strong>UUID=fba61038-e998-4254-b795-519716f393d4 /mnt/sda4 ext4 defaults,auto,users,rw,nofail,noatime 0 0
+</strong></code></pre>
 
 {% hint style="warning" %}
-Lấy mã UUID theo thông tin trả về trong câu lệnh: `lsblk`
+Lấy mã UUID theo thông tin trả về trong câu lệnh: `lsblk -f`
 {% endhint %}
+
+## Cài đặt NAS để có thể backup được time machine
+
+`sudo apt-get install samba avahi-daemon`
+
+Cần bổ sung cấu hình file samba để support định dạng time machine hiểu được
+
+`sudo nano /etc/samba/smb.conf`
+
+```
+[Backup]
+path = /mnt/sda4
+fruit:time machine = yes
+vfs objects = catia fruit streams_xattr
+writeable = yes
+guest ok = yes
+create mask = 0777
+directory mask = 0777
+```
+
+### Reload lại samba
+
+`sudo service smbd reload`
+
+### Configuring Avahi deamon <a href="#ba2a" id="ba2a"></a>
+
+In order to let MacOS automatically detect our new Time Machine we’ll need to configure Avahi. For that edit the following file:
+
+```
+sudo nano /etc/avahi/services/samba.service
+```
+
+And paste this configuration in:
+
+```
+<?xml version="1.0" standalone='no'?><!--*-nxml-*-->
+<!DOCTYPE service-group SYSTEM "avahi-service.dtd">
+<service-group>
+  <name replace-wildcards="yes">%h</name>
+  <service>
+    <type>_smb._tcp</type>
+    <port>445</port>
+  </service>
+  <service>
+    <type>_device-info._tcp</type>
+    <port>9</port>
+    <txt-record>model=TimeCapsule8,119</txt-record>
+  </service>
+  <service>
+    <type>_adisk._tcp</type>
+    <port>9</port>
+    <txt-record>dk0=adVN=backups,adVF=0x82</txt-record>
+    <txt-record>sys=adVF=0x100</txt-record>
+  </service>
+</service-group>
+```
+
+With this we tell MacOS that in fact our Raspberry Pi is a 8th Gen Time Capsule and it will appear like one in the sidebar in Finder.
+
+<figure><img src="https://miro.medium.com/v2/resize:fit:1400/1*24f0i0bNxndq8gDng-qyFg.png" alt="" height="449" width="700"><figcaption></figcaption></figure>
+
+### Restart Avahi daemon: <a href="#c232" id="c232"></a>
+
+```
+sudo service avahi-daemon restart
+```
+
+### Automated start of the services <a href="#id-4feb" id="id-4feb"></a>
+
+We need to edit crontab with:
+
+```
+sudo crontab -e
+```
+
+We’ll mount the USB drive and start the needed services on a boot/reboot:
+
+```
+@reboot sleep 30 && mount /mnt/sda4 && sleep 30 && umount /mnt/sda4 && sleep 30 && mount /mnt/sda4 && sleep 30 && service avahi-daemon start && service smbd start
+```
