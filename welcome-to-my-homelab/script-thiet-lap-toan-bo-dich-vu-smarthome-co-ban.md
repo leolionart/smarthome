@@ -31,4 +31,4 @@ curl -sk https://raw.githubusercontent.com/leolionart/smarthome/main/HomeLab_bas
 Chứa config file ở ổ cứng gắn ngoài hoặc USB để không mất công cài đặt lại từ đầu
 {% endhint %}
 
-Trường hợp cần config thủ công, vui lòng follow các bài viết thuộc loạt bài HomeKIT [apple-homekit-cho-thiet-bi-khong-ho-tro](../smarthome-hub/apple-homekit-cho-thiet-bi-khong-ho-tro/ "mention")
+Trường hợp cần config thủ công, vui lòng follow các bài viết thuộc loạt bài HomeKIT [apple-homekit-cho-thiet-bi-khong-ho-tro](../cai-dat-install/apple-homekit-cho-thiet-bi-khong-ho-tro/ "mention")

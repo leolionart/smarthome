@@ -6,11 +6,16 @@ description: >-
 
 # Welcome to my HomeLAB
 
-Mình bắt tay vào xây dựng smarthome và tiện ích mình tự xây dựng từ 2022 tới hiện tại, qua nhiều cải tiến mình quyết định chia sẻ lại để các bạn có một lộ trình chơi đồ phù hợp.&#x20;
+{% hint style="danger" %}
+Với mong muốn phát triển nhiều nội dung đa dạng hơn về nhiều chủ đề. Nền tảng hiện tại không cho phép mình quản lý nội dung đa dạng và phục vụ tốt trải nghiệm đọc của mọi người nên mình sẽ chuyển sang phát triển nội dung ở một site khác. Mong mọi người ủng hộ ạ.
 
-> Với niềm yêu thích công nghệ, luôn tìm kiếm giải pháp xoay quanh việc tối ưu các vấn đề thường gặp. Tôi dành thời gian cho dự án cá nhân này để học thêm các kỹ năng liên quan tới lập trình và các công nghệ phổ biến.
+\
+Mời mọi người ghé thăm: [https://geek.naai.studio/](https://geek.naai.studio/)
+{% endhint %}
 
-Mình cần một thiết bị trung gian để đưa camera lên Apple Home, tuy nhiên phần cứng vẫn còn khá dư giả để làm nhiều chuyện khác. Dưới dây là một số gợi ý mà bạn có thể tận dụng tối đa sức mạnh phần cứng của máy tính mà sẵn thì bạn cũng đã phải bật 24/7 trong nhà. &#x20;
+Mình bắt tay vào xây dựng smarthome và tiện ích mình tự xây dựng từ 2022 tới hiện tại, qua nhiều cải tiến mình quyết định chia sẻ lại để các bạn có một lộ trình chơi đồ phù hợp. Với niềm yêu thích công nghệ, luôn tìm kiếm giải pháp xoay quanh việc tối ưu các vấn đề thường gặp. Tôi dành thời gian cho dự án cá nhân này để học thêm các kỹ năng liên quan tới lập trình và các công nghệ phổ biến.
+
+Để bắt đầu, mình cần một thiết bị trung gian để đưa camera lên Apple Home, tuy nhiên phần cứng vẫn còn khá dư giả để làm nhiều chuyện khác. Loạt bài viết dưới đây giúp bạn có thể tận dụng tối đa sức mạnh phần cứng của máy tính mà sẵn thì bạn cũng đã phải bật 24/7 trong nhà để làm nhiều việc khác hữu ích hơn.
 
 <figure><img src="https://egg.d.pr/i/TuTrWz.jpg" alt=""><figcaption></figcaption></figure>
 
@@ -96,7 +101,7 @@ Riêng phần cứng yêu cầu cho chức năng này đã phải cần ít nh�
 
 </div>
 
-[dua-camera-len-apple-homekit.md](smarthome-hub/apple-homekit-cho-thiet-bi-khong-ho-tro/dua-camera-len-apple-homekit.md "mention")
+[scrypted-dua-camera-len-apple-homekit.md](cai-dat-install/apple-homekit-cho-thiet-bi-khong-ho-tro/scrypted-dua-camera-len-apple-homekit.md "mention")
 
 Camera hỗ trợ sẵn HomeKit sẽ đắt hơn ít nhất gấp 2 lần camera thông thường với cùng cấu hình độ phân giải. Đôi khi còn có ít chức năng hơn. Mục tiêu của tôi là khiến nó phải hỗ trợ HomeKit để lúc cần xem camera chỉ cần mở Apple Home. Hoặc khi có ai bấm chuông thì mặc định sẽ hiển thị được hình ảnh camera trên Apple TV. Chi tiết:
 
@@ -129,7 +134,7 @@ Không một hãng nào có tất cả thiết bị đáp ứng cả 3 tiêu ch�
 * Tích hợp thông qua Homebridge (vẫn giữ firmware của hãng)
 
 Tôi thường chọn giải pháp thứ 2 vì đơn giản và hoạt động ổn định hơn. Bạn có thể tham khảo loạt bài:\
-[apple-homekit-cho-thiet-bi-khong-ho-tro](smarthome-hub/apple-homekit-cho-thiet-bi-khong-ho-tro/ "mention")
+[apple-homekit-cho-thiet-bi-khong-ho-tro](cai-dat-install/apple-homekit-cho-thiet-bi-khong-ho-tro/ "mention")
 
 {% hint style="warning" %}
 Tuy nhiên trong một số trường hợp việc tích hợp này sẽ khiến thiết bị phản hồi chậm. Do thông thường lệnh vẫn phải đi lên server của hãng (nếu k có tuỳ chọn control via LAN)  sau đó mới xuống thiết bị. Khi đấy nên xem xét tới việc up firmware để add thẳng vào homekit
@@ -153,7 +158,7 @@ Thiết bị Zigbee rất đa dạng, pin trâu và thiết kế rất nhỏ g�
 
 Tự tuỳ biến một HUB để thu nhận sóng Zigbee là một giải pháp vô cùng hiệu quả. Hướng dẫn chi tiết:
 
-[mot-hub-ket-noi-duoc-toan-bo-thiet-bi-zigbee-cua-tat-ca-cac-hang.md](smarthome-hub/apple-homekit-cho-thiet-bi-khong-ho-tro/mot-hub-ket-noi-duoc-toan-bo-thiet-bi-zigbee-cua-tat-ca-cac-hang.md "mention")
+[mot-hub-ket-noi-duoc-toan-bo-thiet-bi-zigbee-cua-tat-ca-cac-hang.md](cai-dat-install/mot-hub-ket-noi-duoc-toan-bo-thiet-bi-zigbee-cua-tat-ca-cac-hang.md "mention")
 
 ## Connect with me 🫵🏻
 

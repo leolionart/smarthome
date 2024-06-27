@@ -58,7 +58,7 @@ Bạn có thể bắt đầu theo từng level cho dễ, không cần đầu tư
 <table><thead><tr><th width="159.33333333333331">Tên phần cứng</th><th>Nhiệm vụ</th><th>Note</th></tr></thead><tbody><tr><td>Aqara HUB</td><td>Đưa các thiết bị Zigbee của Aqara lên Apple Home</td><td>Cần có để các thiết bị Zigbee hoạt động được</td></tr><tr><td>RaspberryPi 3</td><td>Đưa các thiết bị không hỗ trợ HomeKit lên Apple Home</td><td>Tách 1 thiết bị riêng chỉ làm 1 nhiệm vụ duy nhất cho ổn định</td></tr><tr><td>BananaPi</td><td>Vai trò tương tự RaspberryPI, cài linux chạy các dịch vụ phù hợp</td><td>Bạn cần cái này cho các dự án thú vị với HOMELAB</td></tr></tbody></table>
 
 {% hint style="danger" %}
-Nếu bạn thực sự tự tin thì cũng có thể bỏ qua Aqara HUB vì RaspberryPI có thể thành một [HUB Zigbee đa năng](../apple-homekit-cho-thiet-bi-khong-ho-tro/mot-hub-ket-noi-duoc-toan-bo-thiet-bi-zigbee-cua-tat-ca-cac-hang.md) hỗ trợ kết nối bất cứ thiết bị Zigbee của hãng nào. Tuy nhiên tôi đã lỡ mua Aqara M2 rồi thì dùng thôi :joy:
+Nếu bạn thực sự tự tin thì cũng có thể bỏ qua Aqara HUB vì RaspberryPI có thể thành một [HUB Zigbee đa năng](../cai-dat-install/mot-hub-ket-noi-duoc-toan-bo-thiet-bi-zigbee-cua-tat-ca-cac-hang.md) hỗ trợ kết nối bất cứ thiết bị Zigbee của hãng nào. Tuy nhiên tôi đã lỡ mua Aqara M2 rồi thì dùng thôi :joy:
 {% endhint %}
 
 ### Tham khảo chi phí đầu tư trên từng giai đoạn
