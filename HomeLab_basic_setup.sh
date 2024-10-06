@@ -38,11 +38,11 @@ echo "----------------------------------------------------------------"
 echo "Commence Dockge Setup"
 echo "----------------------------------------------------------------"
 mkdir -p /opt/{dockge,stacks}
-wget -q -O /opt/dockge/compose.yaml https://raw.githubusercontent.com/louislam/dockge/master/compose.yaml
+wget -q -O /opt/dockge/compose.yaml https://raw.githubusercontent.com/leolionart/smarthome/dockercompose/Dockge/compose.yaml
 cd /opt/dockge
 docker compose up -d
 echo "----------------------------------------------------------------"
-echo "Dockge GUI, https:// IP:5001"
+echo "Dockge GUI, https://your_server_ip:5001"
 echo "----------------------------------------------------------------"
 
 

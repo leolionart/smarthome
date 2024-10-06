@@ -14,6 +14,8 @@ services:
         options:
           max-size: "10mb"
           max-file: "1"
+
+
     scrypted:
         environment:
             # Scrypted NVR Storage (Part 2 of 3)
