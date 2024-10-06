@@ -12,6 +12,6 @@ services:
       - 3000:3000/tcp
       - 8880:80/tcp
     volumes:
-      - ./workdir:/opt/adguardhome/work
-      - ./confdir:/opt/adguardhome/conf
+      - /mnt/sda1/Config/adguard/workdir:/opt/adguardhome/work
+      - /mnt/sda1/Config/adguard/confdir:/opt/adguardhome/conf
     restart: unless-stopped

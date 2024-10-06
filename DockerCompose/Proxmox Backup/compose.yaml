@@ -1,0 +1,20 @@
+services:
+  pbs:
+    image: ayufan/proxmox-backup-server:latest
+    ports:
+      - 8007:8007
+    mem_limit: 2G
+    volumes:
+      - /mnt/sda1/Proxmox/pbs_etc:/etc/proxmox-backup
+      - /mnt/sda1/Proxmox/pbs_logs:/var/log/proxmox-backup
+      - /mnt/sda1/Proxmox/pbs_lib:/var/lib/proxmox-backup
+      - /mnt/sda1/Proxmox/backups:/backups
+    tmpfs:
+      - /run
+    cap_add:
+      # smartctl support
+      - SYS_RAWIO
+    devices:
+      - /dev/sda
+    restart: unless-stopped
+    stop_signal: SIGHUP

@@ -1,0 +1,12 @@
+version: "2"
+services:
+  node-red-homekit:
+    image: nrchkb/node-red-homekit
+    container_name: node-red
+    restart: always
+    network_mode: host
+    environment:
+      - TZ=Asia/Saigon
+      - DEBUG=NRCHKB:*
+    volumes:
+      - /mnt/sda1/Config/node-red:/data

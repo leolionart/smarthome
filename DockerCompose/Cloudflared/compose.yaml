@@ -1,0 +1,9 @@
+version: "3"
+services:
+  cloudflared_tunnel:
+    image: cloudflare/cloudflared:latest
+    container_name: cloudflared-tunnel
+    command: tunnel --no-autoupdate run --token
+      eyJhIjoiN2YxYjkxMjRiOTRmNGIxOWI4NDVkZmFiOTc2ZWRkZGEiLCJ0IjoiMTlkNmFmZjgtYjQ3NC00YzMwLWEwY2EtYmU4NjQ4MTVkZWViIiwicyI6Ik16UTNPVFEwTWpndE1EaGlOUzAwTVRJM0xUazBZelV0WVRoa1ptSXpObU01WkRJeCJ9
+    # Add any other configurations you need for the service
+    restart: unless-stopped

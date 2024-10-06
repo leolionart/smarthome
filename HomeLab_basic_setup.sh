@@ -32,6 +32,20 @@ echo "----------------------------------------------------------------"
 echo " "
 echo " "
 echo " "
+
+# Dockge setup
+echo "----------------------------------------------------------------"
+echo "Commence Dockge Setup"
+echo "----------------------------------------------------------------"
+mkdir -p /opt/{dockge,stacks}
+wget -q -O /opt/dockge/compose.yaml https://raw.githubusercontent.com/louislam/dockge/master/compose.yaml
+cd /opt/dockge
+docker compose up -d
+echo "----------------------------------------------------------------"
+echo "Dockge GUI, https:// IP:5001"
+echo "----------------------------------------------------------------"
+
+
 # Portainer setup
 echo "----------------------------------------------------------------"
 echo "Commence Portainer Setup"
@@ -41,5 +55,5 @@ echo "----------------------------------------------------------------"
 echo "Portainer Interface is reachable at port:9443"
 echo "----------------------------------------------------------------"
 
-echo "Rebooting Now"
-# sudo reboot
+
+# Rebooting Now: sudo reboot

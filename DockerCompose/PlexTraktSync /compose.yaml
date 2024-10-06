@@ -1,0 +1,11 @@
+services:
+  plextraktsync:
+    image: lscr.io/linuxserver-labs/plextraktsync:latest
+    container_name: plextraktsync
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Asia/Saigon
+    volumes:
+      - /mnt/sda1/Config/Trakt:/config
+    restart: unless-stopped

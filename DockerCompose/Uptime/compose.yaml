@@ -1,0 +1,16 @@
+services:
+  uptime-kuma:
+    image: louislam/uptime-kuma:1
+    volumes:
+      - /mnt/sda1/Config/uptimekuma:/app/data
+    ports:
+      # <Host Port>:<Container Port>
+      - 3001:3001
+    restart: unless-stopped
+networks:
+  plextraktsync_default:
+    external: true
+  dockge_default:
+    external: true
+  cloudflared_default:
+    external: true
