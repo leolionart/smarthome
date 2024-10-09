@@ -1,9 +1,3 @@
----
-description: >-
-  Site này được xây dựng như là một thư viện tra cứu nhanh cho các câu lệnh,
-  hướng dẫn cần thiết để xây dựng các dự án smarthome
----
-
 # Welcome to my HomeLAB
 
 {% hint style="danger" %}
