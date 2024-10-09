@@ -1,21 +1,24 @@
 version: "3.5"
 services:
-    
-    homebridge:
-      image: oznu/homebridge:latest
-      restart: always
-      network_mode: host
-      ports:
-        - "8581:8581"
-      volumes:
-        - /mnt/sda1/Config:/homebridge
-      logging:
-        driver: json-file
-        options:
-          max-size: "10mb"
-          max-file: "1"
+  homebridge:
+    image: oznu/homebridge:2022-11-14
+    # image: oznu/homebridge:latest
+    container_name: homebridge
+    restart: always
+    network_mode: host
+    ports:
+      - 8581:8581
+    volumes:
+      - /mnt/sda1/Config/homebridge:/homebridge
+    logging:
+      driver: json-file
+      options:
+        max-size: 10mb
+        max-file: "1"
 
 
+
+# Scrypted Camera Setup
     scrypted:
         environment:
             # Scrypted NVR Storage (Part 2 of 3)

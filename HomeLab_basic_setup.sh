@@ -38,7 +38,7 @@ echo "----------------------------------------------------------------"
 echo "Commence Dockge Setup"
 echo "----------------------------------------------------------------"
 mkdir -p /opt/{dockge,stacks}
-wget -q -O /opt/dockge/compose.yaml https://raw.githubusercontent.com/leolionart/smarthome/dockercompose/Dockge/compose.yaml
+wget -q -O /opt/dockge/compose.yaml https://raw.githubusercontent.com/leolionart/smarthome/refs/heads/main/DockerCompose/Dockge/compose.yaml
 cd /opt/dockge
 docker compose up -d
 echo "----------------------------------------------------------------"

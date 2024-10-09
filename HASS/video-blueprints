@@ -1,0 +1,76 @@
+blueprint:
+  name: Send a camera snapshot to telegram when motion is detected
+  description: 'This automation blueprint creates a camera snapshot if motion is detected  and
+    sends a notification via preconfigured Telegram bot with the picture.
+
+    '
+  domain: automation
+  input:
+    motion_sensor:
+      name: Motion sensor
+      description: The sensor wich triggers the snapshot creation
+      selector:
+        entity:
+          domain: binary_sensor
+          device_class: motion
+          multiple: false
+    camera:
+      name: Camera
+      description: The camera which creates the snapshot
+      selector:
+        entity:
+          domain: camera
+          multiple: false
+    notification_title:
+      name: Notification title (Optional)
+      description: 'Default: "{{ motion_sensor_name }} detected movement!"'
+      default: '{{ motion_sensor_name }} detected movement!'
+  source_url: https://community.home-assistant.io/t/send-camera-snapshot-notification-on-motion/254565
+trigger:
+  platform: state
+  entity_id: !input motion_sensor
+  to: 'on'
+variables:
+  motion_sensor: !input motion_sensor
+  motion_sensor_name: '{{ states[motion_sensor].name }}'
+  camera: !input camera
+  notification_title: !input notification_title
+  snapshot_file_name: >-
+    {{ now().strftime("%Y%m%d-%H%M%S") }}
+  snapshot_create_file_path: >-
+    /media/snapshots/{{ states[camera].object_id }}_{{ snapshot_file_name }}.jpg
+  record_create_file_path: >-
+    /media/records/{{ states[camera].object_id }}_{{ snapshot_file_name }}.mp4
+action:
+- service: camera.snapshot
+  target:
+    entity_id: !input camera
+  data:
+    filename: '{{ snapshot_create_file_path }}'
+- service: telegram_bot.send_photo
+  data:
+    parse_mode: html
+    file: '{{ snapshot_create_file_path }}'
+    caption: '{{ notification_title }}'
+- repeat:
+    while:
+      - condition: state
+        entity_id: !input camera
+        state: unavailable
+        for:
+          hours: 0
+          minutes: 0
+          seconds: 10
+    sequence:
+      - delay: '00:00:01'
+- service: camera.record
+  target:
+    entity_id: !input camera
+  data:
+    duration: 15
+    filename: '{{ record_create_file_path }}'
+- service: telegram_bot.send_video
+  data:
+    parse_mode: html
+    file: '{{ record_create_file_path }}'
+    caption: '{{ notification_title }}'

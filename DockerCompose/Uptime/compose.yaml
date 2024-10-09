@@ -8,8 +8,6 @@ services:
       - 3001:3001
     restart: unless-stopped
 networks:
-  plextraktsync_default:
-    external: true
   dockge_default:
     external: true
   cloudflared_default:
