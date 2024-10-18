@@ -7,24 +7,22 @@ Repo này là một nơi mình chia sẻ tổng hợp các config, script giúp 
 
 ### Thiết lập các dịch vụ cơ bản sau khi cài mới hệ điều hành
 
-Kết nối ssh qua Terminal và thiết hành past script này vào và ngồi đợi
+Kết nối ssh qua Terminal và thiết hành paste script này vào và ngồi đợi
 
 ```
 curl -sk https://raw.githubusercontent.com/leolionart/smarthome/main/HomeLab_basic_setup.sh | sudo bash -
 ```
 
-**Dịch vụ được cài đặt**
+**Các dịch vụ sau sẽ được cài đặt tự động**
 
-| Serices       | Description                                                 |
-| ------------- | ----------------------------------------------------------- |
-| DockerCompose | Dễ dàng cài đặt các dịch vụ được đóng gói sẵn               |
-| Portainer     | Quản lý trực quan trên nền tảng web                         |
-| Watchtower    | Tự cập nhật phiên bản cho các dịch vụ trong portainer       |
-| Homebridge    | Kết nối thiết bị vào HomeKit                                |
-| Scryted       | Đưa các camera không hỗ trợ HomeKit lên nền tảng Apple Home |
+| Serices       | Description                                                                                                                                                        |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| DockerCompose | Dễ dàng cài đặt các dịch vụ được đóng gói sẵn                                                                                                                      |
+| Portainer     | Quản lý trực quan trên nền tảng web                                                                                                                                |
+| Watchtower    | Tự cập nhật phiên bản cho các dịch vụ trong portainer                                                                                                              |
+| Dockge        | Tương tự portainer nhưng nhẹ hơn và miễn phí. Phù hợp với bạn nào muốn một công cụ quản lý docker trên nhiều máy chủ cùng lúc, dễ xem log và ssh vào container hơn |
+
 ### Hệ thống giải trí miễn phí - Plex Server, Sonarr, Radarr,Prolarr
-
-![](https://egg.d.pr/i/KB4YQS.jpg)
 
 > Bạn yêu thích nhiều series phim hay chiếu trên nhiều nền tảng khác nhau, mong muốn có thể xem sớm nhất khi được phát hành kể cả là bản CAM. Tôi thiết lập một hệ thống với nhiệm vụ
 
@@ -34,24 +32,41 @@ curl -sk https://raw.githubusercontent.com/leolionart/smarthome/main/HomeLab_bas
 * Tự tìm Eng và Việt Sub cho các phim này để khi tôi xem thì có sẵn sub chất lượng
 * Thêm phim vào danh sách theo dõi dễ dàng: Xem trailer thích có thể vào Plex add to watchlist là xong. Hệ thống tự chạy ngầm để tải phim về.
 
+Script tự động cài đặt các dịch vụ giải trí
 
-### Đưa thiết bị lên HomeKit - Homebridge, Scryted Camera
+```
+Đang cập nhật cấu hình cơ bản
+```
 
-Không một hãng nào có tất cả thiết bị đáp ứng cả 3 tiêu chí rẻ, ổn định, bền bỉ. Mục tiêu của dự án là đưa thiết bị IOT của bất cứ hãng nào lên Apple HomeKit và hoạt động một cách ổn định với chi phí thấp nhất có thể nhưng vẫn cần đảm bảo tính ổn định&#x20;
+**Các dịch vụ sau sẽ được cài đặt tự động**
 
-<div align="center">
+| Service     | Description                                           |
+| ----------- | ----------------------------------------------------- |
+| Plex        | Tự tạo server xem phim ở nhà                          |
+| qBittorrent | Tải phim                                              |
+| Radarr      | Quản lí phim lẻ                                       |
+| Sonarr      | Quản lí phim bộ                                       |
+| Prowlarr    | Sẽ tìm nguồn tải phim cho 2 cái trên                  |
+| Bazarr      | Tự động tải sub việt, sub anh theo tên phim           |
 
-<figure><img src="https://egg.d.pr/i/IBIEzi.jpg" alt="" width="188"><figcaption></figcaption></figure>
+### Đưa thiết bị lên HomeKit - Homebridge, Scrypted Camera
+Đây là các dịch vụ vận hành trung gian để đưa thiết bị IOT của bạn lên nền tảng Apple Home một cách dễ dàng. Nếu chưa biết về những thứ này là gì, mời bạn tham khảo các bài viết về IOT cơ bản của mình để tìm hiểu. Cho bạn nào biết rồi thì setup và tận hưởng thôi.
 
-</div>
+Kết nối ssh qua Terminal và thiết hành paste script này vào và ngồi đợi
 
-**Có 2 phương án để Fake HomeKIT:**&#x20;
+```
+Updating
+```
 
-* Mode firmware tuỳ biến cho thiết bị phần cứng
-* Tích hợp thông qua Homebridge (vẫn giữ firmware của hãng)
+>Lưu ý: Để chạy được script này cần chạy trước script đã được setup ở bước 1. Nếu không sẽ không thể hoạt động
 
-Tuy nhiên trong một số trường hợp việc tích hợp này sẽ khiến thiết bị phản hồi chậm. Do thông thường lệnh vẫn phải đi lên server của hãng (nếu k có tuỳ chọn control via LAN)  sau đó mới xuống thiết bị. Khi đấy nên xem xét tới việc up firmware để add thẳng vào homekit
-{% endhint %}
+**Các dịch vụ sau sẽ được cài đặt tự động**
+
+| Serices       | Description                                                 |
+| ------------- | ----------------------------------------------------------- |
+| Homebridge    | Kết nối thiết bị vào HomeKit                                |
+| Scryted       | Đưa các camera không hỗ trợ HomeKit lên nền tảng Apple Home |
+
 #### Camera IMOU hỗ trợ full chức năng của [HomeKit Secure Video](https://support.apple.com/guide/icloud/set-up-homekit-secure-video-mm7c90d21583/icloud)
 
 Camera hỗ trợ sẵn HomeKit sẽ đắt hơn ít nhất gấp 2 lần camera thông thường với cùng cấu hình độ phân giải. Đôi khi còn có ít chức năng hơn. Mục tiêu của tôi là khiến nó phải hỗ trợ HomeKit để lúc cần xem camera chỉ cần mở Apple Home. Hoặc khi có ai bấm chuông thì mặc định sẽ hiển thị được hình ảnh camera trên Apple TV. Chi tiết:
