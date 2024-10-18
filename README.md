@@ -1,52 +1,6 @@
-# Welcome to my HomeLAB
-
-{% hint style="danger" %}
-Với mong muốn phát triển nhiều nội dung đa dạng hơn về nhiều chủ đề. Nền tảng hiện tại không cho phép mình quản lý nội dung đa dạng và phục vụ tốt trải nghiệm đọc của mọi người nên mình sẽ chuyển sang phát triển nội dung ở một site khác. Mong mọi người ủng hộ ạ.
-
-\
 Mời mọi người ghé thăm: [https://geek.naai.studio/](https://geek.naai.studio/)
-{% endhint %}
 
-Mình bắt tay vào xây dựng smarthome và tiện ích mình tự xây dựng từ 2022 tới hiện tại, qua nhiều cải tiến mình quyết định chia sẻ lại để các bạn có một lộ trình chơi đồ phù hợp. Với niềm yêu thích công nghệ, luôn tìm kiếm giải pháp xoay quanh việc tối ưu các vấn đề thường gặp. Tôi dành thời gian cho dự án cá nhân này để học thêm các kỹ năng liên quan tới lập trình và các công nghệ phổ biến.
-
-Để bắt đầu, mình cần một thiết bị trung gian để đưa camera lên Apple Home, tuy nhiên phần cứng vẫn còn khá dư giả để làm nhiều chuyện khác. Loạt bài viết dưới đây giúp bạn có thể tận dụng tối đa sức mạnh phần cứng của máy tính mà sẵn thì bạn cũng đã phải bật 24/7 trong nhà để làm nhiều việc khác hữu ích hơn.
-
-<figure><img src="https://egg.d.pr/i/TuTrWz.jpg" alt=""><figcaption></figcaption></figure>
-
-## Danh sách thiết bị đang vận hành
-
-{% tabs %}
-{% tab title="BPI M5 (BananaPi)" %}
-**Phục vụ các dự án HomeLAB (xem phim, đưa camera lên homekit, tự động hoá...)**
-
-<table><thead><tr><th width="163">BananaPi</th><th>Cấu hình</th></tr></thead><tbody><tr><td>CPU</td><td>4 CPU</td></tr><tr><td>RAM</td><td>4G</td></tr><tr><td>ROM</td><td>32G (SD Card để cài hệ điều hành)</td></tr><tr><td>EMMC</td><td>16G (dùng làm bộ nhớ đệm mở rộng cho RAM)</td></tr><tr><td>HDD</td><td>3Tb (4 ổ cứng cũ)</td></tr></tbody></table>
-
-{% hint style="success" %}
-Với phần cứng này tôi có thể vận hành được các tiện ích như ở dưới 24/7 với chi phí tiền điện chưa tới 50k/tháng. Để tối ưu hơn về hiệu năng bạn có thể sử dụng một laptop cũ hoặc một mini PC để cài đặt. Hoặc chơi lớn bằng PC luôn thì càng tốt, chỉ có điều tốn điện hơn thôi
-{% endhint %}
-{% endtab %}
-
-{% tab title="RaspberryPi 3" %}
-**Chuyên chạy Homebridge, Zigbee HUB => Phục vụ SmartHome**
-
-<table><thead><tr><th width="156">RaspberryPi</th><th>Cấu hình</th></tr></thead><tbody><tr><td>CPU</td><td>4 CPU</td></tr><tr><td>RAM</td><td>1G</td></tr><tr><td>ROM</td><td>16G</td></tr></tbody></table>
-
-{% hint style="success" %}
-Với đặc thù hoạt động 24/7, tiết kiệm điện năng, vận hành ổn định. Tôi chọn Raspberry cũ cỡ 500k cho các nhiệm vụ trên. Với 2 tác vụ này CPU và RAM của thiết bị gần như luôn hoạt động ở mức >70% trong 2 năm chưa một lần gặp sự cố
-{% endhint %}
-{% endtab %}
-
-{% tab title="Home Server" %}
-**Phục vụ học tập và thử nghiệm các dự án mới thông qua nền tảng ảo hoá (proxmox)**
-
-<table><thead><tr><th width="163">BananaPi</th><th>Cấu hình</th></tr></thead><tbody><tr><td>CPU</td><td>12 CPU</td></tr><tr><td>RAM</td><td>32G</td></tr><tr><td>GPU</td><td>4G (RX560)</td></tr><tr><td>SSD</td><td>1Tb (4 ổ SSD)</td></tr><tr><td>HDD</td><td>10Tb (4 ổ cứng cũ)</td></tr></tbody></table>
-
-{% hint style="success" %}
-Tận dụng triệt để đỡ phí tiền đóng tiền internet 2 line cáp quang cỡ 500k/tháng + tiền điện từ pin mặt trời. Không bỏ tiền hàng tháng cho dịch vụ cloud (ngoài iCloud và Gdrive mỗi tháng \~100k) hay giải trí nào như Netflix, Disney+... Hay hosting mấy cái web tự build traffic <1000/tháng. Dùng nó để học mọi thứ về web application không tốn tiền thuê VPS
-{% endhint %}
-{% endtab %}
-{% endtabs %}
-
+Repo này là một nơi mình chia sẻ tổng hợp các config, script giúp mọi người có thể clone về và deploy lên server bất kỳ để triển khai nhanh một hay nhiều hệ thống IOT khác nhau, chủ yếu được setup trên docker.
 ## Những gì mình có thể làm với HomeLAB
 
 ### Hệ thống giải trí miễn phí
