@@ -11,7 +11,7 @@ coverY: 0
 
 Xem dung lượng ram được sử dụng: `$ htop` hoặc `free --mega`
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../wiki/.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 ## Tăng dung lượng RAM
 
