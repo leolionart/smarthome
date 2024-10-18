@@ -1,6 +1,6 @@
 # Tự động tìm kiếm phim ảnh và subtitle có trên internet
 
-Sử dụng script [script-thiet-lap-cac-dich-vu-de-lam-media-server.md](../../welcome-to-my-homelab/script-thiet-lap-cac-dich-vu-de-lam-media-server.md "mention") để cài hàng loạt dịch vụ sau trên docker hoặc sử dụng Portainer để tạo Stack bao gồm các dịch vụ ở dưới
+Sử dụng script [script-thiet-lap-cac-dich-vu-de-lam-media-server.md](../../../wiki/welcome-to-my-homelab/script-thiet-lap-cac-dich-vu-de-lam-media-server.md "mention") để cài hàng loạt dịch vụ sau trên docker hoặc sử dụng Portainer để tạo Stack bao gồm các dịch vụ ở dưới
 
 <details>
 
@@ -116,17 +116,17 @@ Chi tiết thao tác với ổ cứng gắn ngoài và chia sẻ file: [chia-se-
 
 ### Prowlarr - Quản lý các nguồn tìm kiếm phim
 
-<figure><img src="../../.gitbook/assets/image (13).png" alt=""><figcaption><p>Các nguồn torrent mình thường sử dụng</p></figcaption></figure>
+<figure><img src="../../../wiki/.gitbook/assets/image (13).png" alt=""><figcaption><p>Các nguồn torrent mình thường sử dụng</p></figcaption></figure>
 
 ### Radarr - Quản lý & tìm kiếm  phim lẻ | Sonarr - Quản lý & tìm kiếm phim bộ
 
 {% tabs %}
 {% tab title="Sonarr - Quản lý phim bộ" %}
-<figure><img src="../../.gitbook/assets/image (16).png" alt=""><figcaption><p>Tự động tải tập mới nhất, theo dõi theo season mới nhất hoặc toàn bộ season</p></figcaption></figure>
+<figure><img src="../../../wiki/.gitbook/assets/image (16).png" alt=""><figcaption><p>Tự động tải tập mới nhất, theo dõi theo season mới nhất hoặc toàn bộ season</p></figcaption></figure>
 {% endtab %}
 
 {% tab title="Radarr - Quản lý phim lẻ" %}
-<figure><img src="../../.gitbook/assets/image (17).png" alt=""><figcaption><p>Giao diện quản lý, có thể cài đặt độ phân giải muốn lưu trữ</p></figcaption></figure>
+<figure><img src="../../../wiki/.gitbook/assets/image (17).png" alt=""><figcaption><p>Giao diện quản lý, có thể cài đặt độ phân giải muốn lưu trữ</p></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 
@@ -139,7 +139,7 @@ Do cách cấu hình và cài đặt 2 dịch vụ này tương đối giống n
 
 ### qBittorrent - Trình tải torrent
 
-<figure><img src="../../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../wiki/.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 Để có thêm được leaker khi tải torrent cần cấu hình mở port riêng cho torrent
@@ -151,7 +151,7 @@ Do cách cấu hình và cài đặt 2 dịch vụ này tương đối giống n
 
 ### Bazarr - Quản lý & tìm kiếm subtitle
 
-<figure><img src="../../.gitbook/assets/image (14).png" alt=""><figcaption><p>Các nguồn tìm kiếm sub mình đang xài</p></figcaption></figure>
+<figure><img src="../../../wiki/.gitbook/assets/image (14).png" alt=""><figcaption><p>Các nguồn tìm kiếm sub mình đang xài</p></figcaption></figure>
 
 1. Thêm Providers (nguồn tìm kiếm subtitle)
 2. Cấu hình kết nối Sonarr và Radarr để tự động cập nhật danh sách phim cần tìm sub

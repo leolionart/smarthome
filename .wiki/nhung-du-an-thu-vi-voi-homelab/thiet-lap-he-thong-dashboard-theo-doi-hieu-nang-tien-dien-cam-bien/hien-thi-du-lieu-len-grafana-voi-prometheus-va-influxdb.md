@@ -6,7 +6,7 @@ Tôi muốn theo dõi trực quan các dữ liệu thu thập từ cảm biến,
 
 ## Cài đặt
 
-Sử dụng câu lệnh sau để cài hàng loạt: [script-thiet-lap-dich-vu-theo-doi-va-tu-dong-hoa.md](../../welcome-to-my-homelab/script-thiet-lap-dich-vu-theo-doi-va-tu-dong-hoa.md "mention")
+Sử dụng câu lệnh sau để cài hàng loạt: [script-thiet-lap-dich-vu-theo-doi-va-tu-dong-hoa.md](../../../wiki/welcome-to-my-homelab/script-thiet-lap-dich-vu-theo-doi-va-tu-dong-hoa.md "mention")
 
 Hoặc cài đặt thủ công theo hướng dẫn:
 

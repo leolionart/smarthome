@@ -67,7 +67,7 @@ Tận dụng triệt để đỡ phí tiền đóng tiền internet 2 line cáp 
 * Tự tìm Eng và Việt Sub cho các phim này để khi tôi xem thì có sẵn sub chất lượng
 * Thêm phim vào danh sách theo dõi dễ dàng: Xem trailer thích có thể vào Plex add to watchlist là xong. Hệ thống tự chạy ngầm để tải phim về.
 
-[he-thong-giai-tri-xem-phim-tai-nha-mien-phi](nhung-du-an-thu-vi-voi-homelab/he-thong-giai-tri-xem-phim-tai-nha-mien-phi/ "mention")
+[he-thong-giai-tri-xem-phim-tai-nha-mien-phi](../.wiki/nhung-du-an-thu-vi-voi-homelab/he-thong-giai-tri-xem-phim-tai-nha-mien-phi/ "mention")
 
 <table data-view="cards"><thead><tr><th>Service</th><th>Description</th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td>Plex</td><td>Tự tạo server xem phim ở nhà (hoặc từ xa nếu muốn)</td><td><a href=".gitbook/assets/image (22).png">image (22).png</a></td></tr><tr><td>qBittorrent</td><td>Tải phim</td><td><a href=".gitbook/assets/image (19).png">image (19).png</a></td></tr><tr><td>Radarr</td><td>Quản lí phim lẻ</td><td><a href=".gitbook/assets/image (17).png">image (17).png</a></td></tr><tr><td>Sonarr</td><td>Quản lí phim bộ</td><td><a href=".gitbook/assets/image (16).png">image (16).png</a></td></tr><tr><td>Prowlarr</td><td>Sẽ tìm nguồn tải phim cho 2 cái trên</td><td><a href=".gitbook/assets/image (21).png">image (21).png</a></td></tr><tr><td>Bazarr</td><td>Tự động tải sub việt, sub anh theo tên phim</td><td><a href=".gitbook/assets/image (20).png">image (20).png</a></td></tr></tbody></table>
 
@@ -83,7 +83,7 @@ Nếu bạn có dư nhiều ổ cứng từ các bộ PC cũ, chả biết cắm
 * Truy cập file ở bất cứ đâu, bất cứ hệ điều hành nào. Không cần quá quan tâm về định dạng ổ cứng phù hợp
 * Copy qua lại file dễ dàng, có thể dùng chứa tạm dự án đang làm trên đây để truy cập bằng bất cứ máy tính nào trong mạng LAN
 
-[chia-se-file-trong-mang-lan-backup-du-lieu](nhung-du-an-thu-vi-voi-homelab/chia-se-file-trong-mang-lan-backup-du-lieu/ "mention")
+[chia-se-file-trong-mang-lan-backup-du-lieu](../.wiki/nhung-du-an-thu-vi-voi-homelab/chia-se-file-trong-mang-lan-backup-du-lieu/ "mention")
 
 {% hint style="warning" %}
 Dự án này yêu cầu phần cứng mạnh một chút, nếu bạn chỉ đang đầu tư phần cứng như mình, chỉ dùng để copy vài file nhẹ nhẹ hoặc dùng để truy cập file hình ảnh video thôi nhé. Cho nó chạy các tác vụ copy file nặng nó chậm rì luôn á.
@@ -101,7 +101,7 @@ Riêng phần cứng yêu cầu cho chức năng này đã phải cần ít nh�
 
 </div>
 
-[scrypted-dua-camera-len-apple-homekit.md](cai-dat-install/apple-homekit-cho-thiet-bi-khong-ho-tro/scrypted-dua-camera-len-apple-homekit.md "mention")
+[scrypted-dua-camera-len-apple-homekit.md](../.wiki/cai-dat-install/apple-homekit-cho-thiet-bi-khong-ho-tro/scrypted-dua-camera-len-apple-homekit.md "mention")
 
 Camera hỗ trợ sẵn HomeKit sẽ đắt hơn ít nhất gấp 2 lần camera thông thường với cùng cấu hình độ phân giải. Đôi khi còn có ít chức năng hơn. Mục tiêu của tôi là khiến nó phải hỗ trợ HomeKit để lúc cần xem camera chỉ cần mở Apple Home. Hoặc khi có ai bấm chuông thì mặc định sẽ hiển thị được hình ảnh camera trên Apple TV. Chi tiết:
 
@@ -114,7 +114,7 @@ Theo đõi lượng điện tiêu thụ trong nhà, nhiệt độ thu thập t�
 Nếu bạn cũng muốn có được trải nghiệm tương tự, loạt bài này sẽ cực kỳ hữu ích:\
 
 
-[thiet-lap-he-thong-dashboard-theo-doi-hieu-nang-tien-dien-cam-bien](nhung-du-an-thu-vi-voi-homelab/thiet-lap-he-thong-dashboard-theo-doi-hieu-nang-tien-dien-cam-bien/ "mention")
+[thiet-lap-he-thong-dashboard-theo-doi-hieu-nang-tien-dien-cam-bien](../.wiki/nhung-du-an-thu-vi-voi-homelab/thiet-lap-he-thong-dashboard-theo-doi-hieu-nang-tien-dien-cam-bien/ "mention")
 
 ***
 
@@ -134,7 +134,7 @@ Không một hãng nào có tất cả thiết bị đáp ứng cả 3 tiêu ch�
 * Tích hợp thông qua Homebridge (vẫn giữ firmware của hãng)
 
 Tôi thường chọn giải pháp thứ 2 vì đơn giản và hoạt động ổn định hơn. Bạn có thể tham khảo loạt bài:\
-[apple-homekit-cho-thiet-bi-khong-ho-tro](cai-dat-install/apple-homekit-cho-thiet-bi-khong-ho-tro/ "mention")
+[apple-homekit-cho-thiet-bi-khong-ho-tro](../.wiki/cai-dat-install/apple-homekit-cho-thiet-bi-khong-ho-tro/ "mention")
 
 {% hint style="warning" %}
 Tuy nhiên trong một số trường hợp việc tích hợp này sẽ khiến thiết bị phản hồi chậm. Do thông thường lệnh vẫn phải đi lên server của hãng (nếu k có tuỳ chọn control via LAN)  sau đó mới xuống thiết bị. Khi đấy nên xem xét tới việc up firmware để add thẳng vào homekit
@@ -158,7 +158,7 @@ Thiết bị Zigbee rất đa dạng, pin trâu và thiết kế rất nhỏ g�
 
 Tự tuỳ biến một HUB để thu nhận sóng Zigbee là một giải pháp vô cùng hiệu quả. Hướng dẫn chi tiết:
 
-[mot-hub-ket-noi-duoc-toan-bo-thiet-bi-zigbee-cua-tat-ca-cac-hang.md](cai-dat-install/mot-hub-ket-noi-duoc-toan-bo-thiet-bi-zigbee-cua-tat-ca-cac-hang.md "mention")
+[mot-hub-ket-noi-duoc-toan-bo-thiet-bi-zigbee-cua-tat-ca-cac-hang.md](../.wiki/cai-dat-install/mot-hub-ket-noi-duoc-toan-bo-thiet-bi-zigbee-cua-tat-ca-cac-hang.md "mention")
 
 ## Connect with me 🫵🏻
 
