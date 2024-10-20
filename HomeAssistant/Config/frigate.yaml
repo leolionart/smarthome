@@ -1,0 +1,114 @@
+mqtt:
+  host: 172.16.0.61
+  port: 1883
+  user: leolion
+  password: Q214119@i
+     
+cameras:
+#GARAGE
+  Garage_camera: # <------ Name the camera
+    enabled: true
+    ffmpeg:
+      inputs:
+        - path: 
+            rtsp://172.16.0.61:8554/camera.garage?video=copy&audio=aac
+            #rtsp://admin:L27CC17F@172.16.0.253/cam/realmonitor?channel=1&subtype=00&authbasic=YWRtaW46TDI3Q0MxN0Y=     # <----- The stream you want to use for detection
+          roles:
+            - detect
+            - record
+            - audio
+    detect:
+      enabled: true # <---- disable detection until you have a working camera feed
+      width: 1280
+      height: 720
+    snapshots:
+      enabled: true
+      retain:
+        default: 30
+    record:
+      enabled: true
+      retain:
+        days: 3
+        mode: active_objects
+      events:
+        retain:
+          default: 30
+          mode: active_objects
+    objects:
+      track:
+        - person
+        #- motorcycle
+        - dog
+    audio:
+      enabled: true
+      listen:
+          - bell
+          - fire_alarm
+    
+  #GATE
+  Gate_camera: # <------ Name the camera
+    enabled: true
+    ffmpeg:
+      inputs:
+        - path: 
+            rtsp://172.16.0.61:8554/camera.gate?video=copy&audio=aac
+            #rtsp://admin:L211DCB0@172.16.0.250/cam/realmonitor?channel=1&subtype=00&authbasic=YWRtaW46TDIxMURDQjA=     # <----- The stream you want to use for detection
+          roles:
+            - detect
+            - record
+    detect:
+      enabled: true # <---- disable detection until you have a working camera feed
+      width: 1280
+      height: 720
+    snapshots:
+      enabled: true
+      retain:
+        default: 1
+    objects:
+      track:
+        - person
+        - car
+        - motorcycle
+        - dog
+    record:
+      enabled: true
+      retain:
+        days: 1
+        mode: active_objects
+      events:
+        retain:
+          default: 30
+          mode: active_objects
+    motion:
+      mask: 0.534,0,0.269,0.991,0.003,0.998,0,-0.002
+  #MY HOME
+  My_home: # <------ Name the camera
+    enabled: true
+    ffmpeg:
+      inputs:
+        - path: 
+            rtsp://admin:L29E0608@172.16.0.231/cam/realmonitor?channel=1&subtype=00&authbasic=YWRtaW46TDI5RTA2MDg=     # <----- The stream you want to use for detection
+          roles:
+            - detect
+            - record
+    detect:
+      enabled: true # <---- disable detection until you have a working camera feed
+      width: 1280
+      height: 720
+    record:
+      enabled: true
+      retain:
+        days: 1
+        mode: active_objects
+      events:
+        retain:
+          default: 1
+          mode: active_objects
+
+    motion:
+      mask: 0.185,0,0.229,0.635,0.72,0.566,0.728,0
+    zones:
+      Dinner_Table:
+        coordinates: 0.222,0.412,0.278,0.326,0.567,0.327,0.547,0.533,0.243,0.605
+        loitering_time: 0
+version: 0.14
