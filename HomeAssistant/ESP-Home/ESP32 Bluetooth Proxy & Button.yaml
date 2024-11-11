@@ -1,0 +1,141 @@
+# Sử dụng nút bấm trên itag làm trigger cho các tự động hóa
+# Nguồn https://devices.esphome.io/devices/ble_itag
+# Video https://www.youtube.com/watch?v=maEhzqL2VNM
+
+esphome:
+  name: esp32-bluetooth-proxy-fd1190
+  friendly_name: BLE Proxy Bedroom
+
+esp32:
+  board: esp32-c3-devkitm-1
+  framework:
+    type: arduino
+
+ota:
+  - platform: esphome
+    id: ota_esphome
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "S3qYQKyTXaEHIWKNcy3sNpDBLd/a9sUV7ZPhG5qgpmQ="
+
+captive_portal:
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Ld2410 Fallback Hotspot"
+    password: "12345678"
+
+bluetooth_proxy:
+  active: true
+
+esp32_ble_tracker:
+
+ble_client:
+  - mac_address: 5B:22:81:C2:04:BB
+    id: media_remote_client
+
+binary_sensor:
+
+  - platform: template
+    id: media_remote_button_state_helper
+    filters:
+      delayed_off: 500ms
+    on_release:
+      then:
+        - if:
+            condition:
+              lambda: 'return !id(media_remote_button_doubleclick).state;'
+            then:
+              - logger.log: "Single button press detected!"
+              - binary_sensor.template.publish:
+                  id: media_remote_button
+                  state: ON
+              - binary_sensor.template.publish:
+                  id: media_remote_button
+                  state: OFF
+
+  - platform: template
+    id: media_remote_button
+    name: "Media remote button"
+    filters:
+      delayed_off: 200ms
+
+  - platform: template
+    id: media_remote_button_doubleclick
+    name: "Media remote button doubleclick"
+    filters:
+      delayed_off: 1000ms
+
+switch:
+  - platform: ble_client
+    ble_client_id: media_remote_client  # Ensure this matches the ble_client id
+    name: "Connect Media remote"
+
+button:
+  - platform: template
+    name: "Media remote alert"
+    on_press:
+      - ble_client.ble_write:
+          id: media_remote_client
+          service_uuid: "1802"
+          characteristic_uuid: "2a06"
+          value: [0x01]
+      - delay: 10s
+      - ble_client.ble_write:
+          id: media_remote_client
+          service_uuid: "1802"
+          characteristic_uuid: "2a06"
+          value: [0x00]
+
+sensor:
+
+  - platform: ble_client
+    id: media_remote_ble_button_logic
+    type: characteristic
+    ble_client_id: media_remote_client
+    service_uuid: "ffe0"
+    characteristic_uuid: "ffe1"
+    notify: true
+    update_interval: never
+    on_notify:
+      then:
+        - if:
+            condition:
+              lambda: 'return !id(media_remote_button_state_helper).state;'
+            then:
+              - binary_sensor.template.publish:
+                  id: media_remote_button_state_helper
+                  state: ON
+              - binary_sensor.template.publish:
+                  id: media_remote_button_state_helper
+                  state: OFF
+            else:
+              - binary_sensor.template.publish:
+                  id: media_remote_button_doubleclick
+                  state: ON
+              - binary_sensor.template.publish:
+                  id: media_remote_button_doubleclick
+                  state: OFF
+
+  - platform: ble_client
+    type: characteristic
+    ble_client_id: media_remote_client
+    name: "Media remote Battery"
+    service_uuid: "180f"
+    characteristic_uuid: "2a19"
+    icon: "mdi:battery"
+    unit_of_measurement: "%"
+
+  - platform: ble_client
+    type: rssi
+    ble_client_id: media_remote_client
+    name: "Media remote RSSI"
