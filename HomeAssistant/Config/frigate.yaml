@@ -3,26 +3,37 @@ mqtt:
   port: 1883
   user: leolion
   password: Q214119@i
-     
+
+go2rtc:
+  streams:
+    Garage_camera: rtsp://172.16.0.61:8554/camera.garage?video=copy&audio=aac
+
 cameras:
 #GARAGE
   Garage_camera: # <------ Name the camera
     enabled: true
     ffmpeg:
+      output_args:
+        record: preset-record-generic-audio-copy
       inputs:
-        - path: 
-            rtsp://172.16.0.61:8554/camera.garage?video=copy&audio=aac
-            #rtsp://admin:L27CC17F@172.16.0.253/cam/realmonitor?channel=1&subtype=00&authbasic=YWRtaW46TDI3Q0MxN0Y=     # <----- The stream you want to use for detection
+        - path: rtsp://172.16.0.61:8554/camera.garage?video=copy&audio=aac
+          input_args: preset-rtsp-restream
           roles:
             - detect
-            - record
             - audio
+        - path: 
+            rtsp://admin:L27CC17F@172.16.0.253/cam/realmonitor?channel=1&subtype=00&authbasic=YWRtaW46TDI3Q0MxN0Y=         # <----- The stream you want to use for detection
+          input_args: preset-rtsp-restream
+          roles:
+            - record
     detect:
       enabled: true # <---- disable detection until you have a working camera feed
-      width: 1280
-      height: 720
+      width: 1920
+      height: 1080
     snapshots:
       enabled: true
+      timestamp: true
+      bounding_box: true
       retain:
         default: 30
     record:
@@ -39,23 +50,28 @@ cameras:
         - person
         #- motorcycle
         - dog
+      filters:
+        person:
+          threshold: 0.8
+          min_area: 5000
+          max_area: 100000
     audio:
       enabled: true
       listen:
-          - bell
-          - fire_alarm
-    
+        - bell
+        - fire_alarm
+
   #GATE
   Gate_camera: # <------ Name the camera
     enabled: true
     ffmpeg:
       inputs:
         - path: 
-            rtsp://172.16.0.61:8554/camera.gate?video=copy&audio=aac
-            #rtsp://admin:L211DCB0@172.16.0.250/cam/realmonitor?channel=1&subtype=00&authbasic=YWRtaW46TDIxMURDQjA=     # <----- The stream you want to use for detection
+            rtsp://admin:L211DCB0@172.16.0.250/cam/realmonitor?channel=1&subtype=00&authbasic=YWRtaW46TDIxMURDQjA=     # <----- The stream you want to use for detection
           roles:
             - detect
             - record
+            - audio
     detect:
       enabled: true # <---- disable detection until you have a working camera feed
       width: 1280
@@ -70,6 +86,7 @@ cameras:
         - car
         - motorcycle
         - dog
+      mask: 0,0.404,0.208,0,0.6,0,0.315,1,0,1
     record:
       enabled: true
       retain:
@@ -80,8 +97,7 @@ cameras:
           default: 30
           mode: active_objects
     motion:
-      mask: 0.534,0,0.269,0.991,0.003,0.998,0,-0.002
-  #MY HOME
+      mask: 0.27,0.996,0.542,0,0,0,0,1
   My_home: # <------ Name the camera
     enabled: true
     ffmpeg:
@@ -104,11 +120,28 @@ cameras:
         retain:
           default: 1
           mode: active_objects
-
     motion:
-      mask: 0.185,0,0.229,0.635,0.72,0.566,0.728,0
+      mask:
+        - 0.249,0.63,0.185,0.811,0.719,0.779,0.672,0.6,0.62,0.54,0.294,0.561
+        - 0.32,0.271,0.208,0.404,0.178,0,0.302,0.002
     zones:
       Dinner_Table:
-        coordinates: 0.222,0.412,0.278,0.326,0.567,0.327,0.547,0.533,0.243,0.605
+        coordinates: 0.219,0.416,0.274,0.344,0.518,0.327,0.522,0.468,0.227,0.496
         loitering_time: 0
+        inertia: 3
+        objects: person
+      Sofa:
+        coordinates: 0.995,0.993,0.625,0.535,0.281,0.566,0.124,0.995
+        loitering_time: 0
+        objects: person
+    objects:
+      track:
+        - person
+        - dog
+      filters:
+        person:
+          threshold: 0.8
+          min_area: 5000
+          max_area: 100000
+      mask: 0.874,0.002,0.869,0.632,0.932,0.759,0.964,0
 version: 0.14

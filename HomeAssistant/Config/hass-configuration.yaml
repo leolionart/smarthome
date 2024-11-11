@@ -1,0 +1,216 @@
+# Loads default set of integrations. Do not remove.
+default_config:
+
+# Load frontend themes from the themes folder
+frontend:
+  themes: !include_dir_merge_named themes
+
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
+http:
+  # For extra security set this to only accept connections on localhost if Caddy is on the same machine
+  # server_host: 127.0.0.1
+  # Update this line to be your domain
+  use_x_forwarded_for: true
+  # You must set the trusted proxy IP address so that Home Assistant will properly accept connections
+  # Set this to your Caddy machine IP, or localhost if hosted on the same machine.
+  trusted_proxies:
+    - 172.16.0.100
+
+# Example configuration.yaml entry for the Telegram Bot
+telegram_bot:
+  - platform: polling
+    api_key: "7021204170:AAEira9MDc2A6DZZzmLAtH3mhwd75PbAT7Y"
+    allowed_chat_ids:
+      - -1002050746518  # example: 123456789 for the chat_id of a user
+
+# Example configuration.yaml entry for the notifier
+notify:
+  - platform: telegram
+    name: Home Assistant
+    chat_id: -1002050746518
+
+########### LD2410
+mqtt:
+  binary_sensor:
+    - name: "Toilet_occupancy"
+      state_topic: "homeassistant/stat/Mr_Old_Youtuber_FD0870/STATUS8"
+      value_template: "{{ value_json.StatusSNS.Switch1 }}"
+      payload_on: 'ON'
+      payload_off: 'OFF'
+      unique_id: "C3_FD0870"
+      object_id: "C3_FD0870"
+      device_class: "motion"
+    - name: "Kitchen_occupancy"
+      state_topic: "homeassistant/stat/LD2410-C3_FCF6CC/STATUS10"
+      value_template: "{{ value_json.StatusSNS.Switch1 }}"
+      payload_on: 'ON'
+      payload_off: 'OFF'
+      unique_id: "C3_FCF6CC"
+      object_id: "C3_FCF6CC"
+      device_class: "motion"
+    - name: "TV_occupancy"
+      state_topic: "homeassistant/stat/LD2410-C3_FD19C4/STATUS10"
+      value_template: "{{ value_json.StatusSNS.Switch1 }}"
+      payload_on: 'ON'
+      payload_off: 'OFF'
+      unique_id: "C3_FD19C4"
+      object_id: "C3_FD19C4"
+      device_class: "motion"
+    - name: "Dressing_occupancy"
+      state_topic: "homeassistant/stat/LD2410-C3_FD1190/STATUS10"
+      value_template: "{{ value_json.StatusSNS.Switch1 }}"
+      payload_on: 'ON'
+      payload_off: 'OFF'
+      unique_id: "C3_FD1190"
+      object_id: "C3_FD1190"
+      device_class: "motion"
+
+  sensor:
+    - name: "Airplay stream type"
+      unique_id: "airplay_stream_type"
+      object_id: "airplay_stream_type"
+      state_topic: "airplay2/stream_type"
+    
+    - name: "Airplay artist"
+      unique_id: "airplay_artist"
+      object_id: "airplay_artist"
+      state_topic: "airplay2/artist"
+    
+    - name: "Airplay title"
+      unique_id: "airplay_title"
+      object_id: "airplay_title"
+      state_topic: "airplay2/title"
+    
+    - name: "Airplay client"
+      unique_id: "airplay_client"
+      object_id: "airplay_client"
+      state_topic: "airplay2/client_name"
+    
+    - name: "Airplay model"
+      unique_id: "airplay_model"
+      object_id: "airplay_model"
+      state_topic: "airplay2/client_model"
+    
+    - name: "Airplay volume (dB)"
+      unique_id: "airplay_db"
+      object_id: "airplay_db"
+      state_topic: "airplay2/volume"
+      # device_class: "volume"  # Uncomment if needed
+
+    - name: "Airplay volume (PCT)"
+      state_topic: "airplay2/volume"
+      unique_id: "airplay_volume"
+      object_id: "airplay_volume"
+      value_template: "{{ value | regex_findall_index(find='^(.+?),', index=0, ignorecase=False) | float / 30 + 1 }}"
+      unit_of_measurement: 'percent'
+
+sensor:
+  - platform: template
+    sensors:
+      nightstate:
+        friendly_name: Night State
+        value_template: "{% if is_state('sun.sun', 'below_horizon') %}1{% else %}0{% endif %}"
+    
+template:
+  - sensor:
+    - name: "family_monthly_cost"
+      state: >-
+        {% set money_power_all_temp = states('sensor.family_monthly_evn') | float %}
+        {% set price0 = 1893 %}
+        {% set price50 = 1956 %}
+        {% set price100 = 2271 %}
+        {% set price200 = 2860 %}
+        {% set price300 = 3197 %}
+        {% set price400 = 3302 %}
+        {% if money_power_all_temp < 52 %}
+        {% set finalmoney = ((money_power_all_temp  * price0)) %}
+        {% elif (money_power_all_temp >= 52 and money_power_all_temp < 104) %}
+        {% set finalmoney = ((52 * price0 + (money_power_all_temp - 52) * price50)) %}
+        {% elif (money_power_all_temp >= 104 and money_power_all_temp < 207) %}
+        {% set finalmoney = ((52 * price0 + 52 * price50 + (money_power_all_temp - 104) * price100)) %}
+        {% elif (money_power_all_temp >= 207 and money_power_all_temp < 310) %}
+        {% set finalmoney = ((52 * price0 + 52 * price50 + 103 * price100 + (money_power_all_temp - 207) * price200)) %}
+        {% elif (money_power_all_temp >= 310 and money_power_all_temp < 413) %}
+        {% set finalmoney = ((52 * price0 + 52 * price50 + 103 * price100 + 103 * price200 + (money_power_all_temp - 310) * price300)) %}
+        {% elif money_power_all_temp >= 400  %}
+        {% set finalmoney = ((52 * price0 + 52 * price50 + 103 * price100 + 103 * price200 + 103 * price300 + (money_power_all_temp - 413) *price400))| round(0)%}
+        {% endif %}
+        {{ finalmoney + (finalmoney * 8 / 100)| round(0)  }} 
+      unit_of_measurement: "VNĐ"
+      device_class: energy
+      state_class: total_increasing
+      unique_id: "family_monthly_cost"
+
+  - sensor:
+    - name: "biz_monthly_cost"
+      state: >-
+        {% set money_power_all_temp = states('sensor.biz_monthly_evn') | float %}
+        {% set price = 1830 %}
+        {% set finalmoney = money_power_all_temp * price %}
+        {{ finalmoney + (finalmoney * 8 / 100) | round(0) }}
+      unit_of_measurement: "VNĐ"
+      device_class: energy
+      state_class: total_increasing
+      unique_id: "biz_monthly_cost"
+
+  - sensor:
+    - name: "total_monthly_cost"
+      state: >-
+        {% set money_power_all_temp = states('sensor.tuya_energy_this_month') | float %}
+        {% set price0 = 1893 %}
+        {% set price50 = 1956 %}
+        {% set price100 = 2271 %}
+        {% set price200 = 2860 %}
+        {% set price300 = 3197 %}
+        {% set price400 = 3302 %}
+        {% if money_power_all_temp < 52 %}
+        {% set finalmoney = ((money_power_all_temp  * price0)) %}
+        {% elif (money_power_all_temp >= 52 and money_power_all_temp < 104) %}
+        {% set finalmoney = ((52 * price0 + (money_power_all_temp - 52) * price50)) %}
+        {% elif (money_power_all_temp >= 104 and money_power_all_temp < 207) %}
+        {% set finalmoney = ((52 * price0 + 52 * price50 + (money_power_all_temp - 104) * price100)) %}
+        {% elif (money_power_all_temp >= 207 and money_power_all_temp < 310) %}
+        {% set finalmoney = ((52 * price0 + 52 * price50 + 103 * price100 + (money_power_all_temp - 207) * price200)) %}
+        {% elif (money_power_all_temp >= 310 and money_power_all_temp < 413) %}
+        {% set finalmoney = ((52 * price0 + 52 * price50 + 103 * price100 + 103 * price200 + (money_power_all_temp - 310) * price300)) %}
+        {% elif money_power_all_temp >= 400  %}
+        {% set finalmoney = ((52 * price0 + 52 * price50 + 103 * price100 + 103 * price200 + 103 * price300 + (money_power_all_temp - 413) *price400))| round(0)%}
+        {% endif %}
+        {{ finalmoney + (finalmoney * 8 / 100)| round(0)  }} 
+      unit_of_measurement: "VNĐ"
+      device_class: energy
+      state_class: total_increasing
+      unique_id: "total_monthly_cost"
+      
+      
+      
+      
+cover:
+  - platform: template
+    covers:
+      garage_door:
+        unique_id: "garage"
+        device_class: garage
+        friendly_name: "Garage Door"
+        position_template: "{{ 100 if is_state('binary_sensor.garage_door_contact', 'on') else 0 }}"
+        open_cover:
+          service: switch.turn_on
+          target:
+            entity_id: switch.sonoff_100129d788_1
+        close_cover:
+          service: switch.turn_on
+          target:
+            entity_id: switch.sonoff_100129d788_2
+        stop_cover:
+          service: switch.turn_on
+          target:
+            entity_id: switch.sonoff_100129d788_3
+        icon_template: >-
+          {% if is_state('binary_sensor.garage_door_contact','on') %}
+            mdi:garage-open
+          {% else %}
+            mdi:garage
+          {% endif %}

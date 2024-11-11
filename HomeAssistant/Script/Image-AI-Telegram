@@ -1,0 +1,66 @@
+alias: Gate - Snapshot, AI & Notification
+sequence:
+  - metadata: {}
+    data:
+      filename: /media/snapshots/gate_snapshot1.jpg
+    target:
+      entity_id: camera.gate_camera
+    enabled: true
+    action: camera.snapshot
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 0
+      milliseconds: 500
+    enabled: true
+  - metadata: {}
+    data:
+      filename: /media/snapshots/gate_snapshot2.jpg
+    enabled: true
+    action: camera.snapshot
+    target:
+      entity_id: camera.gate_camera
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 0
+      milliseconds: 500
+    enabled: true
+  - metadata: {}
+    data:
+      filename: /media/snapshots/gate_snapshot3.jpg
+    enabled: true
+    action: camera.snapshot
+    target:
+      entity_id: camera.gate_camera
+  - metadata: {}
+    data:
+      prompt: >-
+        Motion has been detected, compare and very briefly describe what you see
+        in the following sequence of images from my driveway camera number 1.
+        What do you think caused the motion alarm? If a person or car is
+        present, describe them in detail. Do not describe stationary objects or
+        buildings. If you see no obvious causes of motion, reply with "Camera
+        has detected motion however no obvious motion observed comparing
+        snapshots". Your message needs to be short enough to fit in a phone
+        notification. 
+      image_filename:
+        - /media/snapshots/gate_snapshot1.jpg
+        - /media/snapshots/gate_snapshot2.jpg
+        - /media/snapshots/gate_snapshot3.jpg
+    response_variable: generated_content
+    action: google_generative_ai_conversation.generate_content
+  - if:
+      - condition: template
+        value_template: >
+          {{ generated_content['text'] == ' Camera has detected motion however
+          no obvious motion observed comparing snapshots.' }} 
+    then:
+      - stop: ""
+    else:
+      - data:
+          caption: "{{generated_content['text'] }}"
+          file: /media/snapshots/gate_snapshot3.jpg
+        action: telegram_bot.send_photo
+mode: single
+description: ""

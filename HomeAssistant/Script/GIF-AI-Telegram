@@ -1,0 +1,60 @@
+alias: Garage - Snapshot, AI & Notification
+sequence:
+  - metadata: {}
+    data:
+      filename: /media/snapshots/garage_snapshot1.jpg
+    enabled: true
+    action: camera.snapshot
+    target:
+      entity_id: camera.garage_camera
+  - delay:
+      milliseconds: 500
+    enabled: true
+  - metadata: {}
+    data:
+      filename: /media/snapshots/garage_snapshot2.jpg
+    enabled: true
+    action: camera.snapshot
+    target:
+      entity_id: camera.garage_camera
+  - delay:
+      milliseconds: 500
+    enabled: true
+  - metadata: {}
+    data:
+      filename: /media/snapshots/garage_snapshot3.jpg
+    enabled: true
+    action: camera.snapshot
+    target:
+      entity_id: camera.garage_camera
+  - metadata: {}
+    data:
+      prompt: >-
+        Phát hiện chuyển động, so sánh và mô tả ngắn gọn những gì bạn thấy trong
+        loạt ảnh từ camera ở lối vào nhà tôi. Bạn nghĩ nguyên nhân nào gây ra
+        báo động chuyển động? Nếu có người hoặc xe, hãy mô tả chi tiết. Không mô
+        tả vật thể đứng yên hoặc tòa nhà. Nếu không thấy nguyên nhân rõ ràng,
+        hãy trả lời: “Camera phát hiện chuyển động nhưng  không thấy chuyển động
+        rõ ràng khi so sánh ảnh”.
+      image_filename:
+        - /media/snapshots/garage_snapshot1.jpg
+        - /media/snapshots/garage_snapshot2.jpg
+        - /media/snapshots/garage_snapshot3.jpg
+    response_variable: generated_content
+    action: google_generative_ai_conversation.generate_content
+  - action: shell_command.create_gif
+    data: {}
+  - if:
+      - condition: template
+        value_template: >
+          {{ generated_content['text'] == ' Camera has detected motion however
+          no obvious motion observed comparing snapshots.' }} 
+    then:
+      - stop: ""
+    else:
+      - data:
+          caption: "{{ generated_content['text'] }}"
+          file: /media/snapshots/garage_motion.gif
+        action: telegram_bot.send_document
+mode: single
+description: ""
