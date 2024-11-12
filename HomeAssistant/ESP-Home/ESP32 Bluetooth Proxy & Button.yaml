@@ -20,8 +20,6 @@ logger:
 
 # Enable Home Assistant API
 api:
-  encryption:
-    key: "S3qYQKyTXaEHIWKNcy3sNpDBLd/a9sUV7ZPhG5qgpmQ="
 
 captive_portal:
 
@@ -32,7 +30,6 @@ wifi:
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
     ssid: "Ld2410 Fallback Hotspot"
-    password: "12345678"
 
 bluetooth_proxy:
   active: true
