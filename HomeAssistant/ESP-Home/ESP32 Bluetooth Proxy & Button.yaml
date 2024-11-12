@@ -11,6 +11,7 @@ esp32:
   framework:
     type: arduino
 
+
 ota:
   - platform: esphome
     id: ota_esphome
