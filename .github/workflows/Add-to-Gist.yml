@@ -1,0 +1,90 @@
+name: Auto Add to Gist
+
+on:
+  push:
+    paths:
+      - 'smarthome/Template/**'
+
+jobs:
+  add-to-gist:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install requests library
+        run: |
+          python -m pip install requests
+
+      - name: Add file to Gist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python <<EOF
+          import os
+          import requests
+          from pathlib import Path
+
+          GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
+          gist_description = "Files from smarthome/Template folder for leolionart"
+          folder = "smarthome/Template"
+          gist_files = {}
+
+          # Prepare files for Gist
+          for file_path in Path(folder).glob("**/*"):
+              if file_path.is_file():
+                  with open(file_path, 'r') as f:
+                      content = f.read()
+                  gist_files[file_path.name] = {"content": content}
+
+          if not gist_files:
+              print("No files found to add to Gist.")
+              exit(0)
+
+          # Check for existing Gist with this description
+          headers = {
+              "Authorization": f"token {GITHUB_TOKEN}",
+              "Accept": "application/vnd.github+json",
+          }
+          response = requests.get("https://api.github.com/gists", headers=headers)
+
+          if response.status_code != 200:
+              print(f"Failed to fetch Gists. Response: {response.status_code} {response.text}")
+              response.raise_for_status()
+
+          existing_gists = response.json()
+          gist_id = None
+          for gist in existing_gists:
+              if gist.get("description") == gist_description:
+                  gist_id = gist["id"]
+                  break
+
+          # Update or create Gist
+          if gist_id:
+              url = f"https://api.github.com/gists/{gist_id}"
+              method = requests.patch
+          else:
+              url = "https://api.github.com/gists"
+              method = requests.post
+
+          payload = {
+              "description": gist_description,
+              "public": False,
+              "files": gist_files
+          }
+
+          response = method(url, headers=headers, json=payload)
+
+          if response.status_code in [200, 201]:
+              gist_url = response.json().get("html_url", "Unknown URL")
+              print(f"Files successfully added to Gist: {gist_url}")
+          else:
+              print(f"Failed to add files to Gist. Response: {response.status_code} {response.text}")
+              response.raise_for_status()
+          EOF
