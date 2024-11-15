@@ -1,6 +1,16 @@
 substitutions:
-  name: esphome-web-c794c4
-  friendly_name: LD2410 Kitchen
+  name: esphome-all-function
+  friendly_name: LD2410 & Bluetooth Scan
+
+# BLUETOOTH PROXY
+bluetooth_proxy:
+   active: true
+
+# TRACKING BLUETOOTH DEVICE
+ble_client:
+  - mac_address: 5B:29:57:72:67:59 #Bluetooth MAC
+    id: itag_black #Bluetooth Device Name
+
 
 esphome:
   name: ${name}
@@ -11,15 +21,12 @@ esphome:
     name: esphome.web
     version: dev
 
-
 external_components:
   - source:
       type: git
       url: https://github.com/screekworkshop/custom_components_support_for_screek_1w
       ref: main
-    components: [esp32, uart, ld2410]
-  
-
+    components: [esp32, uart, ld2410] 
 
 esp32:
   board: esp32-c3-devkitm-1
@@ -61,15 +68,8 @@ uart:
   stop_bits: 1
   parity: NONE
 
-# Uncomment if Bluetooth proxy is needed
-# bluetooth_proxy:
-#   active: true
 
 esp32_ble_tracker:
-
-ble_client:
-  - mac_address: 5B:29:57:72:67:59
-    id: itag_black
 
 binary_sensor:
   - platform: template
@@ -133,21 +133,47 @@ button:
           value: [0x00]
 
 sensor:
-  # Sensor configuration for LD2410
+  - platform: template
+    id: sys_esp_temperature
+    name: ESP Temperature
+    lambda: return temperatureRead();
+    unit_of_measurement: °C
+    device_class: TEMPERATURE
+    update_interval: 30s
+    entity_category: "diagnostic"
+  - platform: uptime
+    name: Uptime
+    id: sys_uptime
+    update_interval: 10s
+  - platform: wifi_signal 
+    name: RSSI
+    id: wifi_signal_db
+    update_interval: 1s
+    entity_category: "diagnostic"
+  - platform: template
+    id: esp_memory
+    icon: mdi:memory
+    name: ESP Free Memory
+    lambda: return heap_caps_get_free_size(MALLOC_CAP_INTERNAL) / 1024;
+    unit_of_measurement: 'kB'
+    state_class: measurement
+    entity_category: "diagnostic"
   - platform: ld2410
     moving_distance:
-      name: Radar Moving Distance
+      name: Moving Distance
       id: moving_distance
     still_distance:
-      name: Radar Still Distance
+      name: Still Distance
       id: still_distance
     moving_energy:
-      name: Radar Move Energy
+      name: Move Energy
     still_energy:
-      name: Radar Still Energy
+      name: Still Energy
     detection_distance:
-      name: Radar Detection Distance
-      id: radar_detection_distance
+      name: Detection Distance
+    light:
+      name: Sun Light
+
 
   # Added sensor configurations for Itag Black
   - platform: ble_client
