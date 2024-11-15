@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - 'smarthome/Template/**'
-    workflow_dispatch: # Allows manual triggering
+  workflow_dispatch: # Allows manual triggering
 
 jobs:
   manage-gist:
