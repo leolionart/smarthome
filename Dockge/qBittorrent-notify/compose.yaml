@@ -1,0 +1,13 @@
+version: "3"
+services:
+  qbittorrent-notify:
+    image: adevjoe/qbittorrent-notify:latest
+    container_name: qbittorrent-notify
+    environment:
+      - TZ=Asia/Ho_Chi_Minh
+      - BOT_TOKEN=7021204170:AAEira9MDc2A6DZZzmLAtH3mhwd75PbAT7Y
+      - CHAT_ID=-1002442764979
+      - QBITTORRENT_HOST=http://172.16.0.18:8085
+      - QBITTORRENT_USERNAME=admin
+      - QBITTORRENT_PASSWORD=Q214119@i103158
+    restart: always

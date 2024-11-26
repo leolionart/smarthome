@@ -1,6 +1,6 @@
 substitutions:
-  name: esphome-all-function
-  friendly_name: LD2410 & Bluetooth Scan
+  name: esphome-all-function #replace your device ID here - IMPORTANT to install wireless
+  friendly_name: LD2410 & Bluetooth Scan #Rename this to your device name
 
 # BLUETOOTH PROXY
 bluetooth_proxy:

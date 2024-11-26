@@ -1,0 +1,666 @@
+type: vertical-stack
+cards:
+  - type: custom:stack-in-card
+    keep:
+      margin: false
+      box_shadow: false
+      background: false
+    cards:
+      - type: grid
+        square: false
+        columns: 1
+        cards:
+          - type: markdown
+            content: >-
+              <center><font size=4>Total runtime:&nbsp;&nbsp;<b> <font
+              color=#41CD52>{{states('sensor.bms_bt_monitor_total_runtime_formatted')}}
+    card_mod:
+      style: |
+        ha-card {
+           box-shadow: none;
+           background: rgba(0,0,0,0);
+           border: white solid 1px !important;
+        }
+  - type: custom:stack-in-card
+    keep:
+      margin: false
+      box_shadow: false
+      background: false
+    cards:
+      - type: grid
+        square: false
+        columns: 3
+        cards:
+          - type: markdown
+            content: >-
+              <center><font size=4>Charge:&nbsp;<b>{% if
+              states('binary_sensor.bms_bt_monitor_charge_switch') == 'on' %} <font
+              color=#41CD52>{{ states('binary_sensor.bms_bt_monitor_charge_switch') | upper
+              }}</font> {% else %} <font color=red>{{
+              states('binary_sensor.bms_bt_monitor_charge_switch') | upper }}</font> {% endif
+              %} 
+          - type: markdown
+            content: >-
+              <center><font size=3>Discharge:&nbsp;<b> {% if
+              states('binary_sensor.bms_bt_monitor_discharge_switch') == 'on' %} <font
+              color=#41CD52>{{ states('binary_sensor.bms_bt_monitor_discharge_switch') |
+              upper }}</font> {% else %} <font color=red>{{
+              states('binary_sensor.bms_bt_monitor_discharge_switch') | upper }}</font> {%
+              endif %} 
+          - type: markdown
+            content: >-
+              <center><font size=4>Balance:&nbsp;<b> {% if
+              states('binary_sensor.bms_bt_monitor_balance_switch') == 'on' %} <font
+              color=#41CD52>{{ states('binary_sensor.bms_bt_monitor_balance_switch') | upper
+              }}</font> {% else %} <font color=red>{{
+              states('binary_sensor.bms_bt_monitor_balance_switch') | upper }}</font> {%
+              endif %} 
+    card_mod:
+      style: |
+        ha-card {
+           box-shadow: none;
+           background: rgba(0,0,0,0);
+           border: white solid 1px !important;
+        }
+  - type: vertical-stack
+    cards:
+      - type: horizontal-stack
+        cards:
+          - type: vertical-stack
+            cards:
+              - type: vertical-stack
+                cards:
+                  - type: entity
+                    style: |
+                      ha-card {
+                        color: #18f50c;
+                        box-shadow: none;
+                           background: rgba(0,0,0,0);
+                           border: white solid 1px !important;
+                      }
+                    entity: sensor.bms_bt_monitor_voltage
+                    name: Total voltage
+                    icon: mdi:battery
+              - type: entities
+                style: |
+                  ha-card {
+                    color: #18f50c;
+                    box-shadow: none;
+                       background: rgba(0,0,0,0);
+                       border: white solid 1px !important;
+                  }
+                entities:
+                  - entity: sensor.bms_bt_monitor_power
+                    name: Power
+                    card_mod:
+                      style:
+                        hui-generic-entity-row:
+                          $: |
+                            state-badge {
+                              display: none;
+                            }
+                            .info {
+                              margin-left:0 !important;
+                              Color: white;
+                            }
+                  - entity: sensor.bms_bt_monitor_capacity
+                    name: Capacity
+                    card_mod:
+                      style:
+                        hui-generic-entity-row:
+                          $: |
+                            state-badge {
+                              display: none;
+                            }
+                            .info {
+                              margin-left:0 !important;
+                              Color: white;
+                            }
+                  - entity: sensor.bms_bt_monitor_cycle_capacity
+                    name: Cycle capacity
+                    card_mod:
+                      style:
+                        hui-generic-entity-row:
+                          $: |
+                            state-badge {
+                              display: none;
+                            }
+                            .info {
+                              margin-left:0 !important;
+                              Color: white;
+                            }
+                  - entity: sensor.bms_bt_monitor_cell_volt_average
+                    name: Average cell voltage
+                    card_mod:
+                      style:
+                        hui-generic-entity-row:
+                          $: |
+                            state-badge {
+                              display: none;
+                            }
+                            .info {
+                              margin-left:0 !important;
+                              Color: white;
+                            }
+                  - entity: sensor.bms_bt_monitor_balance_current
+                    name: Balance current
+                    card_mod:
+                      style:
+                        hui-generic-entity-row:
+                          $: |
+                            state-badge {
+                              display: none;
+                            }
+                            .info {
+                              margin-left:0 !important;
+                              Color: white;
+                            }
+                  - entity: sensor.bms_bt_monitor_temperatures_2
+                    name: Battery T2
+                    card_mod:
+                      style:
+                        hui-generic-entity-row:
+                          $: |
+                            state-badge {
+                              display: none;
+                            }
+                            .info {
+                              margin-left:0 !important;
+                              Color: white;
+                            }
+          - type: vertical-stack
+            cards:
+              - type: vertical-stack
+                cards:
+                  - type: entity
+                    entity: sensor.bms_bt_monitor_current
+                    style: |
+                      ha-card {
+                        color: #18f50c;
+                        box-shadow: none;
+                           background: rgba(0,0,0,0);
+                           border: white solid 1px !important;
+                      }
+              - type: entities
+                style: |
+                  ha-card {
+                    color: #18f50c;
+                    box-shadow: none;
+                       background: rgba(0,0,0,0);
+                       border: white solid 1px !important;
+                  }
+                entities:
+                  - entity: sensor.bms_bt_monitor_soc
+                    name: Remaining %
+                    card_mod:
+                      style:
+                        hui-generic-entity-row:
+                          $: |
+                            state-badge {
+                              display: none;
+                            }
+                            .info {
+                              margin-left:0 !important;
+                              Color: white;
+                            }
+                  - entity: sensor.bms_bt_monitor_capacity
+                    name: Remaining capacity
+                    card_mod:
+                      style:
+                        hui-generic-entity-row:
+                          $: |
+                            state-badge {
+                              display: none;
+                            }
+                            .info {
+                              margin-left:0 !important;
+                              Color: white;
+                            }
+                  - entity: sensor.bms_bt_monitor_num_cycles
+                    name: Cycle count
+                    card_mod:
+                      style:
+                        hui-generic-entity-row:
+                          $: |
+                            state-badge {
+                              display: none;
+                            }
+                            .info {
+                              margin-left:0 !important;
+                              Color: white;
+                            }
+                  - entity: sensor.bms_bt_monitor_cell_volt_delta
+                    name: Cell Vol diff.
+                    card_mod:
+                      style:
+                        hui-generic-entity-row:
+                          $: |
+                            state-badge {
+                              display: none;
+                            }
+                            .info {
+                              margin-left:0 !important;
+                              Color: white;
+                            }
+                  - entity: sensor.bms_bt_monitor_temperatures_1
+                    name: Battery T1
+                    card_mod:
+                      style:
+                        hui-generic-entity-row:
+                          $: |
+                            state-badge {
+                              display: none;
+                            }
+                            .info {
+                              margin-left:0 !important;
+                              Color: white;
+                            }
+                  - entity: sensor.bms_bt_monitor_mos_temperature
+                    name: MOS Temp
+                    card_mod:
+                      style:
+                        hui-generic-entity-row:
+                          $: |
+                            state-badge {
+                              display: none;
+                            }
+                            .info {
+                              margin-left:0 !important;
+                              Color: white;
+                            }
+      - square: false
+        type: grid
+        cards:
+          - type: grid
+            cards:
+              - type: markdown
+                content: |2-
+                            <center><font color="#18f50c"><font size=3>01.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {% if
+                            states('sensor.bms_bt_monitor_cell_volt_max') == '1' %}  <font
+                            color="#3090C7">{{ states('sensor.bms_bt_monitor_cell_volt_1') }}
+                            V</font> {% elif states('sensor.bms_bt_monitor_cell_volt_min') ==
+                            '1' %}  <font color="orange">{{
+                            states('sensor.bms_bt_monitor_cell_volt_1') }} V</font> {% else %}
+                            {{ states('sensor.bms_bt_monitor_cell_volt_1') }} V {% endif %}    
+                            <br>
+                            02.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {% if
+                            states('sensor.bms_bt_monitor_cell_volt_max') == '2' %}  <font
+                            color="#3090C7">{{ states('sensor.bms_bt_monitor_cell_volt_2') }}
+                            V</font> {% elif states('sensor.bms_bt_monitor_cell_volt_min') ==
+                            '2' %} <font color="orange">{{
+                            states('sensor.bms_bt_monitor_cell_volt_2') }} V</font> {% else %}
+                            {{ states('sensor.bms_bt_monitor_cell_volt_2') }} V {% endif %}<br>
+                            03.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {% if
+                            states('sensor.bms_bt_monitor_cell_volt_max') == '3' %}  <font
+                            color="#3090C7">{{ states('sensor.bms_bt_monitor_cell_volt_3') }}
+                            V</font> {% elif states('sensor.bms_bt_monitor_cell_volt_min') ==
+                            '3' %} <font color="orange">{{
+                            states('sensor.bms_bt_monitor_cell_volt_3') }} V</font> {% else %}
+                            {{ states('sensor.bms_bt_monitor_cell_volt_3') }} V {% endif %}
+                            <br>
+                            04.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {% if
+                            states('sensor.bms_bt_monitor_cell_volt_max') == '4' %}  <font
+                            color="#3090C7">{{ states('sensor.bms_bt_monitor_cell_volt_4') }}
+                            V</font> {% elif states('sensor.bms_bt_monitor_cell_volt_min') ==
+                            '4' %} <font color="orange">{{
+                            states('sensor.bms_bt_monitor_cell_volt_4') }} V</font> {% else %}
+                            {{ states('sensor.bms_bt_monitor_cell_volt_4') }} V {% endif %}
+                            <br>
+                            05.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {% if
+                            states('sensor.bms_bt_monitor_cell_volt_max') == '5' %}  <font
+                            color="#3090C7">{{ states('sensor.bms_bt_monitor_cell_volt_5') }}
+                            V</font> {% elif states('sensor.bms_bt_monitor_cell_volt_min') ==
+                            '5' %} <font color="orange">{{
+                            states('sensor.bms_bt_monitor_cell_volt_5') }} V</font> {% else %}
+                            {{ states('sensor.bms_bt_monitor_cell_volt_5') }} V {% endif %}
+                            <br>
+                            06.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {% if
+                            states('sensor.bms_bt_monitor_cell_volt_max') == '6' %}  <font
+                            color="#3090C7">{{ states('sensor.bms_bt_monitor_cell_volt_6') }}
+                            V</font> {% elif states('sensor.bms_bt_monitor_cell_volt_min') ==
+                            '6' %} <font color="orange">{{
+                            states('sensor.bms_bt_monitor_cell_volt_6') }} V</font> {% else %}
+                            {{ states('sensor.bms_bt_monitor_cell_volt_6') }} V {% endif %}
+                            <br>
+                card_mod:
+                  style: |
+                    ha-card {
+                       box-shadow: none;
+                       background: rgba(0,0,0,0);
+                       border: white solid 1px !important;
+                    }
+              - type: markdown
+                content: |2-
+                            <center><font color="#18f50c"><font size=3>07.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {% if
+                            states('sensor.bms_bt_monitor_cell_volt_max') == '7' %}  <font
+                            color="#3090C7">{{ states('sensor.bms_bt_monitor_cell_volt_7') }}
+                            V</font> {% elif states('sensor.bms_bt_monitor_cell_volt_min') ==
+                            '7' %}  <font color="orange">{{
+                            states('sensor.bms_bt_monitor_cell_volt_7') }} V</font> {% else %}
+                            {{ states('sensor.bms_bt_monitor_cell_volt_7') }} V {% endif %}    
+                            <br>
+                            08.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {% if
+                            states('sensor.bms_bt_monitor_cell_volt_max') == '8' %}  <font
+                            color="#3090C7">{{ states('sensor.bms_bt_monitor_cell_volt_8') }}
+                            V</font> {% elif states('sensor.bms_bt_monitor_cell_volt_min') ==
+                            '8' %} <font color="orange">{{
+                            states('sensor.bms_bt_monitor_cell_volt_8') }} V</font> {% else %}
+                            {{ states('sensor.bms_bt_monitor_cell_volt_8') }} V {% endif %}<br>
+                            09.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {% if
+                            states('sensor.bms_bt_monitor_cell_volt_max') == '9' %}  <font
+                            color="#3090C7">{{ states('sensor.bms_bt_monitor_cell_volt_9') }}
+                            V</font> {% elif states('sensor.bms_bt_monitor_cell_volt_min') ==
+                            '9' %} <font color="orange">{{
+                            states('sensor.bms_bt_monitor_cell_volt_9') }} V</font> {% else %}
+                            {{ states('sensor.bms_bt_monitor_cell_volt_9') }} V {% endif %}
+                            <br>
+                            10.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {% if
+                            states('sensor.bms_bt_monitor_cell_volt_max') == '10' %}  <font
+                            color="#3090C7">{{ states('sensor.bms_bt_monitor_cell_volt_10') }}
+                            V</font> {% elif states('sensor.bms_bt_monitor_cell_volt_min') ==
+                            '10' %} <font color="orange">{{
+                            states('sensor.bms_bt_monitor_cell_volt_10') }} V</font> {% else %}
+                            {{ states('sensor.bms_bt_monitor_cell_volt_10') }} V {% endif %}
+                            <br>
+                            11.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {% if
+                            states('sensor.bms_bt_monitor_cell_volt_max') == '11' %}  <font
+                            color="#3090C7">{{ states('sensor.bms_bt_monitor_cell_volt_11') }}
+                            V</font> {% elif states('sensor.bms_bt_monitor_cell_volt_min') ==
+                            '11' %} <font color="orange">{{
+                            states('sensor.bms_bt_monitor_cell_volt_11') }} V</font> {% else %}
+                            {{ states('sensor.bms_bt_monitor_cell_volt_11') }} V {% endif %}
+                            <br>
+                            12.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {% if
+                            states('sensor.bms_bt_monitor_cell_volt_max') == '12' %}  <font
+                            color="#3090C7">{{ states('sensor.bms_bt_monitor_cell_volt_12') }}
+                            V</font> {% elif states('sensor.bms_bt_monitor_cell_volt_min') ==
+                            '12' %} <font color="orange">{{
+                            states('sensor.bms_bt_monitor_cell_volt_12') }} V</font> {% else %}
+                            {{ states('sensor.bms_bt_monitor_cell_volt_12') }} V {% endif %}
+                            <br>
+                card_mod:
+                  style: |
+                    ha-card {
+                       box-shadow: none;
+                       background: rgba(0,0,0,0);
+                       border: white solid 1px !important;
+                    }
+              - type: markdown
+                content: |2-
+                            <center><font color="#18f50c"><font size=3>13.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {% if
+                            states('sensor.bms_bt_monitor_cell_volt_max') == '13' %}  <font
+                            color="#3090C7">{{ states('sensor.bms_bt_monitor_cell_volt_13') }}
+                            V</font> {% elif states('sensor.bms_bt_monitor_cell_volt_min') ==
+                            '13' %}  <font color="orange">{{
+                            states('sensor.bms_bt_monitor_cell_volt_13') }} V</font> {% else %}
+                            {{ states('sensor.bms_bt_monitor_cell_volt_13') }} V {% endif %}    
+                            <br>
+                            14.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {% if
+                            states('sensor.bms_bt_monitor_cell_volt_max') == '14' %}  <font
+                            color="#3090C7">{{ states('sensor.bms_bt_monitor_cell_volt_14') }}
+                            V</font> {% elif states('sensor.bms_bt_monitor_cell_volt_min') ==
+                            '14' %} <font color="orange">{{
+                            states('sensor.bms_bt_monitor_cell_volt_14') }} V</font> {% else %}
+                            {{ states('sensor.bms_bt_monitor_cell_volt_14') }} V {% endif %}<br>
+                            15.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {% if
+                            states('sensor.bms_bt_monitor_cell_volt_max') == '15' %}  <font
+                            color="#3090C7">{{ states('sensor.bms_bt_monitor_cell_volt_15') }}
+                            V</font> {% elif states('sensor.bms_bt_monitor_cell_volt_min') ==
+                            '15' %} <font color="orange">{{
+                            states('sensor.bms_bt_monitor_cell_volt_15') }} V</font> {% else %}
+                            {{ states('sensor.bms_bt_monitor_cell_volt_15') }} V {% endif %}
+                            <br>
+                            16.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {% if
+                            states('sensor.bms_bt_monitor_cell_volt_max') == '16' %}  <font
+                            color="#3090C7">{{ states('sensor.bms_bt_monitor_cell_volt_16') }}
+                            V</font> {% elif states('sensor.bms_bt_monitor_cell_volt_min') ==
+                            '16' %} <font color="orange">{{
+                            states('sensor.bms_bt_monitor_cell_volt_16') }} V</font> {% else %}
+                            {{ states('sensor.bms_bt_monitor_cell_volt_16') }} V {% endif %}
+                            <br>
+                card_mod:
+                  style: |
+                    ha-card {
+                       box-shadow: none;
+                       background: rgba(0,0,0,0);
+                       border: white solid 1px !important;
+                    }
+          - type: grid
+            cards:
+              - type: entities
+                style: |
+                  ha-card {
+                    color: #18f50c;
+                    box-shadow: none;
+                    background: rgba(0,0,0,0);
+                    border: white solid 1px !important;
+                  }
+                entities:
+                  - entity: sensor.bms_bt_monitor_cell_resistance_1
+                    name: 1
+                    card_mod:
+                      style:
+                        hui-generic-entity-row:
+                          $: |
+                            state-badge {
+                              display: none;
+                            }
+                            .info {
+                              margin-left:12 !important;
+                              Color: lime;
+                            }
+                  - entity: sensor.bms_bt_monitor_cell_resistance_2
+                    name: 2
+                    card_mod:
+                      style:
+                        hui-generic-entity-row:
+                          $: |
+                            state-badge {
+                              display: none;
+                            }
+                            .info {
+                              margin-left:12 !important;
+                              Color: lime;
+                            }
+                  - entity: sensor.bms_bt_monitor_cell_resistance_3
+                    name: 3
+                    card_mod:
+                      style:
+                        hui-generic-entity-row:
+                          $: |
+                            state-badge {
+                              display: none;
+                            }
+                            .info {
+                              margin-left:12 !important;
+                              Color: lime;
+                            }
+                  - entity: sensor.bms_bt_monitor_cell_resistance_4
+                    name: 4
+                    card_mod:
+                      style:
+                        hui-generic-entity-row:
+                          $: |
+                            state-badge {
+                              display: none;
+                            }
+                            .info {
+                              margin-left:12 !important;
+                              Color: lime;
+                            }
+                  - entity: sensor.bms_bt_monitor_cell_resistance_5
+                    name: 5
+                    card_mod:
+                      style:
+                        hui-generic-entity-row:
+                          $: |
+                            state-badge {
+                              display: none;
+                            }
+                            .info {
+                              margin-left:12 !important;
+                              Color: lime;
+                            }
+                  - entity: sensor.bms_bt_monitor_cell_resistance_6
+                    name: 6
+                    card_mod:
+                      style:
+                        hui-generic-entity-row:
+                          $: |
+                            state-badge {
+                              display: none;
+                            }
+                            .info {
+                              margin-left:12 !important;
+                              Color: lime;
+                            }
+              - type: entities
+                style: |
+                  ha-card {
+                    color: #18f50c;
+                    box-shadow: none;
+                    background: rgba(0,0,0,0);
+                    border: white solid 1px !important;
+                  }
+                entities:
+                  - entity: sensor.bms_bt_monitor_cell_resistance_7
+                    name: 7
+                    card_mod:
+                      style:
+                        hui-generic-entity-row:
+                          $: |
+                            state-badge {
+                              display: none;
+                            }
+                            .info {
+                              margin-left:12 !important;
+                              Color: lime;
+                            }
+                  - entity: sensor.bms_bt_monitor_cell_resistance_8
+                    name: 8
+                    card_mod:
+                      style:
+                        hui-generic-entity-row:
+                          $: |
+                            state-badge {
+                              display: none;
+                            }
+                            .info {
+                              margin-left:12 !important;
+                              Color: lime;
+                            }
+                  - entity: sensor.bms_bt_monitor_cell_resistance_9
+                    name: 9
+                    card_mod:
+                      style:
+                        hui-generic-entity-row:
+                          $: |
+                            state-badge {
+                              display: none;
+                            }
+                            .info {
+                              margin-left:12 !important;
+                              Color: lime;
+                            }
+                  - entity: sensor.bms_bt_monitor_cell_resistance_10
+                    name: 10
+                    card_mod:
+                      style:
+                        hui-generic-entity-row:
+                          $: |
+                            state-badge {
+                              display: none;
+                            }
+                            .info {
+                              margin-left:12 !important;
+                              Color: lime;
+                            }
+                  - entity: sensor.bms_bt_monitor_cell_resistance_11
+                    name: 11
+                    card_mod:
+                      style:
+                        hui-generic-entity-row:
+                          $: |
+                            state-badge {
+                              display: none;
+                            }
+                            .info {
+                              margin-left:12 !important;
+                              Color: lime;
+                            }
+                  - entity: sensor.bms_bt_monitor_cell_resistance_12
+                    name: 12
+                    card_mod:
+                      style:
+                        hui-generic-entity-row:
+                          $: |
+                            state-badge {
+                              display: none;
+                            }
+                            .info {
+                              margin-left:12 !important;
+                              Color: lime;
+                            }
+              - type: entities
+                style: |
+                  ha-card {
+                    color: #18f50c;
+                    box-shadow: none;
+                    background: rgba(0,0,0,0);
+                    border: white solid 1px !important;
+                  }
+                entities:
+                  - entity: sensor.bms_bt_monitor_cell_resistance_13
+                    name: 13
+                    card_mod:
+                      style:
+                        hui-generic-entity-row:
+                          $: |
+                            state-badge {
+                              display: none;
+                            }
+                            .info {
+                              margin-left:12 !important;
+                              Color: lime;
+                            }
+                  - entity: sensor.bms_bt_monitor_cell_resistance_14
+                    name: 14
+                    card_mod:
+                      style:
+                        hui-generic-entity-row:
+                          $: |
+                            state-badge {
+                              display: none;
+                            }
+                            .info {
+                              margin-left:12 !important;
+                              Color: lime;
+                            }
+                  - entity: sensor.bms_bt_monitor_cell_resistance_15
+                    name: 15
+                    card_mod:
+                      style:
+                        hui-generic-entity-row:
+                          $: |
+                            state-badge {
+                              display: none;
+                            }
+                            .info {
+                              margin-left:12 !important;
+                              Color: lime;
+                            }
+                  - entity: sensor.bms_bt_monitor_cell_resistance_16
+                    name: 16
+                    card_mod:
+                      style:
+                        hui-generic-entity-row:
+                          $: |
+                            state-badge {
+                              display: none;
+                            }
+                            .info {
+                              margin-left:12 !important;
+                              Color: lime;
+                            }
+        columns: 1
+

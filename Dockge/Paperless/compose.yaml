@@ -1,0 +1,40 @@
+services:
+  broker:
+    image: docker.io/library/redis:7
+    restart: unless-stopped
+    volumes:
+      - /volume1/docker/config/paperless/redisdata:/data
+  db:
+    image: docker.io/library/postgres:16
+    restart: unless-stopped
+    volumes:
+      - /volume1/docker/config/paperless/pgdata:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: paperless
+      POSTGRES_USER: paperless
+      POSTGRES_PASSWORD: paperless
+  webserver:
+    image: ghcr.io/paperless-ngx/paperless-ngx:latest
+    restart: unless-stopped
+    depends_on:
+      - db
+      - broker
+    ports:
+      - 8010:8000
+    volumes:
+      - /volume1/docker/config/paperless/data:/usr/src/paperless/data
+      - /volume1/docker/config/paperless/media:/usr/src/paperless/media
+      - /volume1/docker/config/paperless/export:/usr/src/paperless/export
+      - /volume1/docker/config/paperless/consume:/usr/src/paperless/consume
+      - /volume1/docker/config/paperless/scripts:/usr/src/paperless/scripts
+    environment:
+      PAPERLESS_REDIS: redis://broker:6379
+      PAPERLESS_DBHOST: db
+      USERMAP_UID: 1000
+      USERMAP_GID: 100
+      PAPERLESS_TIME_ZONE: Asia/Saigon
+      PAPERLESS_URL: https://paper.naai.studio
+      PAPERLESS_POST_CONSUME_SCRIPT: /usr/src/paperless/scripts/webhook.sh
+networks:
+  default:
+    driver: bridge
