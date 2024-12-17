@@ -1,0 +1,15 @@
+services:
+  dockge:
+    image: louislam/dockge:latest
+    container_name: dockge
+    restart: unless-stopped
+    ports:
+      # Host Port : Container Port
+      - 5001:5001
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./data:/app/data
+      - ./dockge:/opt/stacks
+    environment:
+      # Tell Dockge where is your stacks directory
+      - DOCKGE_STACKS_DIR=/opt/stacks

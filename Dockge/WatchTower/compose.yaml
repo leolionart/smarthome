@@ -5,7 +5,6 @@ services:
     restart: unless-stopped
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - /home/hoster/watchtower/config.json:/config.json # optional. Used to log into a private registry
       - /etc/localtime:/etc/localtime:ro # optional. Used to sync time with host
     environment:
       - WATCHTOWER_NOTIFICATIONS=shoutrrr

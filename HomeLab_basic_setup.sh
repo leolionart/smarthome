@@ -49,9 +49,9 @@ echo "----------------------------------------------------------------"
 echo "----------------------------------------------------------------"
 echo "WatchTower Setup"
 echo "----------------------------------------------------------------"
-mkdir -p /opt/{dockge,stacks}/watchtower
-wget -q -O /opt/dockge/watchtower/compose.yaml https://raw.githubusercontent.com/leolionart/smarthome/refs/heads/main/Dockge/WatchTower/compose.yaml
-cd /opt/dockge/watchtower
+mkdir -p /opt/stacks/watchtower
+wget -q -O /opt/stacks/watchtower/compose.yaml https://raw.githubusercontent.com/leolionart/smarthome/refs/heads/main/Dockge/WatchTower/compose.yaml
+cd /opt/stacks/watchtower
 docker compose up -d
 echo "----------------------------------------------------------------"
 echo "Wathtower Done"
