@@ -1,3 +1,16 @@
+# Dockge setup
+echo "----------------------------------------------------------------"
+echo "Commence Dockge Setup"
+echo "----------------------------------------------------------------"
+mkdir -p /opt/{dockge,stacks}
+wget -q -O /opt/dockge/compose.yaml https://raw.githubusercontent.com/leolionart/smarthome/refs/heads/main/Zigbee2MQTT/dockge/compose.yaml
+cd /opt/dockge
+docker compose up -d
+echo "----------------------------------------------------------------"
+echo "Dockge GUI, https://your_server_ip:5001"
+echo "----------------------------------------------------------------"
+
+
 # MQTT Install
 echo "----------------------------------------------------------------"
 echo "Commence MQTT Setup"

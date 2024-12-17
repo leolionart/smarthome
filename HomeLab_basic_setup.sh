@@ -38,7 +38,7 @@ echo "----------------------------------------------------------------"
 echo "Commence Dockge Setup"
 echo "----------------------------------------------------------------"
 mkdir -p /opt/{dockge,stacks}
-wget -q -O /opt/dockge/compose.yaml https://raw.githubusercontent.com/leolionart/smarthome/refs/heads/main/Zigbee2MQTT/dockge/compose.yaml
+wget -q -O /opt/dockge/compose.yaml https://raw.githubusercontent.com/leolionart/smarthome/refs/heads/main/Dockge/compose.yaml
 cd /opt/dockge
 docker compose up -d
 echo "----------------------------------------------------------------"
@@ -54,7 +54,7 @@ wget -q -O /opt/stacks/watchtower/compose.yaml https://raw.githubusercontent.com
 cd /opt/stacks/watchtower
 docker compose up -d
 echo "----------------------------------------------------------------"
-echo "Wathtower Done"
+echo "Wacthtower Setup Done"
 echo "----------------------------------------------------------------"
 
 # Rebooting Now: sudo reboot
