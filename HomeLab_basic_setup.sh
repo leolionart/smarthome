@@ -38,7 +38,7 @@ echo "----------------------------------------------------------------"
 echo "Commence Dockge Setup"
 echo "----------------------------------------------------------------"
 mkdir -p /opt/{dockge,stacks}
-wget -q -O /opt/dockge/compose.yaml https://raw.githubusercontent.com/leolionart/smarthome/refs/heads/main/Dockge/compose.yaml
+wget -q -O /opt/dockge/compose.yaml https://raw.githubusercontent.com/leolionart/smarthome/refs/heads/main/Zigbee2MQTT/dockge/compose.yaml
 cd /opt/dockge
 docker compose up -d
 echo "----------------------------------------------------------------"
@@ -50,7 +50,7 @@ echo "----------------------------------------------------------------"
 echo "WatchTower Setup"
 echo "----------------------------------------------------------------"
 mkdir -p /opt/stacks/watchtower
-wget -q -O /opt/stacks/watchtower/compose.yaml https://raw.githubusercontent.com/leolionart/smarthome/refs/heads/main/Dockge/WatchTower/compose.yaml
+wget -q -O /opt/stacks/watchtower/compose.yaml https://raw.githubusercontent.com/leolionart/smarthome/refs/heads/main/Dockge/WatchTower/compose.yaml -P /opt/stacks/watchtower
 cd /opt/stacks/watchtower
 docker compose up -d
 echo "----------------------------------------------------------------"
