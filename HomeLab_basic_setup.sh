@@ -45,5 +45,16 @@ echo "----------------------------------------------------------------"
 echo "Dockge GUI, https://your_server_ip:5001"
 echo "----------------------------------------------------------------"
 
+# WatchTower setup
+echo "----------------------------------------------------------------"
+echo "WatchTower Setup"
+echo "----------------------------------------------------------------"
+mkdir -p /opt/{dockge,stacks}/watchtower
+wget -q -O /opt/dockge/watchtower/compose.yaml https://raw.githubusercontent.com/leolionart/smarthome/refs/heads/main/Dockge/WatchTower/compose.yaml
+cd /opt/dockge/watchtower
+docker compose up -d
+echo "----------------------------------------------------------------"
+echo "Wathtower Done"
+echo "----------------------------------------------------------------"
 
 # Rebooting Now: sudo reboot
