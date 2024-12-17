@@ -20,12 +20,12 @@ serial:
   port: /dev/ttyUSB0
   #adapter: deconz
 
-frontend:
-  # Optional, default 8080 or you can use your own as well.
-  port: 8081
+frontend: true #set true để nhận cấu hình port từ container
+
+#  port: 8081
   # IP address of the device running Zigbee2MQTT
-  #host: 192.168.88.11
-  
+#  host: 172.16.0.15
+
 advanced:
   network_key: GENERATE
   pan_id: GENERATE

@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  zigbee2mqtt:
+    container_name: zigbee2mqtt
+    image: koenkk/zigbee2mqtt
+    restart: unless-stopped
+    volumes:
+      - ./data:/app/data
+      - /run/udev:/run/udev:ro
+    ports:
+      # Frontend port
+      - 8081:8080
+    devices:
+      - /dev/ttyUSB0
+    environment:
+      - TZ=Asia/Ho_Chi_Minh
