@@ -2,10 +2,10 @@
 echo "----------------------------------------------------------------"
 echo "Commence MQTT Setup"
 echo "----------------------------------------------------------------"
-sudo mkdir mosquitto
-sudo mkdir mosquitto/config/
-sudo mkdir mosquitto/data/
-sudo wget https://raw.githubusercontent.com/leolionart/smarthome/refs/heads/main/Zigbee2MQTT/mosquitto.conf -P /home/pi/mosquitto/config/
+sudo mkdir /opt/{dockge,stacks}/mosquitto
+sudo mkdir /opt/{dockge,stacks}/mosquitto/config/
+sudo mkdir /opt/{dockge,stacks}/mosquitto/data/
+sudo wget https://raw.githubusercontent.com/leolionart/smarthome/refs/heads/main/Zigbee2MQTT/mosquitto.conf -P /opt/{dockge,stacks}/mosquitto
 sudo docker run -it --name MQTT --restart unless-stopped --net=host -tid -p 1883:1883 -v $(pwd)/mosquitto:/mosquitto/ eclipse-mosquitto
 echo "----------------------------------------------------------------"
 echo "MQTT Setup Completed"
