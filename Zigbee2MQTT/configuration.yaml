@@ -1,5 +1,5 @@
 # Home Assistant integration (MQTT discovery)
-homeassistant: false
+homeassistant: true
 
 # allow new devices to join
 permit_join: true
@@ -9,10 +9,10 @@ mqtt:
   # MQTT base topic for zigbee2mqtt MQTT messages
   base_topic: zigbee2mqtt
   # MQTT server URL
-  server: 'mqtt://192.168.88.11:1883'
+  server: 'mqtt://172.16.0.61:1883'
   # MQTT server authentication, uncomment if required:
-  # user: admin
-  # password: admin
+  user: leolion
+  password: Q214119@i
 
 # Serial settings
 serial:
