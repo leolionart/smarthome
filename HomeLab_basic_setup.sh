@@ -38,21 +38,11 @@ echo "----------------------------------------------------------------"
 echo "Commence Dockge Setup"
 echo "----------------------------------------------------------------"
 mkdir -p /opt/{dockge,stacks}
-wget -q -O /opt/dockge/compose.yaml https://raw.githubusercontent.com/leolionart/smarthome/refs/heads/main/DockerCompose/Dockge/compose.yaml
+wget -q -O /opt/dockge/compose.yaml https://raw.githubusercontent.com/leolionart/smarthome/refs/heads/main/Dockge/compose.yaml
 cd /opt/dockge
 docker compose up -d
 echo "----------------------------------------------------------------"
 echo "Dockge GUI, https://your_server_ip:5001"
-echo "----------------------------------------------------------------"
-
-
-# Portainer setup
-echo "----------------------------------------------------------------"
-echo "Commence Portainer Setup"
-echo "----------------------------------------------------------------"
-docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ee:latest
-echo "----------------------------------------------------------------"
-echo "Portainer Interface is reachable at port:9443"
 echo "----------------------------------------------------------------"
 
 
