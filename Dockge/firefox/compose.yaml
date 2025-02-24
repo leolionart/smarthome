@@ -1,0 +1,15 @@
+version: "3"
+services:
+  firefox:
+    image: jlesage/firefox:v1.18.0
+    shm_size: 256M
+    ports:
+      - 5800:5800
+    environment:
+      - DISPLAY_WIDTH=2048
+      - DISPLAY_HEIGHT=1366
+      - X11VNC_EXTRA_OPTS=-nocursor
+    volumes:
+      - /home/docker/firefox/config:/config
+    restart: unless-stopped
+networks: {}
