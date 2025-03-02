@@ -1,0 +1,26 @@
+services:
+  flare-bypasser :
+    build:
+      args:
+        #CHROME_VERSION: '131.'
+        UID: 1001
+        # CHROME_DISABLE_GPU: true
+        # CHECK_SYSTEM: true
+        # PYTHON_VERSION: 3.11
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      UNUSED: "false"
+      # FORKS: "5:3" #< Uncomment if you work with sites with ustable challenge loading (start additional 3 forks after 5 seconds).
+      # DEBUG: "true"
+      # VERBOSE: "true"
+      SAVE_CHALLENGE_SCREENSHOTS: "true"
+    container_name: flare-bypasser
+    image: flare-bypasser:latest
+    ports:
+      - 20080:8080
+    #volumes:
+      #- ./var:/opt/flare_bypasser/var/
+      #< Uncomment if you persistent logs between runs
+      #- ./examples/custom_user_commands/:/opt/flare_bypasser/extensions/
+      #< Uncomment for run with extension example (/command/my-click uri)
