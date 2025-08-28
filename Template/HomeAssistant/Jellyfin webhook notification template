@@ -1,0 +1,35 @@
+{
+  "Title": "{{Name}}",
+  "Series": "{{SeriesName}} - S{{SeasonNumber00}}E{{EpisodeNumber00}} ({{Year}})",
+  "Username": "{{NotificationUsername}}",
+  "Client": "{{ClientName}} ({{DeviceName}})",
+  "PlayMethod": "{{PlayMethod}}",
+  "NotificationType": "{{NotificationType}}",
+  "Playback": {
+    "PositionTicks": "{{PlaybackPositionTicks}}",
+    "DurationTicks": "{{RunTimeTicks}}",
+    "Position": "{{PlaybackPosition}}",
+    "Duration": "{{RunTime}}",
+    "Percent": "{{PercentPlayed}}"
+  },
+  "Stream": {
+    "Video": {
+      "Title": "{{Video_0_Title}}",
+      "Codec": "{{Video_0_Codec}}",
+      "Resolution": "{{Video_0_Width}}x{{Video_0_Height}}",
+      "AspectRatio": "{{Video_0_AspectRatio}}",
+      "Framerate": "{{Video_0_FrameRate}}"
+    },
+    "Audio": {
+      "Title": "{{Audio_0_Title}}",
+      "Codec": "{{Audio_0_Codec}}",
+      "Channels": "{{Audio_0_Channels}}",
+      "Bitrate": "{{Audio_0_Bitrate}}",
+      "SampleRate": "{{Audio_0_SampleRate}}"
+    }
+  },
+  "Links": {
+    "Thumbnail": "{{ServerUrl}}/Items/{{ItemId}}/Images/Primary",
+    "ItemUrl": "{{ServerUrl}}/web/index.html#!/details?id={{ItemId}}&serverId={{ServerId}}"
+  }
+}
