@@ -18,9 +18,9 @@ esp32:
   framework:
     type: esp-idf
     sdkconfig_options:
-      CONFIG_ESP_COREDUMP_ENABLE: "n"
+      CONFIG_ESP_COREDUMP_ENABLE: "y"
       CONFIG_ESP_COREDUMP_ENABLE_TO_FLASH: "n"
-      CONFIG_ESP_COREDUMP_ENABLE_TO_UART: "n"
+      CONFIG_ESP_COREDUMP_ENABLE_TO_UART: "y"
 
 esphome:
   name: ${name}
@@ -54,6 +54,7 @@ logger:
 
 # If you don't use Home Assistant please remove this `api` section and uncomment the `mqtt` component!
 api:
+  reboot_timeout: 0s
 
 captive_portal:
 
